@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Ncontainer {
+    height: 160px;
+    display: flex;
+    background: #0D0916;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.Nfirst {
+    margin-top: 33px;
+}
+
+.sugaLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.sugaLogo p {
+    font-family: 'Goldman', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.logoName {
+    display: flex;
+    flex-direction: row;
+}
+
+.Nmid {
+    display: flex;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #A3B1E4;
+    margin-top: 80px;
+}
+
+.Nmid p a{
+    text-decoration: none;
+    color: #A3B1E4;
+}
+
+.Nmid p a:hover{
+    text-decoration: none;
+    color: #7984ab;
+}
+
+.Nmid p:nth-child(3) {
+    cursor: pointer;
+    margin-left: 66px;
+    margin-top: 8px;
+    text-decoration: none;
+
+}
+
+.Nmid p:nth-child(2) {
+    cursor: pointer;
+    margin-left: 70px;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+.Nmid p:nth-child(1) {
+    cursor: pointer;
+    /* margin-left: 66px; */
+    color: #323A64;
+}
+
+.Nmid p:nth-child(4) {
+    cursor: pointer;
+    margin-right: 66px;
+    color: #323A64;
+}
+
+.Nlast {
+    display: block;
+}
+
+.Nbox {
+    width: 49.66px;
+    height: 49.66px;
+    background: #101638;
+    border: 1px solid #FFFFFF;
+    transform: rotate(45deg);
+    margin-top: 70px;
+    margin-right: 62px;
+}
+
+.Nimg {
+    position: absolute;
+    z-index: 2;
+    top: 41px;
+    right: 50px;
+}
+
+.Nimg img {
+    width: 70px;
+    height: 70px;
+}
+
+.Ndrop {
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    z-index: 50;
+}
+
+.Nbtn {
+    width: 120px;
+    height: 40px;
+    padding-top: 9px;
+    background: #4D69FD;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 78px 47px 0px 0px;
+}
+
+.Nlink{
+    text-decoration: none;
+}
+
+.Nhamburgur{
+    display:none;
+}
+
+.NhamDrop{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .sugaLogo {
+        margin-left: 30px;
+    }
+    .Nmid p:nth-child(1) {
+        margin-left: -50px;
+    }
+    .Nmid p:nth-child(3) {
+        margin-left: 50px;
+    
+    }
+    
+    .Nmid p:nth-child(2) {
+        margin-left: 17px;
+    }
+    
+    .Nmid p:nth-child(4) {
+        margin-right: 30px;
+        margin-left: -50px;
+        margin-top: 3px;
+    }
+    .Nbtn {
+        width: 90px;
+        height: 35px;
+        padding-top: 7px;
+        font-size: 18px;
+        margin: 86px 25px 0px 0px;
+    }
+    .Nbox {
+        margin-top: 70px;
+        margin-right: 40px;
+    }
+    .Nimg {
+        top: 41px;
+        right: 28px;
+    }  
+    .Ndrop {
+        right: 10px;
+        top: 140px;
+    }
+    .Nhamburgur{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .Nfirst{
+        display: none;
+    }
+    .sugaLogo {
+        display: none;
+    }
+
+    .Ncontainer {
+        height:60px;
+    }
+
+    .Nmid {
+        display: none;
+    }
+
+    .Nbox {
+        width: 25.8px;
+        height: 25.8px;
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+    
+    .Nimg {
+        top: 8px;
+        right: 25px;
+    }
+    
+    .Nimg img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .Ndrop {
+        position: absolute;
+        right: 20px;
+        top: 140px;
+        z-index: 50;
+    }
+    
+    .Nbtn {
+        width: 70px;
+        height: 30px;
+        padding-top: 5px;
+        font-size: 16px;
+        margin: 14px 25px 0px 0px;
+    }
+
+    .Nhamburgur{
+        margin-top: 17px;
+        margin-left: 25px;
+        display: block;
+    }
+
+    .Nhamburgur img{
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .NhamDrop{
+        display: block;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-top: 1pxsolid #fff;
+        position: absolute;
+        top: 60px;
+        left: -110%;
+        opacity: 1;
+        list-style: none;
+        transition: all 0.5s ease;
+      }
+    
+      .nav-menu.active {
+        background: #0D0916;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+      .nav-item{
+        font-size: 18px;
+        color: #A3B1E4;
+        text-decoration: none;
+        margin-left: -30px;
+    }
+.nav-item a{
+    text-decoration: none;
+    color: #A3B1E4;
+    
+}
+      .nav-item .active {
+        color: #ffdd40;
+        border: none;
+      }
+      .nav-links {
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
+      }
+    
+      /* .nav-icon {
+        transform: translate(-100%, 60%);
+        cursor: pointer;
+      } */
+}

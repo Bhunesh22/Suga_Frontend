@@ -1,0 +1,22 @@
+/* *{
+    
+} */
+
+
+
+.navlink{
+    text-decoration: none;
+    background-color: #101638;
+    color: #FFFFFF;
+}
+
+.navActive{
+    text-decoration: none;
+    background-color: #101638;
+    color: #FFFFFF;
+    
+}
+
+.iconimage{
+    background: transparent;
+}

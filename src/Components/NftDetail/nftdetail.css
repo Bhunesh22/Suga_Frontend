@@ -1,0 +1,259 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cardInformation {
+    width: 100%;
+    min-height: 100vh;
+    background: #0D0916;
+    overflow: hidden;
+    
+}
+
+.bar2 {
+
+    width: 100%;
+    height: 72px;
+    background: rgba(77, 105, 253, 0.15);
+    backdrop-filter: blur(12px);
+}
+
+.itemBox2 {
+    width: 250px;
+    height: 250px;
+    background: #101638;
+    margin-left: 110px;
+
+}
+
+.itemBoxFlex1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skin2Logo {
+    margin-top: -12px;
+}
+
+.blueLine3 {
+    width: 200px;
+    height: 2px;
+    background: #4D69FD;
+    filter: blur(2px);
+    border-radius: 50%;
+}
+
+.itemBoxTopArrow1{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.itemBoxBottomArrow1{
+   margin-top: -7px;
+   margin-left: 190px;
+}
+
+.blueLine2 {
+    width: 3px;
+    height: 300px;
+    background: #4D69FD;
+    filter: blur(2px);
+    margin-left: 193px;
+}
+
+.itemTitle {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+
+}
+
+.itemDetail1 {
+    font-family: 'Gilroy', sans-serif;
+    color: #FFFFFF;
+    margin-right: 51px;
+}
+
+.itemDetail2 {
+    font-family: 'Gilroy', sans-serif;
+    color: #FFFFFF;
+}
+
+.openSea {
+    width: 108px;
+    height: 34px;
+
+    background: #23294A;
+
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.openSea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+
+
+.nft {
+    width: 82px;
+    height: 25px;
+    border: 2px solid #00FF94;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 193px; */
+    margin-top: 30px;
+
+}
+
+.opensea1 {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    margin-right: 186px;
+    align-items: right;
+
+
+
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.flexItem2 {
+    margin-left: 51px;
+}
+
+.detailsBar2 {
+    max-width: 1320px;
+    height: 82px;
+    background: #101638;
+    margin-top: 100px;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 30px;
+    line-height: 20px;
+    color: #A3B1E4;
+}
+
+.detailsBarFlex1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -28px;
+    margin-left: 80px;
+}
+
+.detailsBar2 {
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.sellerBarTopArrow1{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.sellerBarBottomArrow1{
+    margin-left: 1260px;
+    margin-top: -27px;
+}
+
+.seller1 {
+    margin-top: 11px;
+    font-size: 32px;
+}
+
+.flexDetails1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buy2 {
+    width: 91px;
+    height: 40px;
+
+    border: 2px solid #00FF94;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+    color: #00FF94;
+}
+
+.price2 {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+    color: #FFC700;
+
+}
+
+.name2 {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+.sellerDetails1 {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -60px;
+}
+
+/* .indLogo1 {
+    margin-left: 109px; 
+} */
+
+.name2 {
+    margin-left: 17px;
+}
+
+
+.buy2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 80px;
+}

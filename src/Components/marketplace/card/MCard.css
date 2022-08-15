@@ -1,0 +1,204 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.card {
+    width: 315px;
+    height: 275px;
+    background: linear-gradient(219.83deg, rgba(91, 101, 153, 0.5) -0.82%, rgba(34, 41, 77, 0.5) 107.94%);
+    backdrop-filter: blur(12px);
+}
+
+.Ctop {
+    display: flex;
+}
+
+.Clogo {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #445ACD;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 8px;
+    z-index: 10;
+}
+
+.Clogo img{
+    margin-top: 6px;
+    margin-left: 6px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.Cimg {
+    position: absolute;
+    width: 220px;
+    height: 173px;
+    left: 5px;
+    top: 2px;
+    z-index: 2;
+}
+
+.Cimg img {
+    width: 224px;
+    height: 173px;
+    object-fit: contain;
+}
+
+.Cbtns {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.Cbtn1 {
+    display: flex;
+    width: 108px;
+    height: 34px;
+    background: #23294A;
+    padding-top: 6px;
+
+}
+
+.Cbtn1 img {
+    height: 21px;
+    width: 21px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.Cbtn1 p {
+    /* margin-left: 15px; */
+    width: 77px;
+    padding-top: 4px;
+    text-align: center;
+
+}
+
+.Cbtn2 {
+    margin-top: 8px;
+    margin-left: 25px;
+    width: 82px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #00FF94;
+    background: transparent;
+
+    padding-top: 4.5px;
+}
+
+.Cline {
+    position: absolute;
+    left: 22px;
+    top: 173px;
+    width: 270px;
+    height: 2px;
+    border-radius: 50%;
+    background: #4D69FD;
+    filter: blur(1px);
+    transform: rotate(-180deg);
+    z-index: 1.6;
+}
+
+.Cmid {
+    display: flex;
+}
+
+.Cmid p:nth-child(1) {
+    position: absolute;
+    top: 191px;
+    left: 23px;
+    font-family: 'Gilroy-Bold';
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+
+}
+
+.Cmid p:nth-child(2) {
+    position: absolute;
+    top: 191px;
+    right: 39px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #FFC700;
+
+}
+
+.Cmid p:nth-child(3) {
+    position: absolute;
+    top: 193px;
+    right: 16px;
+    color: #FFC700;
+}
+
+.Cbottom {
+    display: flex;
+}
+
+.Cleft {
+    display: flex;
+}
+
+.Cleft img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 23px;
+    top: 229px;
+    object-fit: contain;
+}
+
+.Cleft p {
+    position: absolute;
+    width: 151px;
+    height: 26px;
+    left: 54px;
+    top: 229px;
+    font-family: 'Gilroy-Regular';
+    font-size: 10px;
+    line-height: 13px;
+    /* or 130% */
+    color: #A3B1E4;
+}
+
+.Cright p:nth-child(1) {
+    position: absolute;
+    left: 258px;
+    top: 220px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    color: #4D69FD;
+
+}
+
+.Cright p:nth-child(2) {
+    position: absolute;
+    left: 265px;
+    top: 240px;
+    font-family: 'Gilroy-bold', sans-serif;
+    font-size: 20px;
+    line-height: 12px;
+    text-align: right;
+    color: #A3B1E4;
+}

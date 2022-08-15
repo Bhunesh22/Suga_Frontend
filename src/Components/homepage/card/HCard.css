@@ -1,0 +1,337 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.HCcard {
+    width: 315px;
+    height: 275px;
+    background: linear-gradient(219.83deg, rgba(91, 101, 153, 0.5) -0.82%, rgba(34, 41, 77, 0.5) 107.94%);
+    backdrop-filter: blur(12px);
+    border: none !important;
+}
+
+.HCtop {
+    display: flex;
+}
+
+.HCimg {
+    position: absolute;
+    width: 224px;
+    height: 173px;
+    left: 11px;
+    top: 2px;
+    z-index: 2;
+}
+
+.HCimg img{
+    width: 224px;
+    height: 173px;
+    object-fit: contain;
+}
+
+.HCbtns {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+
+.HCbtn1 {
+    width: 82px;
+    height: 25px;
+    background: #4D69FD;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 7px;
+}
+
+.HCbtn2 {
+    margin-top: 8px;
+    width: 82px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #00FF94;
+    background: transparent;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 4.5px;
+}
+
+.HCline {
+    position: absolute;
+    left: 22px;
+    top: 173px;
+    width: 270px;
+    height: 2px;
+    border-radius: 50%;
+    background: #4D69FD;
+    filter: blur(1px);
+    transform: rotate(-180deg);
+    z-index: 1.6;
+}
+
+.HCmid {
+    display: flex;
+}
+
+.HCmid p:nth-child(1) {
+    position: absolute;
+    top: 191px;
+    left: 23px;
+    font-family: 'Gilroy-Bold';
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+
+}
+
+.HCprice p:nth-child(1) {
+    position: absolute;
+    top: 191px;
+    right: 39px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #FFC700;
+
+}
+
+.HCprice p:nth-child(2) {
+    position: absolute;
+    top: 190px;
+    right: 16px;
+    color: #FFC700;
+}
+
+.HCbottom {
+    display: flex;
+}
+
+.HCleft {
+    display: flex;
+}
+
+.HCleft img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 23px;
+    top: 229px;
+}
+
+.HCleft p {
+    position: absolute;
+    width: 151px;
+    height: 26px;
+    left: 54px;
+    top: 229px;
+    font-family: 'Gilroy-Regular';
+    font-size: 10px;
+    line-height: 13px;
+    /* or 130% */
+    color: #A3B1E4;
+}
+
+.HCright p:nth-child(1) {
+    position: absolute;
+    left: 258px;
+    top: 220px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    color: #4D69FD;
+
+}
+
+.HCright p:nth-child(2) {
+    position: absolute;
+    left: 265px;
+    top: 240px;
+    font-family: 'Gilroy-bold', sans-serif;
+    font-size: 20px;
+    line-height: 12px;
+    text-align: right;
+    color: #A3B1E4;
+}
+
+@media screen and (max-width: 700px) {
+    .HCcard {
+        width: 178px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .HCtop {
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+    
+    .HCimg {
+        margin-top: 16px;
+        position: unset;
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+    }
+    
+    .HCimg img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    
+    .HCbtns {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        position: unset;
+    
+    }
+    
+    .HCbtn1 {
+        margin-right: 8px;
+        width: 70px;
+        height: 22px;
+        font-size: 12px;
+        line-height: 14px;
+        padding-top: 4px;
+    }
+    
+    .HCbtn2 {
+        margin-top: 0px;
+        width: 70px;
+        height: 22px;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #FFFFFF;
+        padding-top: 4px;
+    }
+    
+    .HCline {
+        position: relative;
+        left: 0px;
+        top: 148px;
+        width: 132px;
+        height: 2px;
+        z-index: 1.6;
+    }
+    
+    .HCmid {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .HCmid p:nth-child(1) {
+        margin-top: 3px;
+        position: unset;
+        font-family: 'Gilroy-Bold';
+        font-size: 12px;
+        line-height: 17px;
+        color: #FFFFFF;
+    
+    }
+
+    .HCprice{
+        position: absolute;
+        display: flex;
+        top: 200px;
+        right: 74px;
+    }
+    
+    .HCprice p:nth-child(1) {
+        position: unset;
+        font-size: 15px;
+        line-height: 15px;
+        color: #FFC700;
+        margin-right: 2px;
+        margin-top: 5.5px;
+    
+    }
+    
+    .HCprice p:nth-child(2) {
+        position: unset;
+        width: 10px;
+        height: 10px;
+        color: #FFC700;
+    }
+    
+    .HCbottom {
+        display: flex;
+    }
+    
+    .HCleft {
+        display: flex;
+    }
+    
+    .HCleft img {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: 15px;
+        top: 175px;
+    }
+    
+    .HCleft p {
+        position: absolute;
+        width: 151px;
+        height: 26px;
+        left: 37px;
+        top: 174px;
+        font-size: 8px;
+        line-height: 10px;
+        /* or 130% */
+        color: #A3B1E4;
+    }
+
+    .HCright{
+        position: absolute;
+        left: 47px;
+        top: 229px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    
+    .HCright p:nth-child(1) {
+       position: unset;
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: right;
+        color: #4D69FD;
+        margin-right: 15px;
+    
+    }
+    
+    .HCright p:nth-child(2) {
+        position: unset;
+        font-family: 'Gilroy-bold', sans-serif;
+        font-size: 14px;
+        line-height: 12px;
+        text-align: right;
+        color: #A3B1E4;
+    }
+
+}

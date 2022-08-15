@@ -1,0 +1,137 @@
+import React, {useState} from 'react'
+import logo from './suga.png'
+import profile from './profile.png'
+import hamburgur from './Group 146.svg'
+import "./navbar.css"
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
+import { MdOutlineKeyboardArrowLeft } from 'react-icons/md'
+import { VscChromeClose } from 'react-icons/vsc';
+import Dropdown from './Dropdown'
+import {Link, NavLink} from "react-router-dom"
+
+const Navbar = () => {
+
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
+
+
+    const [Open, setOpen] = useState(false);
+    const toggle = () => {setOpen(!Open)}
+
+    const handleLogout = ()=>{
+        localStorage.removeItem('token');
+      }
+
+
+  return (
+    <>
+    <div className="Ncontainer">
+        <div className="Nfirst">
+        <div className="sugaLogo">
+                    <Link to="/" ><img src={logo} alt="" style={{width:"74px"}} /></Link>
+                    <p>
+                        <span>Su</span>
+                        <span style={{ color: "#4D69FD" }}>Ga</span>
+                    </p>
+                </div>
+        </div>
+        <div className="Nmid">
+        <p><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' /></p>
+            <p className='Nmatches'><Link to="/">Matches</Link></p>
+            <p className='Nexchange'><Link to="/commingsoon">Exchange</Link></p>
+            <p><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' /></p>
+        </div>
+
+        <div className="Nhamburgur"  onClick={handleClick}>
+        {!click ? (<img src={hamburgur} alt="" />) : <VscChromeClose color='white' size="2rem"/>}
+            
+        </div>
+        <div className="NhamDrop">
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Matches
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/commingsoon"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Exchances
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/wallet"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Wallet
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/commingsoon"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Settings
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/commingsoon"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Help Center
+              </NavLink>
+            </li>
+            {localStorage.getItem('token')?(<li className="nav-item">
+              <NavLink
+                exact
+                to="/login"
+                activeClassName="active"
+                className="nav-links"
+                onClick={{handleClick , handleLogout}}
+              >
+                Logout
+              </NavLink>
+            </li>) : ""}
+            
+          </ul>
+        </div>
+
+        <div className="Nlast">
+            {!localStorage.getItem("token")? (<Link to="/login" className='Nlink' ><div className='Nbtn' style={{cursor:"pointer"}}>Login</div></Link> ) : (<>
+            <div className="Nbox"></div>
+            <div className="Nimg" style={{cursor:"pointer"}}>
+                <img onClick={toggle} src={profile} alt=""/>
+            </div>
+            {Open? <div className="Ndrop"><Dropdown/></div>: ''} 
+            </>) }
+             
+        </div>
+    </div>
+    </>
+  )
+}
+
+export default Navbar

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Mcontainer {
+    background: #0D0916;
+    height: 2300px;
+    display: flow-root;
+}
+
+.Mbg1 {
+    background-image: url("./logos/COD1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    /* width: -moz-available;          WebKit-based browsers will ignore this. */
+    /* width: -webkit-fill-available;  Mozilla-based browsers will ignore this. */
+    /* width: fill-available; */
+    top: 0px;
+    z-index: 1;
+    height: 1024px;
+}
+
+.Mbackground-box1 {
+    position: absolute;
+    top: 0px;
+    height: 257px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(13, 9, 22, 0) 0%, #0D0916 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: 2;
+
+}
+
+.Mbackground-box2 {
+    position: absolute;
+    top: 767px;
+    height: 257px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(13, 9, 22, 0) 0%, #0D0916 100%);
+    z-index: 2;
+
+}
+
+.Mtop {
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    margin-top: 180px;
+}
+
+.Mleft {
+    z-index: 3;
+    margin-left: 60px;
+}
+
+.Mleft input {
+    width: 538px;
+    height: 60px;
+    font-family: 'Gilroy-Regular', sans-serif;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+    color: #A3B1E4;
+    background: linear-gradient(73.84deg, rgba(27, 33, 70, 0.4) 11.5%, rgba(48, 58, 117, 0.4) 51.53%);
+    backdrop-filter: blur(20px);
+    padding-left: 15px;
+    outline-style: none;
+}
+
+.Mleft input::placeholder {
+    font-family: 'Gilroy-Regular', sans-serif, FontAwesome;
+    padding-top: 27px;
+    color: #A3B1E4;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.Mright {
+    display: flex;
+    z-index: 5;
+    margin-right: 60px;
+
+}
+
+.Mright p {
+    margin-top: 27px;
+    margin-right: 11px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #A3B1E4;
+
+}
+
+.MheadContainer{
+    height: 60px;
+    background: linear-gradient(88.35deg, rgba(24, 32, 78, 0.2) 25.21%, rgba(34, 42, 88, 0.2) 67.59%);
+  backdrop-filter: blur(10px);  
+    width: 171px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.Mheader{
+    font-family: 'Gilroy-Regular', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  padding-top: 22px;
+  padding-left: 16px;
+  padding-bottom: 13px;
+  color: #FFFFFF;
+}
+
+.MlistContainer{
+    background: #101638;
+    width: 171px;
+    height: 113px;
+}
+
+.MlistContainer ul{
+    padding-top: 5px;
+    font-family: 'Gilroy-Regular', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+color: #FFFFFF;
+list-style: none;
+}
+
+.MlistContainer ul li{
+    padding: 5px 0px 5px 16px;
+}
+
+.MlistContainer ul li:hover{
+    background-color: #03071f;
+}
+
+.Marrow{
+    color: #4D69FD;
+    position: absolute;
+    top: 26px;
+    right: 10px;
+}
+
+.Mmarket{
+    display: grid;
+    z-index: 3;
+    margin: 33px 60px 0px 60px;
+    
+}
+
+.Ccontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 20px;
+    z-index: 4;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-top: 52px;
+    gap: 18px;
+}
+
+.pagination .li-page-num {
+    width: 32px;
+    height: 31px;
+    left: 454px;
+    top: 1912px;
+    border: 2px solid #4D69FD;
+}
+
+.pagination .li-page-num:active{
+    background-color: #4D69FD;
+}
+
+.pagination .a-page-num {
+    cursor: pointer;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 13px 7px 11px;
+}
+
+.pagination .li-page-next {
+    width: 95px;
+    height: 31px;
+    background: #4D69FD;
+    padding-top: 3px;
+}
+
+.pagination .a-page-next {
+    cursor: pointer;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 8px 29px 8px 29px;
+
+}

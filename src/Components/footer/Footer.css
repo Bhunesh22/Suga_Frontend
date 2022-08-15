@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Fcontainer {
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    /* Note: backdrop-filter has minimal browser support */
+}
+
+.Ftop {
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+}
+
+.FsugaLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 81px;
+    cursor: pointer;
+}
+
+.FsugaLogo p {
+    font-family: 'Goldman', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.FlogoName {
+    display: flex;
+    flex-direction: row;
+}
+
+.FsocialLogo {
+    position: absolute;
+    right: 60px;
+    padding-top: 29px;
+}
+
+.FsocialLogo ul {
+    display: flex;
+    list-style: none;
+}
+
+.FsocialLogo ul li {
+    margin-left: 62px;
+}
+
+.FsocialLogo ul li a{
+    text-decoration: none;
+    color: inherit; 
+}
+
+.Fmid {
+    display: flex;
+    padding-top: 36px;
+}
+
+.Fleft {
+    margin-left: 60px;
+}
+
+.Ffirst,.Fsecond {
+    outline-style: none;
+    border: none !important;
+    background: rgba(91, 101, 153, 0.5);
+    backdrop-filter: blur(20px);
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 14px;
+    color: #C9C9C9;
+}
+
+.Fleft input::placeholder {
+    color: #C9C9C9;
+}
+
+.Fleft textarea{
+    outline-style: none;
+    border: none;
+    background: rgba(91, 101, 153, 0.5);
+    backdrop-filter: blur(20px);
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 14px;
+    resize: none;   
+    padding-top: 8px;
+    color: #C9C9C9;
+}
+
+.Fleft textarea::placeholder{
+    color: #C9C9C9;
+}
+
+.Ffirst {
+    width: 262px;
+    height: 47px;
+    margin-right: 13px;
+    border: none;
+}
+
+.Fsecond {
+    width: 262px;
+    height: 47px;
+    border: none;
+}
+
+.Fthird {
+    margin-top: 19px;
+    width: 537px;
+    height: 174px;
+    text-align: start;
+    border: none;
+}
+
+.Fbtn {
+    margin-top: 19px;
+    border: none;
+    width: 104px;
+    height: 36px;
+    background: #4D69FD;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.Fright {
+    display: flex;
+    position: absolute;
+    gap: 120px;
+    right: 60px;
+}
+
+.Fcol{
+    padding-top: 5px;
+}
+
+.Fcol p {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4D69FD;
+    text-align: right;
+
+}
+
+.Fcol ul {
+    list-style: none;
+}
+
+.Fcol ul li {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #FFFFFF;
+    padding-top: 19px;
+    cursor: pointer;
+
+}
+
+.Fbottom {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding-left: 60px;
+    padding-top: 19px;
+}
+
+
+@media screen and (max-width: 1350px) {
+    .Ffirst {
+        width: 200px;
+        height: 47px;
+        margin-right: 13px;
+        border: none;
+    }
+
+    .Fright {
+        display: flex;
+        position: absolute;
+        gap: 50px;
+        right: 60px;
+    }
+    
+    .Fsecond {
+        width: 200px;
+        height: 47px;
+        border: none;
+    }
+    
+    .Fthird {
+        margin-top: 19px;
+        width: 413px;
+        height: 174px;
+        text-align: start;
+        border: none;
+    }
+    
+    .Fbtn {
+        width: 90px;
+        height: 36px;
+       
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .Ffirst {
+        width: 250px;
+        height: 47px;
+        margin-right: 13px;
+        border: none;
+    }
+    
+    .Fsecond {
+        width: 250px;
+        height: 47px;
+        border: none;
+    }
+    
+    .Fthird {
+        margin-top: 19px;
+        width: 513px;
+        height: 174px;
+        text-align: start;
+        border: none;
+    }
+    
+    .Fbtn {
+        width: 100px;
+        height: 36px;
+       
+        font-size: 15px;
+    }
+    .Fright {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .Fcontainer{
+        height: 575px;
+    }
+
+    .Fleft {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .Ffirst,.Fsecond {
+        font-size: 16px;
+    }
+    
+    .Fleft input::placeholder {
+        color: #C9C9C9;
+    }
+    
+    .Fleft textarea{
+       margin-top: -5px;
+    }
+    
+    .Fleft textarea::placeholder{
+        color: #C9C9C9;
+    }
+    
+    .Ffirst {
+        width: 250px;
+        height: 47px;
+        margin-right: 13px;
+        border: none;
+    }
+    
+    .Fsecond {
+        width: 250px;
+        height: 47px;
+        border: none;
+    }
+    
+    .Fthird {
+        margin-top: 19px;
+        width: 513px;
+        height: 174px;
+        text-align: start;
+        border: none;
+    }
+    
+    .Fbtn {
+        width: 100px;
+        height: 36px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .Fright {
+        display: none;
+    }
+
+    .FsocialLogo ul {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        width: 200px;
+        gap: 17px;
+    }
+    .FsocialLogo ul li {
+        margin-left: 20px;
+    }
+    .FsocialLogo {
+        right: 25px;
+        padding-top: 2px;
+    }
+
+    .FsugaLogo {
+        margin-left: 31px;
+    }
+
+    .Fmid{
+        justify-content: center;
+        margin-top: -12px;
+    }
+    .Fbottom{
+        display: flex;
+        justify-content: center;
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+
+    .Fleft form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .Ffirst {
+        width: 200px;
+        height: 47px;
+        margin-right: 13px;
+        border: none;
+    }
+    
+    .Fsecond {
+        width: 200px;
+        height: 47px;
+        border: none;
+    }
+    
+    .Fthird {
+        margin-top: 19px;
+        width: 413px;
+        height: 174px;
+        text-align: start;
+        border: none;
+    }
+
+}
+@media screen and (max-width: 440px) {
+    .Ffirst {
+        width: 170px;
+        height: 47px;
+        margin-right: 13px;
+        border: none;
+    }
+    
+    .Fsecond {
+        width: 170px;
+        height: 47px;
+        border: none;
+    }
+    
+    .Fthird {
+        margin-top: 19px;
+        width: 353px;
+        height: 174px;
+        text-align: start;
+        border: none;
+    }
+
+}
+@media screen and (max-width: 375px) {
+    .Ffirst {
+        width: 145px;
+        height: 47px;
+        margin-right: 13px;
+        border: none;
+    }
+    
+    .Fsecond {
+        width: 145px;
+        height: 47px;
+        border: none;
+    }
+    
+    .Fthird {
+        margin-top: 19px;
+        width: 303px;
+        height: 174px;
+        text-align: start;
+        border: none;
+    }
+
+}

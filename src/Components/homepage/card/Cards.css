@@ -1,0 +1,16 @@
+.Ccontainer{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    column-gap: 20px;
+    row-gap: 80px;
+
+}
+
+@media screen and (max-width: 700px) {
+    .Ccontainer{
+        column-gap: 6px;
+        row-gap: 25px;
+    
+    }
+}

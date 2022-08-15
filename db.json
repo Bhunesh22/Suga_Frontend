@@ -1,0 +1,382 @@
+{
+    "cardDetails":[
+        {
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "premium"
+        },
+        {
+            "name": "Plague Mask",
+            "image": "logos/Fortnite-Plague-PNG-HD 3.png",
+            "categorieName": "WazirX",
+            "categorieLogo": "logos/wazirX.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Flash Axe",
+            "image": "logos/imgbin_fortnite-battle-royale-tool-playerunknowns-battlegrounds-pickaxe-png 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "S",
+            "type1": "null"
+        },
+        {
+            "name": "YHB-10 Smoke Sniper",
+            "image": "logos/Fortnite-Weapons-PNG 3.png",
+            "categorieName": "OpenSea",
+            "categorieLogo": "logos/openSea.png",
+            "categorieName2": "NFT",
+            "type": "./logos/premium.png",
+            "type1": "premium"
+        },
+        {
+            "name": "KD52 Silver Assult Rifle",
+            "image": "logos/Fortnite-Weapons-PNG-Free-Download 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Amoung Us Firozi",
+            "image": "logos/Among-Us-Transparent-PNG 3.png",
+            "categorieName": "Steam",
+            "categorieLogo": "logos/steam.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Thassbuddhi Pistol",
+            "image": "logos/Fortnite-Weapons-Download-PNG-Image 3.png",
+            "categorieName": "SugaVerse",
+            "categorieLogo": "logos/sugaVerse.png",
+            "categorieName2": "S",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+       
+        {
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S2.png",
+            "categorieName": "WazirX",
+            "categorieLogo":"logos/wazirX.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+        {
+            "name": "Plague Mask",
+            "image": "logos/Fortnite-Plague-PNG-HD 3.png",
+            "categorieName": "WazirX",
+            "categorieLogo": "logos/wazirX.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Flash Axe",
+            "image": "logos/imgbin_fortnite-battle-royale-tool-playerunknowns-battlegrounds-pickaxe-png 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "S",
+            "type1": "null"
+        },
+        {
+            "name": "YHB-10 Smoke Sniper",
+            "image": "logos/Fortnite-Weapons-PNG 3.png",
+            "categorieName": "OpenSea",
+            "categorieLogo": "logos/openSea.png",
+            "categorieName2": "NFT",
+            "type": "./logos/premium.png",
+            "type1": "premium"
+        },
+        {
+            "name":"Batman Mask",
+            "image": "logos/Batman-Mask-Dark-Knight-PNG 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S1.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "S",
+            "type": "./logos/premium.png",
+            "type1": "premium"
+        },
+        {
+            "name": "KD52 Silver Assult Rifle",
+            "image": "logos/Fortnite-Weapons-PNG-Free-Download 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Amoung Us Firozi",
+            "image": "logos/Among-Us-Transparent-PNG 3.png",
+            "categorieName": "Steam",
+            "categorieLogo": "logos/steam.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Thassbuddhi Pistol",
+            "image": "logos/Fortnite-Weapons-Download-PNG-Image 3.png",
+            "categorieName": "SugaVerse",
+            "categorieLogo": "logos/sugaVerse.png",
+            "categorieName2": "S",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+        {
+            "name": "Batman Mask",
+            "image": "logos/Batman-Mask-Dark-Knight-PNG 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S1.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "S",
+            "type": "./logos/premium.png",
+            "type1": "premium"
+        },
+        {
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S2.png",
+            "categorieName": "WazirX",
+            "categorieLogo": "logos/wazirX.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Amoung Us Firozi",
+            "image": "logos/Among-Us-Transparent-PNG 3.png",
+            "categorieName": "Steam",
+            "categorieLogo": "logos/steam.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Thassbuddhi Pistol",
+            "image": "logos/Fortnite-Weapons-Download-PNG-Image 3.png",
+            "categorieName": "SugaVerse",
+            "categorieLogo": "logos/sugaVerse.png",
+            "categorieName2": "S",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },{
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+        {
+            "name": "Plague Mask",
+            "image": "logos/Fortnite-Plague-PNG-HD 3.png",
+            "categorieName": "WazirX",
+            "categorieLogo": "logos/wazirX.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Flash Axe",
+            "image": "logos/imgbin_fortnite-battle-royale-tool-playerunknowns-battlegrounds-pickaxe-png 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "S",
+            "type1": "null"
+        },{
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S2.png",
+            "categorieName": "WazirX",
+            "categorieLogo":"logos/wazirX.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+        {
+            "name": "Plague Mask",
+            "image": "logos/Fortnite-Plague-PNG-HD 3.png",
+            "categorieName": "WazirX",
+            "categorieLogo": "logos/wazirX.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Flash Axe",
+            "image": "logos/imgbin_fortnite-battle-royale-tool-playerunknowns-battlegrounds-pickaxe-png 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "S",
+            "type1": "null"
+        },{
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S2.png",
+            "categorieName": "WazirX",
+            "categorieLogo":"logos/wazirX.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+        {
+            "name": "Plague Mask",
+            "image": "logos/Fortnite-Plague-PNG-HD 3.png",
+            "categorieName": "WazirX",
+            "categorieLogo": "logos/wazirX.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Flash Axe",
+            "image": "logos/imgbin_fortnite-battle-royale-tool-playerunknowns-battlegrounds-pickaxe-png 3.png",
+            "categorieName": "FTX",
+            "categorieLogo": "logos/ftx.png",
+            "categorieName2": "S",
+            "type1": "null"
+        },
+         {
+            "name": "YHB-10 Smoke Sniper",
+            "image": "logos/Fortnite-Weapons-PNG 3.png",
+            "categorieName": "OpenSea",
+            "categorieLogo": "logos/openSea.png",
+            "categorieName2": "NFT",
+            "type": "./logos/premium.png",
+            "type1": "premium"
+        },
+        {
+            "name": "KD52 Silver Assult Rifle",
+            "image": "logos/Fortnite-Weapons-PNG-Free-Download 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Amoung Us Firozi",
+            "image": "logos/Among-Us-Transparent-PNG 3.png",
+            "categorieName": "Steam",
+            "categorieLogo": "logos/steam.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Thassbuddhi Pistol",
+            "image": "logos/Fortnite-Weapons-Download-PNG-Image 3.png",
+            "categorieName": "SugaVerse",
+            "categorieLogo": "logos/sugaVerse.png",
+            "categorieName2": "S",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+       
+        {
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S2.png",
+            "categorieName": "WazirX",
+            "categorieLogo":"logos/wazirX.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        }, {
+            "name": "YHB-10 Smoke Sniper",
+            "image": "logos/Fortnite-Weapons-PNG 3.png",
+            "categorieName": "OpenSea",
+            "categorieLogo": "logos/openSea.png",
+            "categorieName2": "NFT",
+            "type": "./logos/premium.png",
+            "type1": "premium"
+        },
+        {
+            "name": "KD52 Silver Assult Rifle",
+            "image": "logos/Fortnite-Weapons-PNG-Free-Download 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "Skinm",
+            "type1": "null"
+        },
+        {
+            "name": "Amoung Us Firozi",
+            "image": "logos/Among-Us-Transparent-PNG 3.png",
+            "categorieName": "Steam",
+            "categorieLogo": "logos/steam.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Thassbuddhi Pistol",
+            "image": "logos/Fortnite-Weapons-Download-PNG-Image 3.png",
+            "categorieName": "SugaVerse",
+            "categorieLogo": "logos/sugaVerse.png",
+            "categorieName2": "S",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        },
+       
+        {
+            "name": "M4 A1 - S",
+            "image": "logos/pngegg-M4S2.png",
+            "categorieName": "WazirX",
+            "categorieLogo":"logos/wazirX.png",
+            "categorieName2": "NFT",
+            "type1": "null"
+        },
+        {
+            "name": "Neon Pro Skin",
+            "image": "logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png",
+            "categorieName": "Binance",
+            "categorieLogo": "logos/binance.png",
+            "categorieName2": "NFT",
+            "type": "logos/trending.png",
+            "type1": "trending"
+        }
+    ]
+      
+}

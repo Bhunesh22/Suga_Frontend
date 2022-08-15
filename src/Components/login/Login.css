@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.loginPage {
+    background: #151517;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.LsugaText {
+    /*   */
+    position: absolute;
+    width: 115px;
+    height: 30px;
+    left: 188px;
+    top: 115px;
+    background: transparent;
+}
+
+.LsugaLogoBW {
+    position: absolute;
+    width: 88px;
+    height: 102px;
+    left: 100px;
+    top: 50px;
+    cursor: pointer;
+    border-radius: 18px;
+    background: transparent;
+}
+
+.Lform {
+    display: flex;
+    justify-content: center;
+    margin-top: 210px;
+}
+
+.Lform input {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.sugaUsername {
+    margin-bottom: 18px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: transparent;
+}
+
+.setUsername {
+    margin-bottom: 31px;
+    box-sizing: border-box;
+    width: 497px;
+    height: 49px;
+    background: #292931;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+
+}
+
+.password {
+
+
+    margin-bottom: 18px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: transparent;
+}
+
+.setPassword {
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    width: 497px;
+    height: 49px;
+    background: #292931;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    -webkit-text-security: disc;
+    -moz-text-security: disc;
+}
+
+.frgtPassword {
+
+    margin-bottom: 40px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    color: #FDFDFF;
+    background: transparent;
+}
+
+.signIn {
+    margin-bottom: 43px;
+    box-sizing: border-box;
+    margin-left: 115px;
+    width: 254px;
+    height: 54px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 4px #FFFFFF;
+    border-radius: 13px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: transparent;
+}
+
+.Lbottom {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.account {
+
+
+    margin-bottom: 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    background: transparent;
+}
+
+.registration {
+
+
+    margin-bottom: 20px;
+    font-family: 'Alata', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: #FFFFFF;
+    background: transparent;
+}
+
+/* .blankPassword{
+ 
+width: 199px;
+height: 18px;
+left: 478px;
+top: 555px;
+
+font-family: 'Gilroy', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+align-items: center;
+
+color: #FF2727;
+background: transparent;
+ } */
+
+@media screen and (max-width: 550px) {
+
+    .LsugaText {
+        position: absolute;
+        width: 75px;
+        height: 20px;
+        left: 90px;
+        top: 85px;
+        background: transparent;
+    }
+
+    .LsugaLogoBW {
+        position: absolute;
+        width: 65px;
+        left: 30px;
+        top: 20px;
+        cursor: pointer;
+        border-radius: 18px;
+        background: transparent;
+    }
+
+    .Lform {
+        margin-top: 210px;
+    }
+
+    .Lform input {
+        font-size: 16px;
+    }
+
+    .sugaUsername {
+        margin-bottom: 18px;
+        font-size: 16px;
+        line-height: 29px;
+    }
+
+    .setUsername {
+        margin-bottom: 31px;
+        width: 300px;
+        height: 35px;
+        border-radius: 5px;
+
+    }
+
+    .password {
+        margin-bottom: 18px;
+        font-size: 16px;
+        line-height: 29px;
+        background: transparent;
+    }
+
+    .setPassword {
+        margin-bottom: 18px;
+        width: 300px;
+        height: 35px;
+    }
+
+    .frgtPassword {
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    .signIn {
+        margin-bottom: 43px;
+        margin-left: 75px;
+        width: 150px;
+        height: 35px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .Lbottom {
+        gap: 27px;
+    }
+
+    .account {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .registration {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+}

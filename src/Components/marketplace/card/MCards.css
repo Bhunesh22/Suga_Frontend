@@ -1,0 +1,73 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.Ccontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 20px;
+    z-index: 4;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-top: 52px;
+    gap: 18px;
+}
+
+.pagination .li-page-num {
+    width: 32px;
+    height: 31px;
+    left: 454px;
+    top: 1912px;
+    border: 2px solid #4D69FD;
+}
+
+.pagination .li-page-num:active{
+    background-color: #4D69FD;
+}
+
+.pagination .a-page-num {
+    cursor: pointer;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 13px 7px 11px;
+}
+
+.pagination .li-page-next {
+    width: 95px;
+    height: 31px;
+    background: #4D69FD;
+    padding-top: 3px;
+}
+
+.pagination .a-page-next {
+    cursor: pointer;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 8px 29px 8px 29px;
+
+}
+

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carousal{
+     /* display: flex; */
+     width: auto;
+}
+
+.fwArrow{
+    position: absolute;
+    top: 110px;
+    right: -15px;
+    opacity: 0.7;
+}
+
+.bkArrow{
+    position: absolute;
+    top: 110px;
+    left: -15px;
+    opacity: 0.7;
+    z-index: 20;
+}
