@@ -61,7 +61,7 @@ function Nftdetail() {
                             esse cillum dolore eu fugiat nulla pariatur.
                             <br />
                             <br />
-                            <h2>The Italy Collection</h2>
+                            <h2 className='subTitle1'>The Italy Collection</h2>
                         </p>
                         <div className='opensea1'>
                             {/* <div className='openSea'><img src='/images/opensea logo.png' />Open Sea</div><br /> */}
