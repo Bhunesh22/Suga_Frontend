@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+// import nacl from "tweetnacl";
+// import * as https from 'https';
+import { Link } from 'react-router-dom';
 
 import "./Marketplace.css"
 import MCard from './card/MCard'
@@ -20,8 +23,6 @@ const Marketplace = () => {
         setIsOpen(false);
     };
 
-
-
     const handleFilter = async (value) =>{
         if(value === "All Items"){
             return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));
@@ -33,7 +34,6 @@ const Marketplace = () => {
     }
     }
 
-    
 
     const [searchTitle, setSearchTitle] = useState("");
     const [data, setData] = useState([]);
@@ -53,7 +53,23 @@ const Marketplace = () => {
     }, []);
 
     const loadUserData = async () => {
-        return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));}
+        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=CS%3AGO&Limit=24`, {
+         method: 'GET',
+         headers: {
+          'Content-Type': 'application/json',
+          'Authorization': "f6ac518d1f1bd0aeed03ae5ed85c91489c94fa6cdc80c6d6af0ec92d62ac3086",
+         }
+       });
+       const Json = await responce.json()
+    //    console.log(Json)
+       setData(Json)
+           
+        }
+
+        // console.log(data.objects)
+
+    // const loadUserData = async () => {
+    //     return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));}
 
 
 
@@ -64,13 +80,13 @@ const Marketplace = () => {
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(data.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(data.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, data]);
+        setCurrentItems(data.toString().slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(data.toString().length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data.objects]);
 
 
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % data.length;
+        const newOffset = (event.selected * itemsPerPage) % data.objects.length;
         setItemOffset(newOffset);
     };
 
@@ -115,13 +131,12 @@ const Marketplace = () => {
                     </div>
                 </div>
 
-
                 {/* {searchTitle === ""? ( */}
                 <div className="Mmarket">
                     <div className="Ccontainer">
-                        {currentItems.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>NO Data Found</div>) : currentItems.map((list, index) => {
+                        {data.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>NO Data Found</div>) : data.objects.map((list, index) => {
                             return (
-                                <MCard list={list} index={index} />
+                                <Link to={`/nftdetail/${list.itemId}`}><MCard list={list} index={index} /></Link>
                             )
                         })}
                     </div>

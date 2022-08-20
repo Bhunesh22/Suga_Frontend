@@ -35,7 +35,7 @@ function App() {
           <Route exact path='/registrationfrominvite' element={< RegistrationFromInvite/>}></Route>
           <Route exact path='/login' element={<Login/>}></Route>
           <Route exact path='/wallet' element={<PhantomWallet/>}></Route>
-          <Route exact path='/nftdetail' element={<NftDetail/>}></Route>
+          <Route exact path='/nftdetail/:index' element={<NftDetail/>}></Route>
           <Route exact path='/marketplace' element={<Marketplace/>}></Route>
           <Route exact path='/card' element={<Card/>}></Route>
         </Routes>
