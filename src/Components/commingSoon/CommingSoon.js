@@ -8,15 +8,16 @@ import Navbar from '../navbar/Navbar';
 function ComingSoon() {
   return (
     <div className='comingSoon'>
-      <Navbar/>
+      <Navbar />
       <div>
 
-        <div className='comingSoonTxt' ><h1 className='blue2' style={{fontSize:"60px"}}>Coming</h1><h1 className='white2' style={{fontSize:"60px"}}>Soon</h1></div>
+        <div className='comingSoonTxt' ><h1 className='blue2' style={{ fontSize: "60px" }}>Coming</h1><h1 className='white2' style={{ fontSize: "60px" }}>Soon</h1></div>
 
         <div className='message2'>Don't think twice to reach out and allow us to ring your doors when the launch happens</div>
 
         <div className='enterEmail3'><input className='email3' type='text' placeholder='Enter Your Email'></input>
-          <button className='subscribe3'>Subscribe</button></div>
+          <button className='subscribe3'>Subscribe</button>
+        </div>
 
         <div className='message4'>& Follow us for regular updates</div>
 
