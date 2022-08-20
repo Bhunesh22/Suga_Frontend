@@ -290,7 +290,7 @@ html {
 
     .flexDetails1{
         transform: scale(0.25);
-        margin-top: -50px;
+        margin-top: -70px;
     }
 
     .nft{
@@ -303,5 +303,9 @@ html {
 
     .itemDetail2{
         margin-top: -15px;
+    }
+
+    .flexItem2{
+        transform: scale(0.9);
     }
 }
