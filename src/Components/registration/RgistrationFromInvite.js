@@ -12,7 +12,7 @@ let navigate = useNavigate();
     const handleSubmit = async (e)=>{
         e.preventDefault();
         const {name, email, password} = credentials;
-        const responce = await fetch(`http://localhost:5000/api/auth/createuser`, {
+        const responce = await fetch(`https://suga-server.herokuapp.com/api/auth/createuser`, {
             method: 'POST',
             headers: {
              'Content-Type': 'application/json',
