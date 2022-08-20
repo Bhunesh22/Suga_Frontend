@@ -39,7 +39,7 @@ const Homepage = () => {
                     <p>
                         <span style={{ fontFamily: "'Goldman', cursive", fontSize: "33px" }}>Su</span>
                         <span style={{ color: "#4D69FD", fontFamily: "'Goldman', cursive", fontSize: "33px" }}>Ga </span>
-                     Primium Collections</p>
+                     Premium Collections</p>
                     {/* <p>View All</p> */}
                     {/* <p><MdOutlineKeyboardArrowRight size='1.4rem' style={{ transform: 'translate(30px, 0px)' }} /><MdOutlineKeyboardArrowRight size='1.4rem' style={{ transform: 'translate(15px, 0px)' }} /><MdOutlineKeyboardArrowRight size='1.4rem' /></p> */}
                 </div>

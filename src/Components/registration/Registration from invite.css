@@ -1,38 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .RegistrationFromInvite {
-    position: relative;
     background: #151517;
     overflow: hidden;
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
-.sugaText {
+.LsugaText1 {
     position: absolute;
-    width: 115px;
-    height: 30px;
-    left: 188px;
-    top: 115px;
+    width: 75px;
+    height: 20px;
+    margin-left: 90px;
+    margin-top: 75px;
+    /* left: 90px;
+    top: 85px; */
     background: transparent;
-
 }
 
-.sugaLogoBW {
+.LsugaLogoBW1 {
     position: absolute;
-    width: 88px;
-    height: 102px;
-    left: 100px;
-    top: 50px;
+    width: 65px;
+    left: 30px;
+    top: 20px;
     cursor: pointer;
     border-radius: 18px;
     background: transparent;
 }
 
+.registrationfrominviteTop1{
+    display: flex;
+}
+
 .signInBtn {
     box-sizing: border-box;
-    position: absolute;
+   
     width: 115px;
     height: 48px;
-    right: 150px;
-    top: 100px;
+    margin-left: 1280px;
+    margin-top: 70px;
     text-decoration: none;
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
@@ -53,7 +62,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 170px;
+    margin-top: 70px;
+    /* padding-top: 170px; */
 }
 
 .Rform input{
@@ -252,4 +262,46 @@
 
     color: #FFFFFF;
     background: transparent;
+}
+
+@media screen and (max-width: 550px) {
+    .Rform{
+        transform: scale(0.5);
+        margin-top: -30px;
+        /* padding-top: 0px; */
+    }
+
+    .LsugaText1 {
+        position: absolute;
+        width: 75px;
+        height: 20px;
+        margin-left: 90px;
+    margin-top: 75px;
+        background: transparent;
+    }
+
+    .LsugaLogoBW1 {
+        position: absolute;
+        width: 65px;
+        left: 30px;
+        top: 20px;
+        cursor: pointer;
+        border-radius: 18px;
+        background: transparent;
+    }
+
+    .signInBtn{
+        margin-left:270px;
+        margin-top: 60px;
+        width: 60px;
+    height: 28px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    }
+
+    .sugaLogoAndText1{
+        transform: scale(0.75);
+    }
+
 }

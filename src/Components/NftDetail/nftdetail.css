@@ -259,3 +259,55 @@ html {
     align-items: center;
     margin-right: 80px;
 }
+
+.subTitle1{
+    color:#A3B1E4;
+}
+
+@media screen and (max-width: 550px) {
+    .itemBox2 {
+      transform: scale(0.75);
+      margin-top: 0px;
+      margin-left: 0px;
+    
+    }
+
+    /* .itemBoxBottomArrow1{
+        margin-top: -7px;
+        margin-left: 140px;
+     } */
+
+     .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* gap: 193px; */
+        margin-top: 30px;
+    
+    }
+
+    .blueLine2{
+        display: none;
+    }
+
+    .flexDetails1{
+        transform: scale(0.25);
+        margin-top: -70px;
+    }
+
+    .nft{
+        margin-top: -5px;
+    }
+
+    .subTitle1{
+        margin-top: -15px;
+    }
+
+    .itemDetail2{
+        margin-top: -15px;
+    }
+
+    .flexItem2{
+        transform: scale(0.9);
+    }
+}

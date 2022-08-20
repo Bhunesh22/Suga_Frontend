@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Registration from invite.css'
 import { NavLink, Link } from 'react-router-dom'
@@ -30,63 +30,67 @@ let navigate = useNavigate();
             else{
                 // props.showAlert('Invalid Credentials', 'danger')
             }
-          
-    }
-    const onChange = (e)=>{
-        setCredentials({...credentials, [e.target.name]: e.target.value})
-    }
+
+  }
+  const onChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value })
+  }
 
   return (
     <div className='RegistrationFromInvite'>
-      <Link  to="/"><img className='sugaLogoBW' src='/images/suga logo bw.svg'/></Link>
-      <div><img className='sugaText' src='/images/SuGa text.png' /></div>
-      <Link to='/login'> <button className='signInBtn'>Sign In</button> </Link>
+      <div className='registrationfrominviteTop1'>
+        <div className='sugaLogoAndText1'>
+          <div><Link to="/"><img className='LsugaLogoBW1' src='/images/suga logo bw.svg' /></Link></div>
+          <div><img className='LsugaText1' src='/images/SuGa text.png' /></div>
+        </div>
+        <div><Link to='/login'> <button className='signInBtn'>Sign In</button> </Link></div>
+      </div>
       <div className="Rform">
-      <form  onSubmit={handleSubmit}>
-      <span className='Rusername'>SuGa Username</span>
-      <input 
-      type="text" 
-      id="setUsername" 
-      className='RsetUsername'
-      required
-      name='name' 
-      onChange={onChange}
-      
-      /><br/>
-      <span className='Remail'>Enter Email</span>
-      <input 
-      type="email" 
-      id="setEmail" 
-      className='RsetEmail'
-      required
-      name='email' 
-      onChange={onChange}
-      
-      /><br/>
-      <span className='Rpassword'>Set Password</span>
-      <input 
-      type="password" 
-      id="setPassword" 
-      className='RsetPassword'
-      required
-      name='password' 
-      onChange={onChange} 
-      minLength={5}
-      
-      /><br/>
-      <span className='RcnfrmPassword'>Confirm Password</span>
-      <input 
-      type="password" 
-      id="confermPassword" 
-      className='RconfermPassword'
-      required
-      name='cpassword' 
-      onChange={onChange} 
-      minLength={5}
-      
-      /><br/>
-      <button type='submit' className='RproceedBtn'>Proceed</button>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <span className='Rusername'>SuGa Username</span>
+          <input
+            type="text"
+            id="setUsername"
+            className='RsetUsername'
+            required
+            name='name'
+            onChange={onChange}
+
+          /><br />
+          <span className='Remail'>Enter Email</span>
+          <input
+            type="email"
+            id="setEmail"
+            className='RsetEmail'
+            required
+            name='email'
+            onChange={onChange}
+
+          /><br />
+          <span className='Rpassword'>Set Password</span>
+          <input
+            type="password"
+            id="setPassword"
+            className='RsetPassword'
+            required
+            name='password'
+            onChange={onChange}
+            minLength={5}
+
+          /><br />
+          <span className='RcnfrmPassword'>Confirm Password</span>
+          <input
+            type="password"
+            id="confermPassword"
+            className='RconfermPassword'
+            required
+            name='cpassword'
+            onChange={onChange}
+            minLength={5}
+
+          /><br />
+          <button type='submit' className='RproceedBtn'>Proceed</button>
+        </form>
       </div>
     </div>
   )

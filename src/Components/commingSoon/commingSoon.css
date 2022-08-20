@@ -1,58 +1,59 @@
-*,html {
+*,
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
-.comingSoon{
+.comingSoon {
     background: #0D0916;
-   min-height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
-.comingSoonTxt{
-font-family: 'Goldman', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 77px;
-text-align: center;
+.comingSoonTxt {
+    font-family: 'Goldman', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
 }
 
-.comingSoonTxt{
+.comingSoonTxt {
     display: flex;
     justify-items: center;
     justify-content: center;
     margin-top: 70px;
 }
 
-.blue2{
-color: #4D69FD;
+.blue2 {
+    color: #4D69FD;
 
-text-shadow: 0px 0px 50px rgba(248, 248, 248, 0.5);
+    text-shadow: 0px 0px 50px rgba(248, 248, 248, 0.5);
 }
 
-.white2{
-color: #FFFFFF;
+.white2 {
+    color: #FFFFFF;
 
-text-shadow: 0px 0px 50px rgba(248, 248, 248, 0.5);
+    text-shadow: 0px 0px 50px rgba(248, 248, 248, 0.5);
 }
 
-.message2{
-font-family: 'Gilroy', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.05em;
+.message2 {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
 
-color: #FFFFFF;
-margin-top: 0px;
+    color: #FFFFFF;
+    margin-top: 0px;
 }
 
-.enterEmail3{
+.enterEmail3 {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -61,63 +62,93 @@ margin-top: 0px;
 }
 
 
-.email3{
-width: 948px;
-height: 65px;
+.email3 {
+    width: 948px;
+    height: 65px;
 
-border: 1px solid #4D69FD;
-background: transparent;
+    border: 1px solid #4D69FD;
+    background: transparent;
 
-font-family: 'Gilroy', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 29px;
-/* identical to box height */
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
 
-text-align: left;
-letter-spacing: 0.1em;
+    text-align: left;
+    letter-spacing: 0.1em;
 
-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.subscribe3{
-width: 246px;
-height: 65px;
+.subscribe3 {
+    width: 246px;
+    height: 65px;
 
-font-family: 'Gilroy', sans-serif;
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 29px;
-text-align: center;
-letter-spacing: 0.1em;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.1em;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 
-background: #4D69FD;
-border: 1px solid #4D69FD;
-cursor: pointer;
+    background: #4D69FD;
+    border: 1px solid #4D69FD;
+    cursor: pointer;
 }
 
-.message4{
-font-family: 'Gilroy', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.05em;
+.message4 {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
 
-color: #FFFFFF;
-margin-top: 80px;
+    color: #FFFFFF;
+    margin-top: 80px;
 }
 
-.socialLogo1{
+.socialLogo1 {
     display: flex;
     align-items: center;
     justify-items: center;
     justify-content: center;
     gap: 62px;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 550px) {
+.comingSoonTxt{
+    transform: scale(.75);
+}
+
+.message2{
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.enterEmail3{
+    transform: scale(.70);
+    margin-top: 30px;
+}
+
+.message4{
+  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 50px;
+}
+
+.socialLogo1{
+    transform: scale(.75);
+}
+
 }
