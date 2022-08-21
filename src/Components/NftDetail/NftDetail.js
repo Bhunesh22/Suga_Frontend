@@ -13,15 +13,15 @@ function Nftdetail() {
     const [data, setData] = useState([]);
 
     let { index } = useParams();
-    console.log(index,"id")
-
-
+    let { name } = useParams();
+    // console.log(index,"id")
+    console.log(name);
     useEffect(() => {
         loadUserData();
     }, []);
 
     const loadUserData = async () => {
-        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=CS%3AGO&Limit=24`, {
+        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${name}&Limit=100`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,23 +30,23 @@ function Nftdetail() {
         });
         const Json = await responce.json()
         //    console.log(Json)
-        
-        let selectedObj = Json?.objects?.filter(function (el){
-            // console.log(el,"data//",index)
-            return  el.itemId === index
-        })[0]; 
-        // console.log(selectedObj.itemId,"dnifidfn");
+
+        let selectedObj = Json?.objects?.filter(function (el) {
+            // console.log(el.itemId,"data//",index)
+            return el.itemId === index
+        })[0];
+        // console.log(selectedObj,"dnifidfn");
         setData(selectedObj)
     }
 
-    console.log(data);
-    
+    // console.log(data, "title");
+
     // if(data)
 
     // console.log(data,"data//")
 
-    
-        
+
+
 
 
     // function getResult(filterBy, objList) {
@@ -94,7 +94,9 @@ function Nftdetail() {
                         </svg>
                         </div>
                         <div className='itemBoxFlex1'>
-                            <div><img className='skin2Logo' src={data.image} /></div>
+                            <div>
+                                <img className='skin2Logo' src={data.image} />
+                            </div>
                             <div className='blueLine3'></div>
                         </div>
                         <div className='itemBoxBottomArrow1'><svg width="59" height="47" viewBox="0 0 59 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +106,7 @@ function Nftdetail() {
                     </div>
                     <div className='blueLine2'></div>
                     <div className='flexItem2' >
-                        <div className='itemTitle'>{data.title}</div><br />
+                        <div className='itemTitle'>title</div><br />
                         <div className='itemDetail'>
                             <p className='itemDetail1'>
                                 <h2 className='itemDetail2'>Exterior: Field-Tested</h2><br />

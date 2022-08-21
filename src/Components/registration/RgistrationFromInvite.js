@@ -2,15 +2,23 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Registration from invite.css'
 import { NavLink, Link } from 'react-router-dom'
-
+import CircularProgress from "@mui/material/CircularProgress";
+import { message } from 'antd';
+import 'antd/dist/antd.css';
 
 
 function RegistrationFromInvite(props) {
 
+  const [loading, setLoading] = useState(false);
+
   const [credentials, setCredentials] = useState({name:"" ,email:"", password:""})
 let navigate = useNavigate();
+
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        setLoading({ loading: true });
+
+        try{
         const {name, email, password} = credentials;
         const responce = await fetch(`https://suga-server.herokuapp.com/api/auth/createuser`, {
             method: 'POST',
@@ -20,16 +28,17 @@ let navigate = useNavigate();
             body: JSON.stringify({name, email, password})
           });
           const json = await responce.json()
-          // console.log(json);
+
           if (json.success){
-              // save the auth token and redirect(after press login move to home page direct)
-                localStorage.setItem('token', json.authtoken);
-                navigate("/login");
-                // props.showAlert('Account Created Successfully', 'success')
-            }
-            else{
-                // props.showAlert('Invalid Credentials', 'danger')
-            }
+            localStorage.setItem('token', json.authtoken);
+            setLoading({ loading: false });
+            navigate("/login");
+        }
+        setLoading({ loading: false });
+        }catch(err){
+          setLoading({ loading: false });
+              message.warning("This email is alredy registered");
+          }
 
   }
   const onChange = (e) => {
@@ -89,7 +98,13 @@ let navigate = useNavigate();
             minLength={5}
 
           /><br />
-          <button type='submit' className='RproceedBtn'>Proceed</button>
+          <button type='submit' className='RproceedBtn'>
+          {loading ? (
+                  <CircularProgress color="inherit" size={20} />
+                ) : (
+                  "Proceed"
+                )}
+          </button>
         </form>
       </div>
     </div>

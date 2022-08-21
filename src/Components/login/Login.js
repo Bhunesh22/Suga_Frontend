@@ -2,16 +2,23 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import { NavLink, Link } from 'react-router-dom'
+import CircularProgress from "@mui/material/CircularProgress";
+import { message } from 'antd';
+import 'antd/dist/antd.css';
+import { customEvent } from '../utils/analyticsHelper';
 
 
 
 function Login(props) {
   const [credentials, setCredentials] = useState({email:"", password:""})
 
+  const [loading, setLoading] = useState(false);
+
   let navigate = useNavigate();
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        setLoading({ loading: true });
         const responce = await fetch(`https://suga-server.herokuapp.com/api/auth/login`, {
             method: 'POST',
             headers: {
@@ -21,14 +28,18 @@ function Login(props) {
           });
           const json = await responce.json()
           // console.log(json);
+          setLoading({ loading: false });
           if (json.success){
                 localStorage.setItem('token', json.authtoken);
                 // props.showAlert('Logged in Successfully', 'success')
+                setLoading({ loading: false });
                 navigate("/");
             }
             else{
-                // props.showAlert('Invalid Details', 'danger')
+                setLoading({ loading: false });
+                message.warning("Invalid Credentials");
             }
+            
     }
 
 
@@ -68,7 +79,13 @@ function Login(props) {
       onChange={onChange}
       /><br/>
       <NavLink to="/forgotpassword" className={({isActive}) => isActive ? "": "frgtPassword" }>Forgot Password?</NavLink>
-      <button type='submit' className='signIn'>Sign In</button>
+      <button type='submit' className='signIn' onClick={() => customEvent("login","buttonClick","user","value")}>
+      {loading ? (
+                  <CircularProgress color="inherit" size={20} />
+                ) : (
+                  "Sign In"
+                )}
+        </button>
       <div className="Lbottom">
       <span className='account'>don't have an account?</span>
       <span>

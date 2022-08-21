@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 
 import Homepage from "./Components/homepage/Homepage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -17,7 +18,7 @@ import Footer from "./Components/footer/Footer";
 import Marketplace from "./Components/marketplace/Marketplace";
 import Card from "./Components/homepage/card/Card";
 
-
+ReactGA.initialize('UA-231739890-1');
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Route exact path='/registrationfrominvite' element={< RegistrationFromInvite/>}></Route>
           <Route exact path='/login' element={<Login/>}></Route>
           <Route exact path='/wallet' element={<PhantomWallet/>}></Route>
-          <Route exact path='/nftdetail/:index' element={<NftDetail/>}></Route>
+          <Route exact path='/nftdetail/:index/:name' element={<NftDetail/>}></Route>
           <Route exact path='/marketplace' element={<Marketplace/>}></Route>
           <Route exact path='/card' element={<Card/>}></Route>
         </Routes>
