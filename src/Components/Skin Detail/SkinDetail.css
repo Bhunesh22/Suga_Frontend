@@ -165,6 +165,10 @@ html {
 margin-top: 119px;
 }
 
+.mobileView1{
+    visibility: hidden;
+}
+
 @media screen and (max-width: 550px) {
 .skinBox1{
     transform: scale(0.75);
@@ -206,5 +210,17 @@ margin-top: 119px;
 .skinDetails2{
     display: none;
 }
+
+.mobileView1{
+    visibility: visible;
+    margin-left: 33px;
+    margin-right: 20px;
+   
+}
+
+.accordian3{
+    background: #101638;
+}
+
 }
 
