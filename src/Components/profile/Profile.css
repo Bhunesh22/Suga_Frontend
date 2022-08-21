@@ -1,0 +1,267 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile1{
+    width: 100vw;
+    background: #0D0916;
+    overflow: hidden;
+    z-index: 100;
+    height: 1300px;
+    
+}
+
+
+
+.profileBackground1 {
+    background-image: url("./images/COD1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    position: absolute;
+    width: 100vw;
+    margin-top: 0px;
+    height: 1024px;
+    z-index: .1;
+}
+
+.profileDetailC{
+z-index: 50;
+}
+
+.profileGradient1 {
+    background: linear-gradient(180deg, rgba(13, 9, 22, 0) 0%, #0D0916 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    /* position: absolute; */
+    margin-top: 0px;
+    height: 257px;
+    width: 100vw;
+}
+
+.profileGradient2 {
+    background: linear-gradient(180deg, rgba(13, 9, 22, 0) 0%, #0D0916 100%);
+    position: absolute;
+    top: 859px;
+    height: 257px;
+    width: 100vw;
+}
+
+.Hnavbar1 {
+    z-index: 10000;
+}
+
+.profileTxt1 {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 48px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+    margin-left: 60px;
+    margin-top: 64px;
+   
+
+}
+
+.profileImage2 {
+    width: 501px;
+    height: 584px;
+    filter: drop-shadow(0px 0px 10px #FFFFFF);
+    border-radius: 102px;
+    margin-left: 60px;
+    margin-top: 32px;
+}
+
+.profileBlueLine1{
+width: 3px;
+height: 584px;
+margin-left: 107px;
+margin-top: 30px;
+background: #4D69FD;
+filter: blur(2px);
+
+}
+
+.profileDetail{
+    display: flex;
+    align-items: center;
+}
+
+.form2{
+    margin-left: 84px;
+    z-index: 50;
+    
+}
+
+.firstName1{
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color: #00FF34;
+    
+    text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.formFlex1{
+    display: flex;
+   
+}
+
+.lastName1{
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color: #00FF34;
+    
+    text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.email2{
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color: #00FF34;
+    
+    text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.username2{
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color: #00FF34;
+    
+    text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.formFlex2{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.formFlex3{
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    margin-left: -304px;
+}
+
+.formFlex4{
+    display: flex;
+    gap: 12px;
+}
+
+.formFlex5{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+
+.phoneNumber1{
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color: #00FF34;
+    
+    text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.editProfileBtn1{
+width: 150px;
+height: 40px;
+background: #4D69FD;
+border: none;
+
+font-family: 'Gilroy-SemiBold', sans-serif;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+margin-top: 42px;
+margin-left: 244px;
+}
+
+.inputFirstName1{
+width: 306px;
+height: 48px;
+background: rgba(217, 217, 217, 0.4);
+border: none;
+border-radius: 0%;
+}
+
+.inputLastName1{
+    width: 306px;
+height: 48px;
+background: rgba(217, 217, 217, 0.4);
+border: none;
+border-radius: 0%;
+}
+
+.inputEmail1{
+    width: 624px;
+    height: 48px;
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    border-radius: 0%;
+}
+
+.inputUsername2{
+    width: 306px;
+    height: 48px;
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    border-radius: 0%;
+}
+
+.inputCountry2{
+    width: 306px;
+    height: 48px;
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    border-radius: 0%;
+}
+
+.inputPhoneNumber2{
+    width: 306px;
+    height: 48px;
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    border-radius: 0%;
+}
+
+@media screen and (max-width: 550px) {
+    .profileDetail{
+        flex-direction: column;
+
+    }
+
+    .profileBlueLine1{
+        display: none;
+    }
+
+    .profileImageContainer{
+        transform: scale(0.5);
+        margin-top: -150px;
+    }
+
+    .profileImage2{
+        margin-left: 0px;
+    }
+
+    .profileTxt1{
+        margin-top: 16px;
+        font-size: 28px;
+    }
+
+    .form2{
+        transform: scale(0.5);
+        margin-left: 0px;
+        margin-top: -250px;
+    }
+
+
+}
