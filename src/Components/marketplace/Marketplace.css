@@ -10,7 +10,7 @@
 
 .Mcontainer {
     background: #0D0916;
-    height: 2300px;
+    min-height: 2300px;
     display: flow-root;
 }
 
@@ -129,11 +129,12 @@
 .MlistContainer{
     background: #101638;
     width: 171px;
-    height: 113px;
+    /* height: 113px; */
 }
 
 .MlistContainer ul{
-    padding-top: 5px;
+    padding-left: 0px;
+    padding-top: 4px;
     font-family: 'Gilroy-Regular', sans-serif;
 font-style: normal;
 font-weight: 600;

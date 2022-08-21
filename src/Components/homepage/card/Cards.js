@@ -10,7 +10,7 @@ const Cards = () => {
     <div className="Ccontainer">
          {cardDetails? cardDetails.map((list, index) => {
              return (
-                 <Link to="/nftdetail"><Card list={list} index={index} /></Link>
+                 <Link to={`/nftdetail/${index}`}><Card list={list} index={index} /></Link>
                  )
                    }): null}
                  </div>

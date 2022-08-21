@@ -46,7 +46,7 @@ const Homepage = () => {
                 {/* <div className="Hbackground-box1"></div> */}
                 <div className="Hslider">
                     <div className="Hcard">
-                        <Cards />
+                        <Cards/>
                     </div>
                 </div>
             </div>

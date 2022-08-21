@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+// import nacl from "tweetnacl";
+// import * as https from 'https';
+import { Link } from 'react-router-dom';
 
 import "./Marketplace.css"
 import MCard from './card/MCard'
@@ -6,54 +9,73 @@ import MCard from './card/MCard'
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import { AiFillCaretDown } from 'react-icons/ai';
+import Navbar from '../navbar/Navbar';
+import Nftdetail from '../NftDetail/NftDetail';
 
-const options = ["All Items", "Premium", "Trending"];
+const options = ["AK-47", "AWP", "M4A1-S", "MP9", "USP-S", "P250", "M249", "NAVAJA", "KARAMBIT"];
 
 const Marketplace = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState("AK-47");
     const toggling = () => setIsOpen(!isOpen);
 
-    const onOptionClicked =  (value) => {
+    useEffect(() => {
+        console.log("run")
+        loadUserData();
+    }, [selectedOption]);
+
+    const onOptionClicked = (value) => {
         setSelectedOption(value);
         setIsOpen(false);
     };
+    // console.log(selectedOption); 
+    // const handleFilter = async (value) =>{
+    //     if(value === "All Items"){
+    //         return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));
+    //     }
+    //     else{
+    //     return await axios.get(`http://localhost:5000/cardDetails?type1=${value.toLowerCase()}`).then((response) => {
+    //         setData(response.data);
+    //     }).catch((err) => console.log(err));
+    // }
+    // }
 
-
-
-    const handleFilter = async (value) =>{
-        if(value === "All Items"){
-            return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));
-        }
-        else{
-        return await axios.get(`http://localhost:5000/cardDetails?type1=${value.toLowerCase()}`).then((response) => {
-            setData(response.data);
-        }).catch((err) => console.log(err));
-    }
-    }
-
-    
 
     const [searchTitle, setSearchTitle] = useState("");
     const [data, setData] = useState([]);
 
-    const handleSearch = async () => {
-        if(selectedOption === null || selectedOption === "All Items"){
-            return await axios.get(`http://localhost:5000/cardDetails?q=${searchTitle}`).then((response) => setData(response.data)).catch((err) => console.log(err));
-        }
-        else
-        return await axios.get(`http://localhost:5000/cardDetails?type1=${selectedOption.toLowerCase()}&q=${searchTitle}`).then((response) => {
-            setData(response.data);
-        }).catch((err) => console.log(err));
-    };
-
-    useEffect(() => {
-        loadUserData();
-    }, []);
+    // const handleSearch = async () => {
+    //     if(selectedOption === null || selectedOption === "All Items"){
+    //         return await axios.get(`http://localhost:5000/cardDetails?q=${searchTitle}`).then((response) => setData(response.data)).catch((err) => console.log(err));
+    //     }
+    //     else
+    //     return await axios.get(`http://localhost:5000/cardDetails?type1=${selectedOption.toLowerCase()}&q=${searchTitle}`).then((response) => {
+    //         setData(response.data);
+    //     }).catch((err) => console.log(err));
+    // };
 
     const loadUserData = async () => {
-        return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));}
+        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${selectedOption}&Limit=100`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': "f6ac518d1f1bd0aeed03ae5ed85c91489c94fa6cdc80c6d6af0ec92d62ac3086",
+            }
+        });
+        const Json = await responce.json()
+        //    console.log(Json)
+        setData(Json)
+
+    }
+
+
+
+
+    // console.log(data.objects)
+
+    // const loadUserData = async () => {
+    //     return await axios.get("http://localhost:5000/cardDetails").then((response) => setData(response.data)).catch((err) => console.log(err));}
 
 
 
@@ -64,18 +86,22 @@ const Marketplace = () => {
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(data.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(data.length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, data]);
+        setCurrentItems(data.toString().slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(data.toString().length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, data.objects]);
 
 
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % data.length;
+        const newOffset = (event.selected * itemsPerPage) % data.objects.length;
         setItemOffset(newOffset);
     };
 
     return (
         <>
+        <div style={{display:"none"}}>
+            <Nftdetail  option={selectedOption}/>
+        </div>
+        <Navbar/>
             <div className="Mcontainer">
 
                 <div className="Mbackground-box1"></div>
@@ -86,8 +112,8 @@ const Marketplace = () => {
 
                     <div className="Mleft">
                         {/* <form onSubmit={handleSearch}> */}
-                            <input type="text" onChange={(e) => {setSearchTitle(e.target.value); handleSearch() }} placeholder="&#61442;   Looking  for  something  specific?  Type  here" />
-                            {/* <button type='submit'>Search</button> */}
+                        <input type="text" onChange={(e) => { setSearchTitle(e.target.value); /*handleSearch()*/ }} placeholder="&#61442;   Looking  for  something  specific?  Type  here" />
+                        {/* <button type='submit'>Search</button> */}
                         {/* </form> */}
                     </div>
 
@@ -96,14 +122,14 @@ const Marketplace = () => {
                         <div className="Mdropdown">
                             <div className="MheadContainer">
                                 <div className="Mheader" onClick={toggling}>
-                                    {selectedOption || "All Items"}
+                                    {selectedOption || "AK-47"}
                                 </div>
                                 <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
                                 {isOpen && (
                                     <div className="MlistContainer">
                                         <ul>
                                             {options.map(option => (
-                                                <li onClick={() => {onOptionClicked(option); handleFilter(option);}} key={Math.random()}>
+                                                <li onClick={() => { onOptionClicked(option); /*handleFilter(option)*/; }} key={Math.random()}>
                                                     {option}
                                                 </li>
                                             ))}
@@ -115,17 +141,16 @@ const Marketplace = () => {
                     </div>
                 </div>
 
-
                 {/* {searchTitle === ""? ( */}
                 <div className="Mmarket">
                     <div className="Ccontainer">
-                        {currentItems.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>NO Data Found</div>) : currentItems.map((list, index) => {
+                        {data.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>NO Data Found</div>) : data.objects.map((list, index) => {
                             return (
-                                <MCard list={list} index={index} />
+                                <Link to={`/nftdetail/${list.itemId}/${selectedOption}`}><MCard list={list} index={index} /></Link>
                             )
                         })}
                     </div>
-                    {pageCount > 1? (<ReactPaginate
+                    {pageCount > 1 ? (<ReactPaginate
                         breakLabel="..."
                         nextLabel="NEXT"
                         onPageChange={handlePageClick}
@@ -140,8 +165,8 @@ const Marketplace = () => {
                         nextClassName="li-page-next"
                         nextLinkClassName="a-page-next"
                         activeLinkClassName="active"
-                    />) : "null" }
-                    
+                    />) : "null"}
+
                 </div>
                 {/* ) : (
                     <div className="Mmarket">
