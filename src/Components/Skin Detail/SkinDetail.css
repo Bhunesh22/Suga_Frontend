@@ -83,7 +83,7 @@ html {
     font-family: 'Gilroy', sans-serif;
     color: #FFFFFF;
     margin-right: 51px;
-    
+
 }
 
 .skinDetail2 {
@@ -119,7 +119,7 @@ html {
 }
 
 .skinType1 {
-   
+
     height: 53px;
 
     background: #101638;
@@ -161,21 +161,21 @@ html {
     color: #FFFFFF;
 }
 
-.skinDetails2{
-margin-top: 119px;
+.skinDetails2 {
+    margin-top: 119px;
 }
 
-.mobileView1{
+.mobileView1 {
     visibility: hidden;
 }
 
-.skinDetailAccordian1{
+.skinDetailAccordian1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.skinDetailAccordian2{
+.skinDetailAccordian2 {
     display: flex;
     justify-content: space-between;
 }
@@ -184,62 +184,68 @@ margin-top: 119px;
     background: #101638;
 } */
 
-/* .accordianBackground1{ 
+.accordianBackground1 {
     background: #101638;
-} */
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
 
 @media screen and (max-width: 550px) {
-.skinBox1{
-    transform: scale(0.75);
-    margin-left: 0px;
+    .skinBox1 {
+        transform: scale(0.75);
+        margin-left: 0px;
+    }
+
+    .skinBlueLine2 {
+        display: none;
+    }
+
+    .details1 {
+        flex-direction: column;
+    }
+
+    .skinTitle {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .skinFlexItem2 {
+        margin-left: 0px;
+    }
+
+    .skinDetail4 {
+        margin-left: 33px;
+        margin-right: 50px;
+    }
+
+    .skinDetail2 {
+        font-size: 16px;
+    }
+
+    .skinSubTitle1 {
+        font-size: 16px;
+    }
+
+    .skinDetails2 {
+        display: none;
+    }
+
+    .mobileView1 {
+        visibility: visible;
+        margin-left: 33px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    .accordian3 {
+        background: #101638;
+    }
+
 }
-
-.skinBlueLine2{
-    display: none;
-}
-
-.details1{
-    flex-direction: column;
-}
-
-.skinTitle{
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-
-}
-
-.skinFlexItem2{
-    margin-left: 0px;
-}
-
-.skinDetail4{
-    margin-left: 33px;
-    margin-right: 50px;
-}
-
-.skinDetail2{
-    font-size: 16px;
-}
-
-.skinSubTitle1{
-    font-size: 16px;
-}
-
-.skinDetails2{
-    display: none;
-}
-
-.mobileView1{
-    visibility: visible;
-    margin-left: 33px;
-    margin-right: 20px;
-   
-}
-
-.accordian3{
-    background: #101638;
-}
-
-}
-

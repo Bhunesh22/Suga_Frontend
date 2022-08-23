@@ -9,6 +9,7 @@ import linkedIn from './logo/linkedIn.png'
 import { Link } from 'react-router-dom'
 import { message } from 'antd';
 import 'antd/dist/antd.css';
+
 // import { FaDiscord, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
@@ -108,7 +109,7 @@ const Footer = () => {
                     <div className="Fcol">
                         <p>Company</p>
                         <ul>
-                            <li>About Us</li>
+                            <li><Link to="/ourteam">About Us</Link></li>
                             <li>Careers</li>
                             <li>Copyright Policy</li>
                             <li>Terms and Conditions </li>
