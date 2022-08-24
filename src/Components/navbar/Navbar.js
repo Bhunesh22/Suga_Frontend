@@ -19,6 +19,7 @@ const Navbar = () => {
     const toggle = () => {setOpen(!Open)}
 
     const handleLogout = ()=>{
+        setClick(!click);
         localStorage.removeItem('token');
       }
 
@@ -108,7 +109,7 @@ const Navbar = () => {
                 to="/login"
                 activeClassName="active"
                 className="nav-links"
-                onClick={{handleClick , handleLogout}}
+                onClick={handleLogout}
               >
                 Logout
               </NavLink>

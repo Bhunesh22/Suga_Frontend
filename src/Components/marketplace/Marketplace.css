@@ -176,7 +176,7 @@ list-style: none;
 .Ccontainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     row-gap: 30px;
     column-gap: 20px;
     z-index: 4;
@@ -241,6 +241,7 @@ list-style: none;
     .Ccontainer{
         column-gap: 2px;
         row-gap: 25px;
+        justify-content: space-evenly;
     
     }
 }

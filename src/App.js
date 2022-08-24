@@ -18,7 +18,7 @@ import Footer from "./Components/footer/Footer";
 import Marketplace from "./Components/marketplace/Marketplace";
 import Card from "./Components/homepage/card/Card";
 import Profile from "./Components/profile/Profile";
-import SkinDetail from "./Components/Skin Detail/SkinDetail";
+import SkinDetail from './Components/Skin Detail/SkinDetail';
 import OurTeam from "./Components/Our Team/OurTeam";
 
 ReactGA.initialize('UA-231739890-1');
