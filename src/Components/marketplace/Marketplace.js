@@ -10,7 +10,8 @@ import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import { AiFillCaretDown } from 'react-icons/ai';
 import Navbar from '../navbar/Navbar';
-import Nftdetail from '../NftDetail/NftDetail';
+// import Nftdetail from '../NftDetail/NftDetail';
+import SkinDetail from '../Skin Detail/SkinDetail';
 
 const options = ["AK-47", "AWP", "M4A1-S", "MP9", "USP-S", "P250", "M249", "NAVAJA", "KARAMBIT"];
 
@@ -99,11 +100,10 @@ const Marketplace = () => {
     return (
         <>
         <div style={{display:"none"}}>
-            <Nftdetail  option={selectedOption}/>
+            <SkinDetail  option={selectedOption}/>
         </div>
-        <Navbar/>
             <div className="Mcontainer">
-
+                <div className="NMcontainer"><Navbar/></div>
                 <div className="Mbackground-box1"></div>
                 <div className="Mbg1"></div>
                 <div className="Mbackground-box2"></div>
@@ -146,7 +146,7 @@ const Marketplace = () => {
                     <div className="Ccontainer">
                         {data.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>NO Data Found</div>) : data.objects.map((list, index) => {
                             return (
-                                <Link to={`/nftdetail/${list.itemId}/${selectedOption}`}><MCard list={list} index={index} /></Link>
+                                <Link to={`/skindetail/${list.itemId}/${selectedOption}/${list.slug}`}><MCard list={list} index={index} /></Link>
                             )
                         })}
                     </div>

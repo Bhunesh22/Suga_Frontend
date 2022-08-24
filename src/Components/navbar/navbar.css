@@ -271,6 +271,7 @@
         opacity: 1;
         list-style: none;
         transition: all 0.5s ease;
+        z-index: 5;
       }
     
       .nav-menu.active {
@@ -278,7 +279,7 @@
         left: 0px;
         opacity: 1;
         transition: all 0.5s ease;
-        z-index: 1;
+        z-index: 5;
       }
       .nav-item{
         font-size: 18px;

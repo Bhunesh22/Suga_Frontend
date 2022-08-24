@@ -47,6 +47,8 @@ html {
 
 .skin3Logo {
     margin-top: -12px;
+    width: 210px;
+    height: 173px;
 }
 
 .skinBlueLine1 {
@@ -120,18 +122,15 @@ html {
 
 .skinType1 {
    
-    height: 53px;
-
+    height: 50px;
+    width: 160px;
     background: #101638;
-
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
-
     color: #FFFFFF;
-
     display: flex;
     flex-direction: row;
     align-items: center;

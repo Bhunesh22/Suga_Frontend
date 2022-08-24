@@ -8,18 +8,18 @@
 
 
 
-.card {
+.MNcard {
     width: 315px;
     height: 275px;
     background: linear-gradient(219.83deg, rgba(91, 101, 153, 0.5) -0.82%, rgba(34, 41, 77, 0.5) 107.94%);
     backdrop-filter: blur(12px);
 }
 
-.Ctop {
+.MCtop {
     display: flex;
 }
 
-.Clogo {
+.MClogo {
     width: 34px;
     height: 34px;
     border: 1px solid #445ACD;
@@ -29,7 +29,7 @@
     z-index: 10;
 }
 
-.Clogo img{
+.MClogo img{
     margin-top: 6px;
     margin-left: 6px;
     width: 20px;
@@ -37,22 +37,22 @@
     object-fit: contain;
 }
 
-.Cimg {
+.MCimg {
     position: absolute;
     width: 220px;
-    height: 173px;
-    left: 5px;
-    top: 2px;
+    height: 180px;
+    left: 40px;
+    top: 5px;
     z-index: 2;
 }
 
-.Cimg img {
+.MCimg img {
     width: 224px;
     height: 173px;
     object-fit: contain;
 }
 
-.Cbtns {
+.MCbtns {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -66,7 +66,7 @@
 
 }
 
-.Cbtn1 {
+.MCbtn1 {
     display: flex;
     width: 108px;
     height: 34px;
@@ -75,14 +75,14 @@
 
 }
 
-.Cbtn1 img {
+.MCbtn1 img {
     height: 21px;
     width: 21px;
     object-fit: contain;
     margin-left: 10px;
 }
 
-.Cbtn1 p {
+.MCbtn1 p {
     /* margin-left: 15px; */
     width: 77px;
     padding-top: 4px;
@@ -90,7 +90,7 @@
 
 }
 
-.Cbtn2 {
+.MCbtn2 {
     margin-top: 8px;
     margin-left: 25px;
     width: 82px;
@@ -102,7 +102,7 @@
     padding-top: 4.5px;
 }
 
-.Cline {
+.MCline {
     position: absolute;
     left: 22px;
     top: 173px;
@@ -115,11 +115,11 @@
     z-index: 1.6;
 }
 
-.Cmid {
+.MCmid {
     display: flex;
 }
 
-.Cmid p:nth-child(1) {
+.MCmid p:nth-child(1) {
     position: absolute;
     top: 191px;
     left: 23px;
@@ -130,7 +130,7 @@
 
 }
 
-.Cmid p:nth-child(2) {
+.MCmid p:nth-child(2) {
     position: absolute;
     top: 191px;
     right: 39px;
@@ -143,36 +143,36 @@
 
 }
 
-.Cmid p:nth-child(3) {
+.MCmid p:nth-child(3) {
     position: absolute;
     top: 193px;
     right: 16px;
     color: #FFC700;
 }
 
-.Cbottom {
+.MCbottom {
     display: flex;
 }
 
-.Cleft {
+.MCleft {
     display: flex;
 }
 
-.Cleft img {
+.MCleft img {
     position: absolute;
     width: 24px;
     height: 24px;
     left: 23px;
-    top: 229px;
+    top: 240px;
     object-fit: contain;
 }
 
-.Cleft p {
+.MCleft p {
     position: absolute;
     width: 151px;
     height: 26px;
     left: 54px;
-    top: 229px;
+    top: 240px;
     font-family: 'Gilroy-Regular';
     font-size: 10px;
     line-height: 13px;
@@ -180,7 +180,7 @@
     color: #A3B1E4;
 }
 
-.Cright p:nth-child(1) {
+.MCright p:nth-child(1) {
     position: absolute;
     left: 258px;
     top: 220px;
@@ -192,7 +192,7 @@
 
 }
 
-.Cright p:nth-child(2) {
+.MCright p:nth-child(2) {
     position: absolute;
     left: 265px;
     top: 240px;

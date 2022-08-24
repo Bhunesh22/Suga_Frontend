@@ -1,15 +1,96 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import 'reactjs-popup/dist/index.css';
+import { message } from 'antd';
+import 'antd/dist/antd.css';
 import './SkinDetail.css'
 import Navbar from '../navbar/Navbar'
 
 
-
 function SkinDetail() {
+
+    const [data, setData] = useState([]);
+    const [selectedData, setSelectedData] = useState([]);
+
+
+    let { index } = useParams();
+    let { name } = useParams();
+    let { slug } = useParams();
+    // console.log(index,"id")
+    // console.log(name, "name");
+    console.log(slug, "slug");
+
+    useEffect(() => {
+        loadUserData();
+    }, []);
+
+    const loadUserData = async () => {
+        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${name}&Limit=100`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': "f6ac518d1f1bd0aeed03ae5ed85c91489c94fa6cdc80c6d6af0ec92d62ac3086",
+            }
+        });
+        const Json = await responce.json()
+        //    console.log(Json)
+
+        let selectedObj = Json?.objects?.filter(function (el) {
+            // console.log(el.itemId,"data//",index)
+            return el.itemId === index
+        })[0];
+        // console.log(selectedObj,"dnifidfn");
+        setData(selectedObj)
+
+
+        let selectedItem = Json?.objects?.filter(function (el) {
+            // console.log(el.itemId,"data//",index)
+            return el.slug === slug
+        });
+        // console.log(selectedObj,"dnifidfn");
+        setSelectedData(selectedItem)
+    }
+
+    console.log(selectedData)
+
+    let factoryNew = selectedData.filter(function (el){
+        return el.title.toString().includes("Factory")
+    })[0]
+    console.log(factoryNew?.price.USD);
+
+
+    let minimalWear = selectedData.filter(function (el){
+        return el.title.toString().includes("Minimal")
+    })[0]
+    console.log(minimalWear?.price.USD);
+
+
+    let fieldTested = selectedData.filter(function (el){
+        return el.title.toString().includes("Field")
+    })[0]
+    console.log(fieldTested?.price.USD);
+
+
+    let wellWorn = selectedData.filter(function (el){
+        return el.title.toString().includes("Well")
+    })[0]
+    console.log(wellWorn?.price.USD);
+
+    let battleScarred = selectedData.filter(function (el){
+        return el.title.toString().includes("Battle")
+    })[0]
+    console.log(battleScarred?.price.USD);
+
+   
+
+
+
+
+
     return (
         <>
             <div className='skinDetail1'>
                 <div>
-
                     <Navbar />
                 </div>
 
@@ -20,7 +101,10 @@ function SkinDetail() {
                         </svg>
                         </div>
                         <div className='skinBoxFlex1'>
-                            <div><img className='skin3Logo' src='/logos/imgbin_fortnite-battle-royale-skin-battle-royale-game-epic-games-png 3.png' /></div>
+                            <div>
+                                {name === undefined? "loading" : <img className='skin3Logo'  src={data.image} />}
+                                
+                                </div>
                             <div className='skinBlueLine1'></div>
                         </div>
                         <div className='skinBoxBottomArrow1'><svg width="59" height="47" viewBox="0 0 59 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +114,7 @@ function SkinDetail() {
                     </div>
                     <div className='skinBlueLine2'></div>
                     <div className='skinFlexItem2'>
-                        <div className='skinTitle'>AWP | Pit Viper</div><br />
+                        <div className='skinTitle'> {name === undefined? "loading" : data.title}</div><br />
                         <div className='skinDetail4'>
                             <p className='skinDetail3'>
                                 <h2 className='skinDetail2'>Exterior: Field-Tested</h2><br />
@@ -53,7 +137,9 @@ function SkinDetail() {
                 </div>
                 <div className='skinDetails2'>
                     <table class="table">
-                        <thead>
+                        <thead 
+                        style={{borderBottom:"transparent"}}
+                        >
                             <tr>
                                 <th scope="col"></th>
                                 <th scope="col"><div className='skinType1'>Factory New</div></th>
@@ -64,78 +150,23 @@ function SkinDetail() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9</th>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
-                                <td><div className='skinPrice1'>$100</div></td>
+                            <tr style={{borderBottom:"transparent"}}>
+                                <th scope="row"><div></div></th>
+                                <td ><div className='skinPrice1'>
+                                    {factoryNew === undefined? "NA" : factoryNew?.price.USD}
+                                    </div></td>
+                                <td><div className='skinPrice1'>
+                                    {minimalWear === undefined? "NA" : minimalWear?.price.USD}
+                                </div></td>
+                                <td><div className='skinPrice1'>
+                                    {fieldTested === undefined? "NA" : fieldTested?.price.USD}
+                                    </div></td>
+                                <td><div className='skinPrice1'>
+                                    {wellWorn === undefined? "NA" : wellWorn?.price.USD}
+                                    </div></td>
+                                <td><div className='skinPrice1'>
+                                    {battleScarred === undefined? "NA" : battleScarred?.price.USD}
+                                    </div></td>
                             </tr>
                         </tbody>
                     </table>

@@ -14,8 +14,15 @@
     display: flow-root;
 }
 
+.NMcontainer {
+    position: relative;
+    z-index: 10;
+    top: 0px;
+}
+
+
 .Mbg1 {
-    background-image: url("./logos/COD1.png");
+    /* background-image: url("./logos/COD1.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     mix-blend-mode: normal;
@@ -55,7 +62,7 @@
     display: flex;
     justify-content: space-between;
     z-index: 5;
-    margin-top: 180px;
+    margin-top: 50px;
 }
 
 .Mleft {
@@ -228,4 +235,12 @@ list-style: none;
     color: #FFFFFF;
     padding: 8px 29px 8px 29px;
 
+}
+
+@media screen and (max-width: 700px) {
+    .Ccontainer{
+        column-gap: 2px;
+        row-gap: 25px;
+    
+    }
 }

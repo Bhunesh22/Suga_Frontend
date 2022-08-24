@@ -15,14 +15,12 @@ const Navbar = () => {
 
     const handleClick = () => setClick(!click);
 
-
     const [Open, setOpen] = useState(false);
     const toggle = () => {setOpen(!Open)}
 
     const handleLogout = ()=>{
         localStorage.removeItem('token');
       }
-
 
   return (
     <>
@@ -38,8 +36,8 @@ const Navbar = () => {
         </div>
         <div className="Nmid">
         <p><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' /></p>
-            <p className='Nmatches'><Link to="/">Matches</Link></p>
-            <p className='Nexchange'><Link to="/commingsoon">Exchange</Link></p>
+            <p className='Nmatches'><Link to="/commingSoon">NFT's</Link></p>
+            <p className='Nexchange'><Link to="/">Skins</Link></p>
             <p><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' /></p>
         </div>
 
@@ -57,7 +55,7 @@ const Navbar = () => {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Matches
+                Skins
               </NavLink>
             </li>
             <li className="nav-item">
@@ -68,7 +66,7 @@ const Navbar = () => {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Exchances
+                NFT's
               </NavLink>
             </li>
             <li className="nav-item">

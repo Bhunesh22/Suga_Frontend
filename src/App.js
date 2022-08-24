@@ -19,6 +19,7 @@ import Marketplace from "./Components/marketplace/Marketplace";
 import Card from "./Components/homepage/card/Card";
 import Profile from "./Components/profile/Profile";
 import SkinDetail from "./Components/Skin Detail/SkinDetail";
+import Career from "./Components/Career";
 
 ReactGA.initialize('UA-231739890-1');
 
@@ -42,7 +43,8 @@ function App() {
           <Route exact path='/marketplace' element={<Marketplace/>}></Route>
           <Route exact path='/card' element={<Card/>}></Route>
           <Route exact path='/profile' element={<Profile/>}></Route>
-          <Route exact path='/skindetail' element={<SkinDetail/>}></Route>
+          <Route exact path='/Career' element={<Career/>}></Route>
+          <Route exact path='/skindetail/:index/:name/:slug' element={<SkinDetail/>}></Route>
         </Routes>
       </Router>
     </>

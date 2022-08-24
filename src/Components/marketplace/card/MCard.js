@@ -13,12 +13,12 @@ const MCard = (props) => {
                 {/* <div style={{display:"none"}}>
                     <Nftdetail  list={props.list}/>
                 </div> */}
-                    <div className="card" key={props.index}>
-                        <div className="Ctop">
+                    <div className="MNcard" key={props.index}>
+                        <div className="MCtop">
                             {/* <div className="Clogo" style={{display:`${props.list.type1 === "null" ? "none": "block"}`}}>
                                 <img src={props.list.type} alt="" />
                             </div> */}
-                            <div className="Cimg" >
+                            <div className="MCimg" >
                                 <img src={props.list.image} alt="" />
                             </div>
                             {/* <div className="Cbtns">
@@ -28,23 +28,23 @@ const MCard = (props) => {
                                 </div>
                                 <div className="Cbtn2">{props.list.categorieName2}</div>
                             </div> */}
-                            <div className="Cline"></div>
+                            <div className="MCline"></div>
                         </div>
-                        <div className="Cmid">
+                        <div className="MCmid">
                             <p>{props.list.title}</p>
-                            <p>575</p>
-                            <p><AiOutlineDollar size='1.1rem' /></p>
+                            {/* <p>575</p>
+                            <p><AiOutlineDollar size='1.1rem' /></p> */}
                         </div>
-                        <div className="Cbottom">
-                            <div className="Cleft">
+                        <div className="MCbottom">
+                            <div className="MCleft">
                                 <img src={logo} alt="" />
                                 <p>Counter Strike : Global Offensive
                                     Ristricted Sniper Rifle</p>
                             </div>
-                            <div className="Cright">
+                            {/* <div className="MCright">
                                 <p>Quantity</p>
                                 <p>458</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     </>
