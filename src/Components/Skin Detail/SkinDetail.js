@@ -5,6 +5,7 @@ import { message } from 'antd';
 import 'antd/dist/antd.css';
 import './SkinDetail.css'
 import Navbar from '../navbar/Navbar'
+import { customEvent } from '../utils/analyticsHelper';
 
 
 function SkinDetail() {
@@ -18,7 +19,7 @@ function SkinDetail() {
     let { slug } = useParams();
     // console.log(index,"id")
     // console.log(name, "name");
-    console.log(slug, "slug");
+    // console.log(slug, "slug");
 
     useEffect(() => {
         loadUserData();
@@ -51,39 +52,40 @@ function SkinDetail() {
         setSelectedData(selectedItem)
     }
 
-    console.log(selectedData)
+    // console.log(data.slug, "slug");
+
+
+    // console.log(selectedData)
 
     let factoryNew = selectedData.filter(function (el){
         return el.title.toString().includes("Factory")
     })[0]
-    console.log(factoryNew?.price.USD);
+    // console.log(factoryNew?.price.USD);
+    // console.log(factoryNew?.slug);
 
 
     let minimalWear = selectedData.filter(function (el){
         return el.title.toString().includes("Minimal")
     })[0]
-    console.log(minimalWear?.price.USD);
+    // console.log(minimalWear?.price.USD);
+    // console.log(minimalWear?.slug);
 
 
     let fieldTested = selectedData.filter(function (el){
         return el.title.toString().includes("Field")
     })[0]
-    console.log(fieldTested?.price.USD);
+    // console.log(fieldTested?.price.USD);
 
 
     let wellWorn = selectedData.filter(function (el){
         return el.title.toString().includes("Well")
     })[0]
-    console.log(wellWorn?.price.USD);
+    // console.log(wellWorn?.price.USD);
 
     let battleScarred = selectedData.filter(function (el){
         return el.title.toString().includes("Battle")
     })[0]
-    console.log(battleScarred?.price.USD);
-
-   
-
-
+    // console.log(battleScarred?.price.USD);
 
 
 
@@ -151,22 +153,27 @@ function SkinDetail() {
                         </thead>
                         <tbody>
                             <tr style={{borderBottom:"transparent"}}>
-                                <th scope="row"><div></div></th>
-                                <td ><div className='skinPrice1'>
+                                <th scope="row"></th>
+
+                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
                                     {factoryNew === undefined? "NA" : factoryNew?.price.USD}
-                                    </div></td>
-                                <td><div className='skinPrice1'>
+                                    </div></a></td>
+
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
                                     {minimalWear === undefined? "NA" : minimalWear?.price.USD}
-                                </div></td>
-                                <td><div className='skinPrice1'>
+                                </div></a></td>
+
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
                                     {fieldTested === undefined? "NA" : fieldTested?.price.USD}
-                                    </div></td>
-                                <td><div className='skinPrice1'>
+                                    </div></a></td>
+
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
                                     {wellWorn === undefined? "NA" : wellWorn?.price.USD}
-                                    </div></td>
-                                <td><div className='skinPrice1'>
+                                    </div></a></td>
+
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
                                     {battleScarred === undefined? "NA" : battleScarred?.price.USD}
-                                    </div></td>
+                                    </div></a></td>
                             </tr>
                         </tbody>
                     </table>

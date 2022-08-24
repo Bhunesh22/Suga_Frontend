@@ -144,20 +144,17 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     width: 101px;
     height: 48px;
-
     border: 2px solid #4D69FD;
     border-radius: 4px;
-
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .skinDetails2 {
