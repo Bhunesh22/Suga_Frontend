@@ -5,12 +5,8 @@ import 'reactjs-popup/dist/index.css';
 import 'antd/dist/antd.css';
 import './SkinDetail.css'
 import Navbar from '../navbar/Navbar'
-<<<<<<< Updated upstream
 import { customEvent } from '../utils/analyticsHelper';
-=======
 import dmarketLogo from './dmart logo.svg'
-
->>>>>>> Stashed changes
 
 
 function SkinDetail() {
@@ -90,15 +86,10 @@ function SkinDetail() {
     let battleScarred = selectedData.filter(function (el) {
         return el.title.toString().includes("Battle")
     })[0]
-<<<<<<< Updated upstream
-    // console.log(battleScarred?.price.USD);
-=======
+
+    // console.log(battleScarred?.price.USD)
     console.log(battleScarred?.price.USD);
 
-
-
-
->>>>>>> Stashed changes
 
 
 
@@ -165,9 +156,8 @@ function SkinDetail() {
                             </tr>
                         </thead>
                         <tbody>
-<<<<<<< Updated upstream
                             <tr style={{borderBottom:"transparent"}}>
-                                <th scope="row"></th>
+                            <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
 
                                 <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {factoryNew === undefined? "NA" : factoryNew?.price.USD}
@@ -188,25 +178,8 @@ function SkinDetail() {
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {battleScarred === undefined? "NA" : battleScarred?.price.USD}
                                     </div></a></td>
-=======
-                            <tr style={{ borderBottom: "transparent" }}>
-                                <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
-                                <td ><div className='skinPrice1'>
-                                    {factoryNew === undefined ? "NA" : factoryNew?.price.USD}
-                                </div></td>
-                                <td><div className='skinPrice1'>
-                                    {minimalWear === undefined ? "NA" : minimalWear?.price.USD}
-                                </div></td>
-                                <td><div className='skinPrice1'>
-                                    {fieldTested === undefined ? "NA" : fieldTested?.price.USD}
-                                </div></td>
-                                <td><div className='skinPrice1'>
-                                    {wellWorn === undefined ? "NA" : wellWorn?.price.USD}
-                                </div></td>
-                                <td><div className='skinPrice1'>
-                                    {battleScarred === undefined ? "NA" : battleScarred?.price.USD}
-                                </div></td>
->>>>>>> Stashed changes
+
+                                
                             </tr>
                         </tbody>
                     </table>
