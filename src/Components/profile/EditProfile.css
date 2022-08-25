@@ -1,0 +1,101 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.editProfile2 {
+    width: 100%;
+    min-height: 100vh;
+    background: #0D0916;
+    overflow: hidden;
+}
+
+.profileTxt3 {
+    font-family: 'Gilroy-Bold';
+    font-size: 48px;
+    line-height: 56px;
+
+    color: #FFFFFF;
+    margin-left: 60px;
+    margin-top: 64px;
+}
+
+.editProfileForm1 {
+    margin-top: 64px;
+}
+
+.editProfileLable1 {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    color: #00FF34;
+    text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.editProfleInput2 {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    margin-top: 10px;
+}
+
+.editProfleInput3 {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    margin-top: 10px;
+}
+
+.editProfileEmail2 {
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+}
+
+/* .editProfileRow1{
+    display: flex;
+   justify-content: center;
+} */
+
+.rightLable2 {
+    /* margin-left: -250px; */
+}
+
+/* 
+.editProfileForm1{
+   display: flex;
+   justify-content: center;
+} */
+
+.form-control {
+    background: rgba(217, 217, 217, 0.4);
+    border: none;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    height: 48px;
+    margin-top: 10px;
+    border-radius: 0%;
+}
+
+.row g-3 container{
+    margin-left: 0px;
+}
