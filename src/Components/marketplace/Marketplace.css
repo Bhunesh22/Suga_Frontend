@@ -245,3 +245,19 @@ list-style: none;
     
     }
 }
+
+@media screen and (max-width: 950px) {
+.Mleft{
+    display: none;
+}
+
+.Mright{
+    margin-left: 32px;
+}
+
+.Mmarket{
+    justify-content: center;
+}
+
+}
+

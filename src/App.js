@@ -20,6 +20,7 @@ import Card from "./Components/homepage/card/Card";
 import Profile from "./Components/profile/Profile";
 import SkinDetail from './Components/Skin Detail/SkinDetail';
 import OurTeam from "./Components/Our Team/OurTeam";
+import EditProfile from './Components/profile/EditProfile';
 
 ReactGA.initialize('UA-231739890-1');
 
@@ -32,7 +33,7 @@ function App() {
           <Route exact path="/navbar" element={<Navbar/>} />
           <Route exact path="/footer" element={<Footer/>} />
           <Route exact path="/paymentDrop" element={<PaymentDrop/>} />
-          <Route exact path="/commingSoon" element={<CommingSoon/>} />
+          <Route exact path="/comingSoon" element={<CommingSoon/>} />
           <Route exact path="/cards" element={<Cards/>} />
           <Route exact path="/buyPopup" element={<BuyPopup/>} />
           <Route exact path='/registration' element={< Registration/>}></Route>
@@ -45,6 +46,7 @@ function App() {
           <Route exact path='/profile' element={<Profile/>}></Route>
           <Route exact path='/skindetail/:index/:name/:slug' element={<SkinDetail/>}></Route>
           <Route exact path='/ourteam' element={<OurTeam/>}></Route>
+          <Route exact path='/editprofile' element={<EditProfile/>}></Route>
         </Routes>
       </Router>
     </>

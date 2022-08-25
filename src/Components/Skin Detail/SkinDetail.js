@@ -6,6 +6,7 @@ import 'antd/dist/antd.css';
 import './SkinDetail.css'
 import Navbar from '../navbar/Navbar'
 import { customEvent } from '../utils/analyticsHelper';
+import dmarketLogo from './dmart logo.svg'
 
 
 function SkinDetail() {
@@ -57,35 +58,38 @@ function SkinDetail() {
 
     // console.log(selectedData)
 
-    let factoryNew = selectedData.filter(function (el){
+    let factoryNew = selectedData.filter(function (el) {
         return el.title.toString().includes("Factory")
     })[0]
     // console.log(factoryNew?.price.USD);
     // console.log(factoryNew?.slug);
 
 
-    let minimalWear = selectedData.filter(function (el){
+    let minimalWear = selectedData.filter(function (el) {
         return el.title.toString().includes("Minimal")
     })[0]
     // console.log(minimalWear?.price.USD);
     // console.log(minimalWear?.slug);
 
 
-    let fieldTested = selectedData.filter(function (el){
+    let fieldTested = selectedData.filter(function (el) {
         return el.title.toString().includes("Field")
     })[0]
     // console.log(fieldTested?.price.USD);
 
 
-    let wellWorn = selectedData.filter(function (el){
+    let wellWorn = selectedData.filter(function (el) {
         return el.title.toString().includes("Well")
     })[0]
     // console.log(wellWorn?.price.USD);
 
-    let battleScarred = selectedData.filter(function (el){
+    let battleScarred = selectedData.filter(function (el) {
         return el.title.toString().includes("Battle")
     })[0]
-    // console.log(battleScarred?.price.USD);
+
+    // console.log(battleScarred?.price.USD)
+    console.log(battleScarred?.price.USD);
+
 
 
 
@@ -104,9 +108,9 @@ function SkinDetail() {
                         </div>
                         <div className='skinBoxFlex1'>
                             <div>
-                                {name === undefined? "loading" : <img className='skin3Logo'  src={data.image} />}
-                                
-                                </div>
+                                {name === undefined ? "loading" : <img className='skin3Logo' src={data.image} />}
+
+                            </div>
                             <div className='skinBlueLine1'></div>
                         </div>
                         <div className='skinBoxBottomArrow1'><svg width="59" height="47" viewBox="0 0 59 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +120,7 @@ function SkinDetail() {
                     </div>
                     <div className='skinBlueLine2'></div>
                     <div className='skinFlexItem2'>
-                        <div className='skinTitle'> {name === undefined? "loading" : data.title}</div><br />
+                        <div className='skinTitle'> {name === undefined ? "loading" : data.title}</div><br />
                         <div className='skinDetail4'>
                             <p className='skinDetail3'>
                                 <h2 className='skinDetail2'>Exterior: Field-Tested</h2><br />
@@ -139,8 +143,8 @@ function SkinDetail() {
                 </div>
                 <div className='skinDetails2'>
                     <table class="table">
-                        <thead 
-                        style={{borderBottom:"transparent"}}
+                        <thead
+                            style={{ borderBottom: "transparent" }}
                         >
                             <tr>
                                 <th scope="col"></th>
@@ -153,7 +157,7 @@ function SkinDetail() {
                         </thead>
                         <tbody>
                             <tr style={{borderBottom:"transparent"}}>
-                                <th scope="row"></th>
+                            <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
 
                                 <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
                                     {factoryNew === undefined? "NA" : factoryNew?.price.USD}
@@ -174,6 +178,8 @@ function SkinDetail() {
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
                                     {battleScarred === undefined? "NA" : battleScarred?.price.USD}
                                     </div></a></td>
+
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -191,7 +197,7 @@ function SkinDetail() {
                                     <div class="accordion-body">
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
-                                                <div><img src='/Skin Detail/dmarket logo.png' alt='Dmarket' /></div>
+                                                <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
                                                 <div>$100</div>
                                             </div>
                                         </div>
@@ -210,7 +216,7 @@ function SkinDetail() {
                                     <div class="accordion-body">
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
-                                                <div><img src='/Skin Detail/dmarket logo.png' alt='Dmarket' /></div>
+                                                <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
                                                 <div>$100</div>
                                             </div>
                                         </div>
@@ -229,7 +235,7 @@ function SkinDetail() {
                                     <div class="accordion-body">
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
-                                                <div><img src='/Skin Detail/dmarket logo.png' alt='Dmarket' /></div>
+                                                <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
                                                 <div>$100</div>
                                             </div>
                                         </div>
@@ -248,7 +254,7 @@ function SkinDetail() {
                                     <div class="accordion-body">
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
-                                                <div><img src='/Skin Detail/dmarket logo.png' alt='Dmarket' /></div>
+                                                <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
                                                 <div>$100</div>
                                             </div>
                                         </div>
@@ -267,7 +273,7 @@ function SkinDetail() {
                                     <div class="accordion-body">
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
-                                                <div><img src='/Skin Detail/dmarket logo.png' alt='Dmarket' /></div>
+                                                <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
                                                 <div>$100</div>
                                             </div>
                                         </div>

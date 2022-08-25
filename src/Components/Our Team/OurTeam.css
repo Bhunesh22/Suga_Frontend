@@ -16,8 +16,8 @@ html {
     z-index: 1000;
 }
 
-.ourTeamBG1{
-   
+.ourTeamBG1 {
+
     z-index: 10;
 }
 
@@ -96,31 +96,54 @@ html {
 .image2 {
     width: 155px;
     height: 166px;
-    border: 2px solid #FFFFFF;
-    border-radius: 77.5px;
+  
 }
 
 @media screen and (max-width: 550px) {
-.ourTeamContainer{
-min-height: 100vh;
-width: 100vw;
-}
+    .ourTeamContainer {
+        min-height: 100vh;
+        width: 100vw;
+    }
 
-.teamCard{
-    transform: scale(0.8);
-}
+    .teamCard {
+        width: 166px;
+        height: 160px;
+    }
 
-.teamDetail1{
-gap: 0px;
-}
+    .memberName1 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 8px;
+    }
 
-.ourTeamTxt1{
-margin-top: 30px;
-margin-left: 20px;
-font-size: 32px;
-}
+    .memberPosition1 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
 
-.teamDetail1{
-    margin-top: 0px;
-}
+    .image2 {
+        width: 73px;
+        height: 76px;
+       
+    }
+
+
+    .teamDetail1 {
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ourTeamTxt1 {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 32px;
+    }
+
+    .teamDetail1 {
+        margin-top: 0px;
+    }
 }

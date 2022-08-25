@@ -137,7 +137,27 @@ html {
 .enterEmail3{
     transform: scale(.70);
     margin-top: 30px;
+    flex-direction: column;
 }
+
+.subscribe3{
+    margin-top: 150px;
+    width: 198px;
+height: 48px;
+    
+}
+
+.email3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 374px;
+    height: 48px;
+   
+    
+    border: 1px solid #4D69FD;
+}
+
 
 .message4{
   
