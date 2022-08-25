@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import 'reactjs-popup/dist/index.css';
-import { message } from 'antd';
+// import { message } from 'antd';
 import 'antd/dist/antd.css';
 import './SkinDetail.css'
 import Navbar from '../navbar/Navbar'
@@ -155,23 +155,23 @@ function SkinDetail() {
                             <tr style={{borderBottom:"transparent"}}>
                                 <th scope="row"></th>
 
-                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
+                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {factoryNew === undefined? "NA" : factoryNew?.price.USD}
                                     </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {minimalWear === undefined? "NA" : minimalWear?.price.USD}
                                 </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {fieldTested === undefined? "NA" : fieldTested?.price.USD}
                                     </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {wellWorn === undefined? "NA" : wellWorn?.price.USD}
                                     </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user","value")}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",data.slug)}>
                                     {battleScarred === undefined? "NA" : battleScarred?.price.USD}
                                     </div></a></td>
                             </tr>

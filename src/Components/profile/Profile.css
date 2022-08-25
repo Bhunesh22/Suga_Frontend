@@ -193,6 +193,10 @@ border: none;
 border-radius: 0%;
 }
 
+.inputFirstName1::placeholder{
+   color: black;
+}
+
 .inputLastName1{
     width: 306px;
 height: 48px;
@@ -201,6 +205,10 @@ border: none;
 border-radius: 0%;
 }
 
+.inputLastName1::placeholder{
+    color: black;
+ }
+
 .inputEmail1{
     width: 624px;
     height: 48px;
@@ -208,6 +216,9 @@ border-radius: 0%;
     border: none;
     border-radius: 0%;
 }
+.inputEmail1::placeholder{
+    color: black;
+ }
 
 .inputUsername2{
     width: 306px;
@@ -217,6 +228,10 @@ border-radius: 0%;
     border-radius: 0%;
 }
 
+.inputUsername2::placeholder{
+    color: black;
+ }
+
 .inputCountry2{
     width: 306px;
     height: 48px;
@@ -225,6 +240,10 @@ border-radius: 0%;
     border-radius: 0%;
 }
 
+.inputCountry2::placeholder{
+    color: black;
+ }
+
 .inputPhoneNumber2{
     width: 306px;
     height: 48px;
@@ -232,6 +251,10 @@ border-radius: 0%;
     border: none;
     border-radius: 0%;
 }
+
+.inputPhoneNumber2::placeholder{
+    color: black;
+ }
 
 @media screen and (max-width: 550px) {
     .profileDetail{
