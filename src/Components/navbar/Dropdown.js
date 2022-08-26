@@ -79,15 +79,15 @@ export default function Dropdown() {
         {/* {isOpen && ( */}
           <DropDownListContainer>
             <DropDownList>
-              <ListItem><NavLink to='/commingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>View Profile</NavLink></ListItem>
+              <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>View Profile</NavLink></ListItem>
 
-              <ListItem><NavLink to='/commingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Settings</NavLink></ListItem>
+              <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Settings</NavLink></ListItem>
 
               <ListItem><NavLink to='/wallet' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Wallet</NavLink></ListItem>
 
               <ListItem><NavLink to="/login" onClick={handleLogout}  className={({isActive}) => isActive ? "navActive": "navlink" }>Logout</NavLink></ListItem>
 
-              <ListItem><NavLink to='/commingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Help Center</NavLink></ListItem>
+              <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Help Center</NavLink></ListItem>
 
             </DropDownList>
           </DropDownListContainer>
