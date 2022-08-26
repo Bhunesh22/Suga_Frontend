@@ -57,7 +57,7 @@ const Marketplace = () => {
     // };
 
     const loadUserData = async () => {
-        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${selectedOption}&Limit=100`, {
+        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${selectedOption}&Limit=500`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

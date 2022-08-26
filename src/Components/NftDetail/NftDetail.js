@@ -21,7 +21,7 @@ function Nftdetail() {
     }, []);
 
     const loadUserData = async () => {
-        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${name}&Limit=100`, {
+        const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${name}&Limit=500`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
