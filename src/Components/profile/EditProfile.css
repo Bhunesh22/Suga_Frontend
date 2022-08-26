@@ -70,9 +70,7 @@ html {
    justify-content: center;
 } */
 
-.rightLable2 {
-    /* margin-left: -250px; */
-}
+
 
 /* 
 .editProfileForm1{
@@ -130,6 +128,7 @@ col-md-12 > form-control{
 @media screen and (max-width: 550px) {
     .profileTxt3 {
       font-size: 32px;
+      margin-top: 4px;
     }
 
     .editProfileForm1 {
