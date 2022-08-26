@@ -1,6 +1,8 @@
 import React from 'react'
 import './EditProfile.css'
 import Navbar from '../navbar/Navbar'
+import cancelLogo from './edit profile cross.svg'
+import doneLogo from './edit profile right.svg'
 
 function EditProfile() {
     return (
@@ -41,8 +43,11 @@ function EditProfile() {
                         </div>
                         
                        
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        <div class="col-6">
+                            <button class="btn btn-primary"><img src={cancelLogo} alt="cancel" /></button>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary"><img src={doneLogo} alt="done" /></button>
                         </div>
                     </form>
                 </div>

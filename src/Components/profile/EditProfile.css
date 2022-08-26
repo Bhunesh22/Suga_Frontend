@@ -96,6 +96,39 @@ html {
     border-radius: 0%;
 }
 
-.row g-3 container{
-    align-items: center;
+.row{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+col-md-6 > form-control{
+    width: 305px;
+}
+
+col-md-12 > form-control{
+    width: 624px;
+}
+
+.editProfileForm1{
+    /* width: 60vw; */
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 550px) {
+    .profileTxt3 {
+      font-size: 32px;
+    }
+
+    .editProfileForm1 {
+        margin-top: 24px;
+    }
+  
+    .editProfileForm1{
+        /* width: 90vw; */
+        display: flex;
+        justify-content: center;
+    }
+
 }
