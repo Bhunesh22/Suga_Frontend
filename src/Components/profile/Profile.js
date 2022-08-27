@@ -80,7 +80,7 @@ function Profile() {
                     <Navbar />
                 </div>
                 <div className='ProfileContainer'>
-                    <div className='profileBackground1'></div>
+                    {/* <div className='profileBackground1'></div> */}
                     {/* <div className='profileGradient1'></div>
             <div className='profileGradient2'></div> */}
                     <div className='profileDetailC'>

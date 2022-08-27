@@ -21,6 +21,8 @@ import Profile from "./Components/profile/Profile";
 import SkinDetail from './Components/Skin Detail/SkinDetail';
 import OurTeam from "./Components/Our Team/OurTeam";
 import EditProfile from './Components/profile/EditProfile';
+import Settings from './Components/Settings/Settings';
+
 
 ReactGA.initialize('UA-231739890-1');
 
@@ -47,6 +49,7 @@ function App() {
           <Route exact path='/skindetail/:index/:name/:slug' element={<SkinDetail/>}></Route>
           <Route exact path='/ourteam' element={<OurTeam/>}></Route>
           <Route exact path='/editprofile' element={<EditProfile/>}></Route>
+          <Route exact path='/settings' element={<Settings/>}></Route>
         </Routes>
       </Router>
     </>
