@@ -7,7 +7,7 @@
 }
 
 
-.Ccontainer {
+.MCcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -71,10 +71,9 @@
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 770px) {
     .Ccontainer{
         column-gap: 2px;
         row-gap: 25px;
-    
     }
 }
