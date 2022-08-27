@@ -12,28 +12,27 @@ const Card = (props) => {
                             <div className="HCimg">
                                 <img src={props.list.image} alt="" />
                             </div>
-                            <div className="HCbtns">
+                            {/* <div className="HCbtns">
                                 <div className="HCbtn1">Sugaverse</div>
                                 <div className="HCbtn2">NFT</div>
-                            </div>
+                            </div> */}
                             <div className="HCline"></div>
                         </div>
                         <div className="HCmid">
                             <p>{props.list.name}</p>
-                            <div className="HCprice">
+                            {/* <div className="HCprice">
                             <p>575</p>
                             <p><AiOutlineDollar size='1.1rem' /></p>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="HCbottom">
                             <div className="HCleft">
                                 <img src={logo} alt="" />
-                                <p>Counter Strike : Global Offensive
-                                    Ristricted Sniper Rifle</p>
+                                <p>Counter Strike : Global Offensive</p>
                             </div>
                             <div className="HCright">
                                 <p>Quantity:</p>
-                                <p>458</p>
+                                <p>500</p>
                             </div>
                         </div>
                     </div>
