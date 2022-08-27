@@ -31,6 +31,9 @@ html {
 
 .profileDetailC{
 z-index: 50;
+display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profileGradient1 {
@@ -91,7 +94,6 @@ filter: blur(2px);
 }
 
 .form2{
-    margin-left: 84px;
     z-index: 50;
     
 }

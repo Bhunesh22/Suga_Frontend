@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Profile.css'
 import Navbar from '../navbar/Navbar'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Profile() {
 
@@ -10,12 +10,12 @@ function Profile() {
 
     useEffect(() => {
         loadUserData();
-        getNotes();
+        getUser();
     }, []);
 
     const loadUserData = async () => {
         const responce = await fetch(`http://localhost:5000/api/auth/getuser`, {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'auth-token': localStorage.getItem('token')
             }
@@ -24,11 +24,10 @@ function Profile() {
         setUser(Json)
     }
 
-    console.log(user, "intial");
+    // console.log(user, "intial");
 
 
-
-    const getNotes = async () => {
+    const getUser = async () => {
         const responce = await fetch(`http://localhost:5000/api/userdetails/fetchuserdata`, {
             method: 'GET',
             headers: {
@@ -37,41 +36,25 @@ function Profile() {
             }
         });
         const json = await responce.json()
-        console.log(json)
+        // console.log(json)
         setEditedData(json)
     }
 
-    console.log(editedData, "GetEditedData")
-
-    const [orderDetails, setOrderDetails] = useState({ firstname: "", lastname: "", email: "", contact: "", username: "", country: "" })
-
-    let navigate = useNavigate();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const res = await fetch(`http://localhost:5000/api/userdetails/profile`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'auth-token': localStorage.getItem('token'),
-            },
-            body: JSON.stringify({
-                firstname: orderDetails.firstname,
-                lastname: orderDetails.lastname,
-                email: orderDetails.email,
-                username: orderDetails.username,
-                contact: orderDetails.contact,
-                country: orderDetails.country,
-            })
-        });
-        const Json = await res.json()
-        console.log(Json, "onEditClick");
+    function arrayIsEmpty() {
+        if (!Array.isArray(editedData)) {
+            return true;
+        }
+        if (editedData.length == 0) {
+            return true;
+        }
+        return false;
     }
 
-    const onChange = (e) => {
-        setOrderDetails({ ...orderDetails, [e.target.name]: e.target.value })
-    }
+    // console.log(arrayIsEmpty())
+
+    // console.log(editedData, "edited data")
+
+
 
     return (
         <>
@@ -83,14 +66,10 @@ function Profile() {
                     {/* <div className='profileBackground1'></div> */}
                     {/* <div className='profileGradient1'></div>
             <div className='profileGradient2'></div> */}
+
                     <div className='profileDetailC'>
                         <div className='profileTxt1'>Profile</div>
                         <div className='profileDetail'>
-                            <div className='profileImageContainer'>
-                                <img className='profileImage2' src='/images/DEVESH 1.png'></img>
-                                <button className='updateProfile'><img src='/images/update profile image button.svg'></img></button>
-                            </div>
-                            <div className='profileBlueLine1'></div>
                             <div className='form2'>
 
                                 {/* <form className="row g-3 "> */}
@@ -105,7 +84,7 @@ function Profile() {
                                                     type="text"
                                                     className="form-control mb-1, inputFirstName1"
                                                     name="firstName"
-                                                    // placeholder={editedData.firstname}
+                                                    placeholder={arrayIsEmpty() ? "" : editedData[editedData.length - 1].firstname}
                                                 />
                                             </div>
                                             <div className="col-md-6">
@@ -115,7 +94,7 @@ function Profile() {
                                                     type="text"
                                                     className="form-control mb-1, inputLastName1"
                                                     name="lastName"
-                                                    // placeholder={editedData.lasttname}
+                                                    placeholder={arrayIsEmpty() ? "" : editedData[editedData.length - 1].lastname}
 
                                                 />
                                             </div>
@@ -127,8 +106,8 @@ function Profile() {
                                                 type="text"
                                                 className="form-control mb-1, inputEmail1"
                                                 name="email"
-                                                // placeholder={user.email}
-                                                // placeholder={editedData.email}
+                                                placeholder={user === undefined? "" : user.email}
+                                                // placeholder={arrayIsEmpty() ? user.email : editedData[editedData.length - 1].email}
                                             />
                                         </div>
                                         <div className='formFlex4'>
@@ -139,8 +118,8 @@ function Profile() {
                                                     type="text"
                                                     className="form-control mb-1, inputUsername2"
                                                     name="username"
-                                                    // placeholder={user.name}
-                                                    // placeholder={editedData.username}
+                                                    placeholder={user === undefined? "" : user.name}
+                                                    // placeholder={arrayIsEmpty() ? user.name : editedData[editedData.length - 1].username}
                                                 />
                                             </div>
                                             <div className="col-md-6">
@@ -150,7 +129,7 @@ function Profile() {
                                                     type="text"
                                                     className="form-control mb-1, inputPhoneNumber2"
                                                     name="phone"
-                                                    // placeholder={editedData.contact}
+                                                    placeholder={arrayIsEmpty() ? "" : editedData[editedData.length - 1].contact}
                                                     
                                                 />
                                             </div>
@@ -163,7 +142,7 @@ function Profile() {
                                                 type="text"
                                                 className="form-control mb-1, inputCountry2"
                                                 name="country"
-                                                // placeholder={editedData.country}
+                                                placeholder={arrayIsEmpty() ? "" : editedData[editedData.length - 1].country}
                                             />
                                         </div>
                                     </div>
@@ -171,87 +150,7 @@ function Profile() {
                                 {/* </form> */}
 
 
-                                <div><button className='editProfileBtn1'>Edit</button></div>
-                                <form className="row g-3 editFormDetails" onSubmit={handleSubmit}>
-                                    <div className='formFlex1'>
-                                        <div className='formFlex2'>
-                                            <div className='formFlex4'>
-                                                <div className="col-md-6">
-                                                    <label for="firstName" className="form-label mb-2.5, firstName1">First Name</label>
-                                                    <input
-                                                        type="text"
-                                                        className="form-control mb-1, inputFirstName1"
-                                                        name="firstname"
-                                                        required
-                                                        value={orderDetails.firstname}
-                                                        onChange={onChange}
-                                                    />
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <label for="lastName" className="form-label mb-2.5, lastName1">Last Name</label>
-                                                    <input
-                                                        type="text"
-                                                        className="form-control mb-1, inputLastName1"
-                                                        name="lastname"
-                                                        required
-                                                        value={orderDetails.lastname}
-                                                        onChange={onChange}
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-md-12">
-                                                <label for="email" className="form-label mb-2.5, email2">Email</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control mb-1, inputEmail1"
-                                                    name="email"
-                                                    // placeholder={user.email}
-                                                    required
-                                                    value={orderDetails.email}
-                                                    onChange={onChange}
-                                                />
-                                            </div>
-                                            <div className='formFlex4'>
-                                                <div className="col-md-6">
-                                                    <label for="username" className="form-label mb-2.5, username2">Username</label>
-                                                    <input
-                                                        type="text"
-                                                        className="form-control mb-1, inputUsername2"
-                                                        name="username"
-                                                        // placeholder={user.name}
-                                                        required
-                                                        value={orderDetails.username}
-                                                        onChange={onChange}
-                                                    />
-                                                </div>
-                                                <div className="col-md-6">
-                                                    <label for="phoneNumber" className="form-label mb-2.5, phoneNumber1">Phone Number</label>
-                                                    <input
-                                                        type="text"
-                                                        className="form-control mb-1, inputPhoneNumber2"
-                                                        name="contact"
-                                                        required
-                                                        value={orderDetails.contact}
-                                                        onChange={onChange}
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <div className="col-md-6">
-                                                <label for="country" className="form-label mb-2.5, username2">Country</label>
-                                                <input
-                                                    type="text"
-                                                    className="form-control mb-1, inputCountry2"
-                                                    name="country"
-                                                    required
-                                                    value={orderDetails.country}
-                                                    onChange={onChange}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div><button className='editProfileBtn1' type="submit">Edit</button></div>
-                                </form>
+                                <div><Link to="/editprofile"><button className='editProfileBtn1'>Edit</button></Link></div>
                             </div>
                         </div>
                     </div>

@@ -156,30 +156,30 @@ function SkinDetail() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style={{borderBottom:"transparent"}}>
-                            <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
+                            <tr style={{ borderBottom: "transparent" }}>
+                                <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
 
-                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov": data.slug} + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
-                                    {factoryNew === undefined? "NA" : factoryNew?.price.USD}
-                                    </div></a></td>
-
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov": data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
-                                    {minimalWear === undefined? "NA" : minimalWear?.price.USD}
+                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {factoryNew === undefined ? "NA" : factoryNew?.price.USD}
                                 </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
-                                    {fieldTested === undefined? "NA" : fieldTested?.price.USD}
-                                    </div></a></td>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {minimalWear === undefined ? "NA" : minimalWear?.price.USD}
+                                </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
-                                    {wellWorn === undefined? "NA" : wellWorn?.price.USD}
-                                    </div></a></td>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {fieldTested === undefined ? "NA" : fieldTested?.price.USD}
+                                </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail","Dmarket","user",name === undefined? "ak-47-asiimov" : data.slug)}>
-                                    {battleScarred === undefined? "NA" : battleScarred?.price.USD}
-                                    </div></a></td>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {wellWorn === undefined ? "NA" : wellWorn?.price.USD}
+                                </div></a></td>
 
-                                
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {battleScarred === undefined ? "NA" : battleScarred?.price.USD}
+                                </div></a></td>
+
+
                             </tr>
                         </tbody>
                     </table>
@@ -198,7 +198,11 @@ function SkinDetail() {
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
                                                 <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                <div>$100</div>
+                                                <div>
+                                                    <a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                        {factoryNew === undefined ? "NA" : factoryNew?.price.USD}
+                                                    </div></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -217,7 +221,9 @@ function SkinDetail() {
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
                                                 <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                <div>$100</div>
+                                                <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    {minimalWear === undefined ? "NA" : minimalWear?.price.USD}
+                                                </div></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -236,7 +242,9 @@ function SkinDetail() {
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
                                                 <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                <div>$100</div>
+                                                <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    {fieldTested === undefined ? "NA" : fieldTested?.price.USD}
+                                                </div></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -255,7 +263,9 @@ function SkinDetail() {
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
                                                 <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                <div>$100</div>
+                                                <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    {wellWorn === undefined ? "NA" : wellWorn?.price.USD}
+                                                </div></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -274,7 +284,9 @@ function SkinDetail() {
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
                                                 <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                <div>$100</div>
+                                                <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    {battleScarred === undefined ? "NA" : battleScarred?.price.USD}
+                                                </div></a></div>
                                             </div>
                                         </div>
                                     </div>

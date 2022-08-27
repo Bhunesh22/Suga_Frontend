@@ -12,6 +12,7 @@ import {Link, NavLink} from "react-router-dom"
 const Navbar = () => {
 
     const [click, setClick] = useState(false);
+    const [openProfile, setProfileOpen] = useState(false);
 
     const handleClick = () => setClick(!click);
 
@@ -22,6 +23,15 @@ const Navbar = () => {
         setClick(!click);
         localStorage.removeItem('token');
       }
+      
+      var x = window.matchMedia("(max-width: 700px)")
+
+    const myFunction = (X) => {
+        if (x.matches) {
+          setProfileOpen(true)
+        }
+      }
+      
 
   return (
     <>
@@ -121,10 +131,12 @@ const Navbar = () => {
         <div className="Nlast">
             {!localStorage.getItem("token")? (<Link to="/login" className='Nlink' ><div className='Nbtn' style={{cursor:"pointer"}}>Login</div></Link> ) : (<>
             <div className="Nbox"></div>
-            <div className="Nimg" style={{cursor:"pointer"}}>
+            {openProfile ? (<div className="Nimg" style={{cursor:"pointer"}}>
                 <img onClick={toggle} src={profile} alt=""/>
-            </div>
-            {Open? <div className="Ndrop"><Dropdown/></div>: ''} 
+            </div>): (<div className="Nimg" style={{cursor:"pointer"}}>
+                <Link to="/profile"><img onClick={toggle} src={profile} alt=""/></Link>
+            </div>)}
+            {Open? <div className="Ndrop"><Dropdown/></div>: ''}
             </>) }
              
         </div>
