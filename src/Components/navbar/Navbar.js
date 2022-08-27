@@ -7,11 +7,9 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 import { VscChromeClose } from 'react-icons/vsc';
 import Dropdown from './Dropdown'
-import {Link, useNavigate, NavLink} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 
 const Navbar = () => {
-
-  //  const navigate = useNavigate()
 
     const [click, setClick] = useState(false);
     const [openProfile, setProfileOpen] = useState(false);
