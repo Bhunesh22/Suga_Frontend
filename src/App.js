@@ -49,7 +49,7 @@ function App() {
           <Route exact path='/skindetail/:index/:name/:slug' element={<SkinDetail/>}></Route>
           <Route exact path='/ourteam' element={<OurTeam/>}></Route>
           <Route exact path='/editprofile' element={<EditProfile/>}></Route>
-          <Route exact path='/settings' element={<Settings/>}></Route>
+          {/* <Route exact path='/settings' element={<Settings/>}></Route> */}
         </Routes>
       </Router>
     </>

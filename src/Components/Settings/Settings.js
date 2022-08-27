@@ -13,6 +13,9 @@ function Settings() {
                 <div className='settingsTxt1'>
                     <h2 className='settingsTxt2'> Settings</h2>
                 </div>
+                <div >
+
+                </div>
             </div>
         </>
     )
