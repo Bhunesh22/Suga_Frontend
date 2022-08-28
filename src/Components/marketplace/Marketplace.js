@@ -6,12 +6,12 @@ import { Link, useParams } from 'react-router-dom';
 import "./Marketplace.css"
 import MCard from './card/MCard'
 // import DropDown from "./dropdown/DropDown"
-import axios from 'axios';
+// import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import { AiFillCaretDown } from 'react-icons/ai';
 import Navbar from '../navbar/Navbar';
 // import Nftdetail from '../NftDetail/NftDetail';
-import SkinDetail from '../Skin Detail/SkinDetail';
+// import SkinDetail from '../Skin Detail/SkinDetail';
 
 const options = ["AK-47", "AWP", "M4A1-S", "MP9", "USP-S", "P250", "M249", "NAVAJA", "KARAMBIT", "BUTTERFLY-KNIFE"];
 
