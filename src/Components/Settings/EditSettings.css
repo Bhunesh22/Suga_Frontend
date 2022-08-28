@@ -5,7 +5,7 @@ html {
     box-sizing: border-box;
 }
 
-.settings2 {
+.EditSettings2 {
 
     width: 100vw;
     background: #0D0916;
@@ -16,12 +16,12 @@ html {
 
 }
 
-.settingsTxt1 {
+.EditSettingsTxt1 {
     display: flex;
     justify-content: center;
 }
 
-.settingsTxt2 {
+.EditSettingsTxt2 {
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 48px;
     line-height: 56px;

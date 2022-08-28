@@ -1,20 +1,21 @@
-
 import React from 'react'
-import './Settings.css'
-import Navbar from '../navbar/Navbar'
-import { Link } from 'react-router-dom'
+import './EditSettings.css';
+import Navbar from '../navbar/Navbar';
+import cancelIcon from "./images/edit profile cross.svg"
+import donelIcon from "./images/edit profile right.svg"
+import { useNavigate, Link } from 'react-router-dom'
 
-function Settings() {
+function EditSettings() {
     return (
         <>
-            <div className='settings2'>
+            <div className='EditSettings2'>
                 <div>
                     <Navbar />
                 </div>
-                <div className='settingsTxt1'>
-                    <h2 className='settingsTxt2'> Settings</h2>
+                <div className='EditSettingsTxt1'>
+                    <h2 className='EditSettingsTxt2'> Settings</h2>
                 </div>
-                <div className='settingsForm1'>
+                <div className='EditSettingsForm1'>
                     <form class="row g-3 container">
                         <div class="col-md-6">
                             <label for="inputPassword4s" class="form-label">Change Password</label>
@@ -37,17 +38,19 @@ function Settings() {
                             <label for="inputPhoneNumber1s" class="form-label">Phone Number</label>
                             <input type="number" class="form-control" id="inputPhoneNumber1s" />
                         </div>
-                        <div class="col-12">
-                            <div><Link to="/editsettings"><button class="btn btn-primary">Edit</button></Link></div>
+                        <div className='btnFlex1'>
+                            <div className="">
+                                <button className="btn btn-primary3"><Link to="/settings"><img src={cancelIcon} alt="cancel" /></Link></button>
+                            </div>
+                            <div className="">
+                                <button type="submit" className="btn btn-primary3"><img src={donelIcon} alt="done" /></button>
+                            </div>
                         </div>
                     </form>
-                </div>
-                <div >
-
                 </div>
             </div>
         </>
     )
 }
 
-export default Settings
+export default EditSettings
