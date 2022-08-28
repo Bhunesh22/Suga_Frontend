@@ -16,6 +16,7 @@ import NftDetail from "./Components/NftDetail/NftDetail";
 import Navbar from "./Components/navbar/Navbar";
 import Footer from "./Components/footer/Footer";
 import Marketplace from "./Components/marketplace/Marketplace";
+import MarketplaceType from "./Components/marketplace/Marketplace";
 import Card from "./Components/homepage/card/Card";
 import Profile from "./Components/profile/Profile";
 import SkinDetail from './Components/Skin Detail/SkinDetail';
@@ -42,6 +43,7 @@ function App() {
           <Route exact path='/wallet' element={<PhantomWallet/>}></Route>
           <Route exact path='/nftdetail/:index/:name' element={<NftDetail/>}></Route>
           <Route exact path='/marketplace' element={<Marketplace/>}></Route>
+          <Route exact path='/marketplace/:type' element={<MarketplaceType/>}></Route>
           <Route exact path='/card' element={<Card/>}></Route>
           <Route exact path='/profile' element={<Profile/>}></Route>
           <Route exact path='/skindetail/:index/:name/:slug' element={<SkinDetail/>}></Route>

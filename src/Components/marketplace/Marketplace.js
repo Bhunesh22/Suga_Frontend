@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 // import nacl from "tweetnacl";
 // import * as https from 'https';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import "./Marketplace.css"
 import MCard from './card/MCard'
@@ -13,16 +13,26 @@ import Navbar from '../navbar/Navbar';
 // import Nftdetail from '../NftDetail/NftDetail';
 import SkinDetail from '../Skin Detail/SkinDetail';
 
-const options = ["AK-47", "AWP", "M4A1-S", "MP9", "USP-S", "P250", "M249", "NAVAJA", "KARAMBIT"];
+const options = ["AK-47", "AWP", "M4A1-S", "MP9", "USP-S", "P250", "M249", "NAVAJA", "KARAMBIT", "BUTTERFLY-KNIFE"];
 
 const Marketplace = () => {
 
+    let { type } = useParams();
+    console.log(type, "type of items")
+
+    // if(type === undefined){
+    //     var A = "AK-47"
+    // }
+    // else{
+    //     let A = type
+    // }
+
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState("AK-47");
+    const [selectedOption, setSelectedOption] = useState(type === undefined? "AK-47" : type);
     const toggling = () => setIsOpen(!isOpen);
 
     useEffect(() => {
-        console.log("run")
+        // console.log("run")
         loadUserData();
     }, [selectedOption]);
 
@@ -41,7 +51,6 @@ const Marketplace = () => {
     //     }).catch((err) => console.log(err));
     // }
     // }
-
 
     const [searchTitle, setSearchTitle] = useState("");
     const [data, setData] = useState([]);
@@ -67,10 +76,7 @@ const Marketplace = () => {
         const Json = await responce.json()
         //    console.log(Json)
         setData(Json)
-
     }
-
-
 
 
     // console.log(data.objects)
@@ -100,7 +106,7 @@ const Marketplace = () => {
     return (
         <>
         <div style={{display:"none"}}>
-            <SkinDetail  option={selectedOption}/>
+            {/* <SkinDetail  option={selectedOption}/> */}
         </div>
             <div className="Mcontainer">
                 <div className="NMcontainer"><Navbar/></div>
