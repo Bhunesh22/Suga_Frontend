@@ -34,7 +34,7 @@ function App() {
           <Route exact path="/navbar" element={<Navbar/>} />
           <Route exact path="/footer" element={<Footer/>} />
           <Route exact path="/paymentDrop" element={<PaymentDrop/>} />
-          <Route exact path="/comingSoon" element={<CommingSoon/>} />
+          <Route exact path="/commingSoon" element={<CommingSoon/>} />
           <Route exact path="/cards" element={<Cards/>} />
           <Route exact path="/buyPopup" element={<BuyPopup/>} />
           <Route exact path='/registration' element={< Registration/>}></Route>
