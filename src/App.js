@@ -23,6 +23,7 @@ import OurTeam from "./Components/Our Team/OurTeam";
 import EditProfile from './Components/profile/EditProfile';
 import Settings from './Components/Settings/Settings';
 import EditSettings from './Components/Settings/EditSettings';
+import AskToBuy from './Components/Ask to Buy/AskToBuy';
 
 
 ReactGA.initialize('UA-231739890-1');
@@ -52,6 +53,7 @@ function App() {
           <Route exact path='/editprofile' element={<EditProfile/>}></Route>
           <Route exact path='/settings' element={<Settings/>}></Route>
           <Route exact path='/editsettings' element={<EditSettings/>}></Route>
+          <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
         </Routes>
       </Router>
     </>

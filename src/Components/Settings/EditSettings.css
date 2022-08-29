@@ -42,7 +42,7 @@ html {
 
 }
 
-.settingsForm1{
+.settingsForm1 {
     margin-top: 40px;
 }
 
@@ -94,6 +94,8 @@ col-md-12>form-control {
     width: 150px;
     height: 40px;
     --bs-btn-hover-bg: #4D69FD;
+    
+
 }
 
 @media screen and (max-width: 550px) {
@@ -102,14 +104,14 @@ col-md-12>form-control {
         margin-top: 24px;
     }
 
-    .settingsForm1{
+    .settingsForm1 {
         margin-top: 16px;
     }
 
     .form-label {
         font-size: 16px;
-   
-    
+
+
     }
 
 }
