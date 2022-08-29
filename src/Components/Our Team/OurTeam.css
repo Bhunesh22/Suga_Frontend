@@ -6,7 +6,7 @@ html {
 }
 
 .ourTeamContainer {
-    width: 100vw;
+    width: 100%;
     min-height: 1700px;
     background: #0D0916;
     z-index: 20;
