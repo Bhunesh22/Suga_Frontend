@@ -1,0 +1,121 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.verifyEmail1 {
+    width: 100%;
+    min-height: 100vh;
+    background: #0D0916;
+    overflow: hidden;
+}
+
+.verifyBoxFlex2{
+    display: flex;
+    justify-content: center;
+}
+
+.verifyBox1 {
+    width: 914px;
+    
+
+    background: #FFFFFF;
+    margin-top: 146px;
+    margin-bottom: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verifyLogo1 {
+    width: 355px;
+    height: 282px;
+    margin-top: 90px;
+
+}
+
+.verifyTxt1 {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #000000;
+
+    margin-top: 34px;
+
+}
+
+.emailName1 {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 8px;
+
+}
+
+.clickToVerify1 {
+    width: 315px;
+    height: 48px;
+
+    background: #4D69FD;
+
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    margin-top: 21px;
+   margin-bottom: 200px;
+
+}
+
+
+@media screen and (max-width: 550px) {
+.verifyBoxFlex2{
+    transform: scale(0.8);
+}
+
+.verifyLogo1{
+    margin-top: 20px;
+}
+
+.verifyTxt1{
+    font-size: 24px;
+}
+
+.emailName1{
+
+    font-size: 16px;
+}
+
+
+
+.verifyBox1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.verifyBox1{
+    margin-bottom: 20px;
+}
+
+.clickToVerify1{
+margin-bottom: 100px;
+}
+
+}
