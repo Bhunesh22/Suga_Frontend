@@ -32,7 +32,11 @@ html {
     align-items: center;
 }
 
-.sugaLogoEmail1 {
+.doneTickLogo1{
+    margin-top: 19px;
+}
+
+.sugaLogoEmail3 {
     margin-top: 33px;
     margin-left: 29px;
 }
@@ -112,6 +116,10 @@ html {
 
 }
 
+.sugaLogoEmail2{
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 550px) {
     .sugaLogoEmail1 {
@@ -136,7 +144,7 @@ html {
     }
 
     .verifyTxt1 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .emailName1 {
@@ -148,12 +156,16 @@ html {
 
 
     .verifyBox1 {
-        margin-top: 10px;
+        margin-top: -100px;
 
     }
 
     .verifyBox1 {
         margin-bottom: 20px;
+    }
+
+    .clickToVerify1{
+        margin-bottom: 40px;
     }
 
 }
