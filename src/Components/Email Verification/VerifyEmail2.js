@@ -15,9 +15,9 @@ function VerifyEmail2() {
                         <div><button className='loginBtn2'>Login</button></div>
                     </div>
                     <div className='verifyBoxFlex2'>
-                        <div className='verifyBox1'>
-                            <div><img className='verifyLogo1' src={VerifyLogo2} /></div>
-                            <div className='verifyTxt1'>Congratulation your email ID is verified</div>
+                        <div className='verifyBox2'>
+                            <div><img className='verifyLogo2' src={VerifyLogo2} /></div>
+                            <div className='verifyTxt2'>Congratulation your email ID is verified</div>
                             <div className='doneTickLogo1'><img src={OkLogo}/></div>
                             {/* <div className='emailName1'>email to: kunaldalotra02@gmail.com</div> */}
                             <div><button className='clickToVerify1'>Click to continue</button></div>

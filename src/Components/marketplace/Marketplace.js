@@ -118,7 +118,7 @@ const Marketplace = () => {
 
                     <div className="Mleft">
                         {/* <form onSubmit={handleSearch}> */}
-                        <input type="text" onChange={(e) => { setSearchTitle(e.target.value); /*handleSearch()*/ }} placeholder="&#61442;   Looking  for  something  specific?  Type  here" />
+                        <input type="text" onChange={(e) => { setSearchTitle(e.target.value); /*handleSearch()*/ }} placeholder="&#61442;   search?  Type  here" />
                         {/* <button type='submit'>Search</button> */}
                         {/* </form> */}
                     </div>
