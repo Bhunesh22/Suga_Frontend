@@ -142,4 +142,8 @@ col-md-12 > form-control{
         justify-content: center;
     }
 
+    .editProfileForm1{
+        margin-bottom: 60px;
+    }
+
 }

@@ -63,9 +63,12 @@ function Profile() {
                     <Navbar />
                 </div>
                 <div className='ProfileContainer'>
-                    <div className='profileBackground1'></div>
+                    {/* <div className='profileBackground1'></div> */}
+                    {/* <div className='profileGradient1'></div>
+            <div className='profileGradient2'></div> */}
+
                     <div className='profileDetailC'>
-                        <div className='profileTxt1'>Profile</div>
+                        <div className='profileTxt1'><h2 className='profileTxt2'>Profile</h2>Profile</div>
                         <div className='profileDetail'>
                             <div className='form2'>
 
@@ -103,8 +106,8 @@ function Profile() {
                                                 type="text"
                                                 className="form-control mb-1, inputEmail1"
                                                 name="email"
-                                                placeholder={user === undefined? "" : user.email}
-                                                // placeholder={arrayIsEmpty() ? user.email : editedData[editedData.length - 1].email}
+                                                placeholder={user === undefined ? "" : user.email}
+                                            // placeholder={arrayIsEmpty() ? user.email : editedData[editedData.length - 1].email}
                                             />
                                         </div>
                                         <div className='formFlex4'>
@@ -115,8 +118,8 @@ function Profile() {
                                                     type="text"
                                                     className="form-control mb-1, inputUsername2"
                                                     name="username"
-                                                    placeholder={user === undefined? "" : user.name}
-                                                    // placeholder={arrayIsEmpty() ? user.name : editedData[editedData.length - 1].username}
+                                                    placeholder={user === undefined ? "" : user.name}
+                                                // placeholder={arrayIsEmpty() ? user.name : editedData[editedData.length - 1].username}
                                                 />
                                             </div>
                                             <div className="col-md-6">
@@ -127,7 +130,7 @@ function Profile() {
                                                     className="form-control mb-1, inputPhoneNumber2"
                                                     name="phone"
                                                     placeholder={arrayIsEmpty() ? "" : editedData[editedData.length - 1].contact}
-                                                    
+
                                                 />
                                             </div>
                                         </div>

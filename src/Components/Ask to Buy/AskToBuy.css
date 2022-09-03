@@ -1,0 +1,166 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.askToBuy1 {
+    width: 100vw;
+    background: #0D0916;
+    overflow: hidden;
+    z-index: 100;
+    min-height: 100vh;
+}
+
+.preferedModelTxt {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-top: 142px;
+    margin-left: 40px;
+}
+
+.modelSelector1 {
+    background: #101638;
+    margin-top: 32px;
+    /* height: 105px; */
+    min-height: 105px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.ModelRadioButton1 {
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+
+}
+
+.modelFlex1 {
+    display: flex;
+    gap: 100px;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root {
+    color: none !important;
+}
+
+.modelSelector1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.css-qfz70r-MuiFormGroup-root {
+    gap: 100px;
+}
+
+.terms2 {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-top: 52px;
+    margin-left: 40px;
+
+}
+
+.termsDetails1 {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+
+    letter-spacing: 0.005em;
+
+    color: #FFFFFF;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.form-check-label{
+    font-family: 'Gilroy', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 21px;
+color: #A3B1E4;
+
+}
+
+.check2{
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 40px;
+}
+
+.buyButton1{
+    
+font-family: 'Gilroy', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+
+background: #4D69FD;
+width: 182px;
+height: 51px;
+border: none;
+}
+
+.buyButtonFlex1{
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    margin-bottom: 100px;
+}
+
+.buySecondCheck{
+    margin-top: 22px;
+}
+
+@media screen and (max-width: 1200px) {
+    .modelSelector1 {
+        gap: 10px;
+    }
+
+    .css-qfz70r-MuiFormGroup-root {
+        gap: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+  
+
+
+    .css-qfz70r-MuiFormGroup-root {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    .modelSelector1{
+        margin-left: 20px;
+    }
+
+    .modelFlex1{
+        margin-left: 4px;
+    }
+}
