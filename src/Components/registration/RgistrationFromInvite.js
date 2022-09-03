@@ -13,11 +13,8 @@ function RegistrationFromInvite() {
   const navigate = useNavigate();
   const [data, setData] = useState({
 		name: "",
-		// lastName: "",
-
 		email: "",
-		password: "",
-    confirmpassword:""
+		password: ""
 	});
 	const [error, setError] = useState("");
 	const [msg, setMsg] = useState("");
@@ -34,7 +31,7 @@ function RegistrationFromInvite() {
 			const { data: res } = await axios.post(url, data);
 			setMsg(res.message);
       setLoading(false)
-      navigate("/")
+      navigate("/emailverification")
 		} catch (error) {
 			if (
 				error.response &&
@@ -134,11 +131,10 @@ function RegistrationFromInvite() {
             type="password"
             id="confermPassword"
             className='RconfermPassword'
-            // required
+            required
             // name='cpassword'
             // onChange={onChange}
-            // minLength={5}
-
+            minLength={5}
           />
           <br />
           <button type='submit' className='RproceedBtn'>

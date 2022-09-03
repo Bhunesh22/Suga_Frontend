@@ -59,12 +59,12 @@ function App() {
           <Route exact path='/ourteam' element={<OurTeam/>}></Route>
           <Route exact path='/editprofile' element={<EditProfile/>}></Route>
 
-          <Route exact path="/users/:id/verify/:token" element={<Verified/>}></Route>
+          <Route exact path="/users/:id/verify/:token" element={<VerifyEmail2/>}></Route>
           <Route exact path='/settings' element={<Settings/>}></Route>
           <Route exact path='/editsettings' element={<EditSettings/>}></Route>
           <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
           <Route exact path='/emailverification' element={<VerifyEmail/>}></Route>
-          <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route>
+          {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
 
         </Routes>
       </Router>
