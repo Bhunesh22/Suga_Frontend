@@ -14,7 +14,7 @@ function Profile() {
     }, []);
 
     const loadUserData = async () => {
-        const responce = await fetch(`http://localhost:5000/api/auth/getuser`, {
+        const responce = await fetch(`http://localhost:5000/api/auth1/getuser`, {
             method: 'GET',
             headers: {
                 'auth-token': localStorage.getItem('token')

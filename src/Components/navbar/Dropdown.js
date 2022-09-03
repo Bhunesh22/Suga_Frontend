@@ -79,7 +79,7 @@ export default function Dropdown() {
         {/* {isOpen && ( */}
           <DropDownListContainer>
             <DropDownList>
-              <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>View Profile</NavLink></ListItem>
+              <ListItem><NavLink to='/profile' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>View Profile</NavLink></ListItem>
 
               <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Settings</NavLink></ListItem>
 

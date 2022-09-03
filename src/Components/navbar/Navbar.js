@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
 
-      console.log(openProfile);
+      // console.log(openProfile);
       
 
   return (
@@ -120,6 +120,17 @@ const Navbar = () => {
                 onClick={handleClick}
               >
                 Help Center
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/ourteam"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About Us
               </NavLink>
             </li>
             {localStorage.getItem('token')?(<li className="nav-item">
