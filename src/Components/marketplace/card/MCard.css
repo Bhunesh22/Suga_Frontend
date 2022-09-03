@@ -29,7 +29,7 @@
     z-index: 10;
 }
 
-.MClogo img{
+.MClogo img {
     margin-top: 6px;
     margin-left: 6px;
     width: 20px;
@@ -39,8 +39,6 @@
 
 .MCimg {
     position: absolute;
-    width: 220px;
-    height: 180px;
     left: 40px;
     top: 5px;
     z-index: 2;
@@ -201,4 +199,93 @@
     line-height: 12px;
     text-align: right;
     color: #A3B1E4;
+}
+
+@media screen and (max-width: 700px) {
+    .MNcard {
+        width: 170px;
+        height: 190px;
+    }
+
+    .MCimg {
+        left: 22px;
+        top: -5px;
+    }
+
+    .MCimg img {
+        width: 120px;
+        height: 100px;
+    }
+
+    .MCline {
+        left: 15px;
+        top: 85px;
+        width: 140px;
+    }
+
+    .MCmid p:nth-child(1) {
+        top: 95px;
+        left: 15px;
+        padding: 0px 5px;
+        font-size: 13px;
+        line-height: 16px;
+
+    }
+
+    .MCleft img {
+        width: 18px;
+        height: 20px;
+        left: 15px;
+        top: 147px
+    }
+    .MCleft p {
+        width: 120px;
+        height: 26px;
+        left: 40px;
+        top: 145px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .MNcard {
+        width: 150px;
+        height: 190px;
+    }
+
+    .MCimg {
+        left: 22px;
+        top: -5px;
+    }
+
+    .MCimg img {
+        width: 100px;
+        height: 100px;
+    }
+    .MCline {
+        left: 11px;
+        top: 85px;
+        width: 120px;
+    }
+
+    .MCmid p:nth-child(1) {
+        top: 95px;
+        left: 15px;
+        padding: 0px 5px;
+        font-size: 13px;
+        line-height: 16px;
+
+    }
+
+    .MCleft img {
+        width: 18px;
+        height: 20px;
+        left: 15px;
+        top: 147px
+    }
+    .MCleft p {
+        width: 120px;
+        height: 26px;
+        left: 40px;
+        top: 145px;
+    }
 }

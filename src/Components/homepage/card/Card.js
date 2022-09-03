@@ -7,7 +7,7 @@ const Card = (props) => {
    
     return (
        
-                    <div className="HCcard" key={props.index}>
+                    <div className="HCcard" key={props.index} style={{cursor:'pointer'}}>
                         <div className="HCtop">
                             <div className="HCimg">
                                 <img src={props.list.image} alt="" />

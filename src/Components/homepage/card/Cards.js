@@ -10,7 +10,7 @@ const Cards = () => {
     <div className="Ccontainer">
          {cardDetails? cardDetails.map((list, index) => {
              return (
-                 <Card list={list} index={index} />
+                 <Link to={`/marketplace/${list.type}`}><Card list={list} index={index} /></Link>
                  )
                    }): null}
                  </div>

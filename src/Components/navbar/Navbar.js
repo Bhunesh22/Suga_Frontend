@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import logo from './suga.png'
 import profile from './profile.png'
 import hamburgur from './Group 146.svg'
@@ -26,11 +26,20 @@ const Navbar = () => {
       
       var x = window.matchMedia("(max-width: 700px)")
 
-    const myFunction = (X) => {
+      const myFunction = (X) => {
         if (x.matches) {
           setProfileOpen(true)
         }
       }
+
+      useEffect((x) => {
+       myFunction(x)
+      }, [])
+      
+
+
+
+      console.log(openProfile);
       
 
   return (
@@ -131,14 +140,14 @@ const Navbar = () => {
         <div className="Nlast">
             {!localStorage.getItem("token")? (<Link to="/login" className='Nlink' ><div className='Nbtn' style={{cursor:"pointer"}}>Login</div></Link> ) : (<>
             <div className="Nbox"></div>
-            {openProfile ? (<div className="Nimg" style={{cursor:"pointer"}}>
+            {!openProfile ? (<div className="Nimg" style={{cursor:"pointer"}}>
                 <img onClick={toggle} src={profile} alt=""/>
             </div>): (<div className="Nimg" style={{cursor:"pointer"}}>
-                <Link to="/profile"><img onClick={toggle} src={profile} alt=""/></Link>
+                <Link to="/profile"><img src={profile} alt=""/></Link>
             </div>)}
             {Open? <div className="Ndrop"><Dropdown/></div>: ''}
             </>) }
-             
+
         </div>
     </div>
     </>

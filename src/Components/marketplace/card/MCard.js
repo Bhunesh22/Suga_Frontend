@@ -38,8 +38,7 @@ const MCard = (props) => {
                         <div className="MCbottom">
                             <div className="MCleft">
                                 <img src={logo} alt="" />
-                                <p>Counter Strike : Global Offensive
-                                    Ristricted Sniper Rifle</p>
+                                <p>Counter Strike : Global Offensive</p>
                             </div>
                             {/* <div className="MCright">
                                 <p>Quantity</p>
