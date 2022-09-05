@@ -27,7 +27,7 @@ function RegistrationFromInvite() {
 		e.preventDefault();
     setLoading(true)
 		try {
-			const url = "http://localhost:5000/api/users";
+			const url = "https://suga-server.herokuapp.com/api/users";
 			const { data: res } = await axios.post(url, data);
 			setMsg(res.message);
       setLoading(false)

@@ -14,7 +14,7 @@ function Profile() {
     }, []);
 
     const loadUserData = async () => {
-        const responce = await fetch(`http://localhost:5000/api/auth1/getuser`, {
+        const responce = await fetch(`https://suga-server.herokuapp.com/api/auth1/getuser`, {
             method: 'GET',
             headers: {
                 'auth-token': localStorage.getItem('token')
@@ -26,9 +26,8 @@ function Profile() {
 
     // console.log(user, "intial");
 
-
     const getUser = async () => {
-        const responce = await fetch(`http://localhost:5000/api/userdetails/fetchuserdata`, {
+        const responce = await fetch(`https://suga-server.herokuapp.com/api/userdetails/fetchuserdata`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +52,6 @@ function Profile() {
     // console.log(arrayIsEmpty())
 
     // console.log(editedData, "edited data")
-
 
 
     return (

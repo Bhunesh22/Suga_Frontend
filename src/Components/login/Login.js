@@ -9,7 +9,6 @@ import { customEvent } from '../utils/analyticsHelper';
 import axios from 'axios';
 
 
-
 function Login(props) {
   // const [credentials, setCredentials] = useState({email:"", password:""})
 
@@ -55,7 +54,7 @@ function Login(props) {
 		e.preventDefault();
     setLoading(true)
 		try {
-			const url = "http://localhost:5000/api/auth1";
+			const url = "https://suga-server.herokuapp.com/api/auth1";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";
