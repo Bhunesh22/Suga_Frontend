@@ -30,10 +30,10 @@ const Card = (props) => {
                                 <img src={logo} alt="" />
                                 <p>Counter Strike : Global Offensive</p>
                             </div>
-                            <div className="HCright">
+                            {/* <div className="HCright">
                                 <p>Quantity:</p>
                                 <p>500</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
     )

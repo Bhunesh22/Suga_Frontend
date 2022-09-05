@@ -27,9 +27,9 @@ const Homepage = () => {
                     <div className="Hellipse1"></div>
                 </div>
                 <div className="Hleft">
-                    <h1>Gaming &amp; NFT’s <span style={{color: "white"}}>Universe</span></h1>
+                    <h1>Gaming Assets &amp; Skins <span style={{color: "white"}}>Universe</span></h1>
                     {/* <h1 style={{ color: "white", marginTop: "0px" }}>OF GAMING AND NFT’S</h1> */}
-                    <p>Digital barter! Your one-stop market for all gaming NFTs. Buy and sell at pure ease from the global marketplaces.</p>
+                    <p>A one-stop market for your gaming inventory. Compare gaming assets at pure ease from the global marketplaces.</p>
                     {!localStorage.getItem('token')? (<Link to="/registrationfrominvite"><button className='Hbtn'>Register</button></Link>) : (<Link to="/marketplace"><button className='Hbtn'>Explore</button></Link>)
                     }
                     
@@ -39,8 +39,8 @@ const Homepage = () => {
                 <div className="Hhead">
                     <p></p>
                     <p>
-                        <span style={{ fontFamily: "'Goldman', cursive" }}>Su</span>
-                        <span style={{ color: "#4D69FD", fontFamily: "'Goldman', cursive" }}>Ga </span>
+                        <span style={{ color: "#4D69FD", fontFamily: "'Goldman', cursive" }}>CS:GO </span>
+                        {/* <span style={{ color: "#4D69FD", fontFamily: "'Goldman', cursive" }}>Ga </span> */}
                      Premium Collections</p>
 
                     <p><Link to="/marketplace">View All</Link></p>
@@ -75,10 +75,10 @@ const Homepage = () => {
                 <div className="Hleft2">
                     <h1>
                         <span style={{ color: "#00FF94", paddingRight: "15px" }}>Newest</span>
-                        <span>Fantasy Games</span>
+                        <span>Fantasy Section</span>
                     </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                    <Link to="/commingsoon"><button className='Hbtn'>Play Now</button></Link>
+                    <p>Making NFT's accessible at ease for next million people</p>
+                    <Link to="/commingsoon"><button className='Hbtn'>Wander</button></Link>
                 </div>
                 <div className="Hellipse2"></div>
             </div>

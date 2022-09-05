@@ -17,7 +17,7 @@ html {
     justify-content: center;
 }
 
-.verifyBox1 {
+.verifyBox2 {
     width: 914px;
 
 
@@ -41,7 +41,7 @@ html {
     margin-left: 29px;
 }
 
-.verifyLogo1 {
+.verifyLogo2 {
     width: 434px;
     height: 434px;
     margin-top: 132px;
@@ -71,7 +71,7 @@ html {
     align-items: center;
 }
 
-.verifyTxt1 {
+.verifyTxt2 {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -84,7 +84,7 @@ html {
 
 }
 
-.emailName1 {
+/* .emailName2 {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -94,7 +94,7 @@ html {
     margin-top: 8px;
     margin-bottom: 162px;
 
-}
+} */
 
 .clickToVerify1 {
     width: 315px;
@@ -132,22 +132,22 @@ html {
     }
 
     .emailFlex3 {
-        transform: scale(0.5);
+        transform: scale(0.);
     }
 
     .verifyBoxFlex2 {
         transform: scale(0.7);
     }
 
-    .verifyLogo1 {
+    .verifyLogo2 {
         margin-top: 8px;
     }
 
-    .verifyTxt1 {
+    .verifyTxt2 {
         font-size: 20px;
     }
 
-    .emailName1 {
+    .emailName2 {
 
         font-size: 16px;
         margin-bottom: 40px;
@@ -155,12 +155,12 @@ html {
 
 
 
-    .verifyBox1 {
+    .verifyBox2 {
         margin-top: -100px;
 
     }
 
-    .verifyBox1 {
+    .verifyBox2 {
         margin-bottom: 20px;
     }
 
