@@ -5,44 +5,83 @@ import { NavLink, Link } from 'react-router-dom'
 import CircularProgress from "@mui/material/CircularProgress";
 import { message } from 'antd';
 import 'antd/dist/antd.css';
+import axios from 'axios';
 
 
-function RegistrationFromInvite(props) {
+function RegistrationFromInvite() {
+
+  const navigate = useNavigate();
+  const [data, setData] = useState({
+		name: "",
+		email: "",
+		password: ""
+	});
+	const [error, setError] = useState("");
+	const [msg, setMsg] = useState("");
+
+	// const handleChange = ({ currentTarget: input }) => {
+	// 	setData({ ...data, [input.name]: input.value });
+	// };
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+    setLoading(true)
+		try {
+			const url = "http://localhost:5000/api/users";
+			const { data: res } = await axios.post(url, data);
+			setMsg(res.message);
+      setLoading(false)
+      navigate("/emailverification")
+		} catch (error) {
+			if (
+				error.response &&
+				error.response.status >= 400 &&
+				error.response.status <= 500
+			) {
+				setError(error.response.data.message);
+        setLoading(false)
+			}
+		}
+	};
 
   const [loading, setLoading] = useState(false);
 
-  const [credentials, setCredentials] = useState({name:"" ,email:"", password:""})
-let navigate = useNavigate();
+//   const [credentials, setCredentials] = useState({name:"" ,email:"", password:""})
+// let navigate = useNavigate();
 
-    const handleSubmit = async (e)=>{
-        e.preventDefault();
-        setLoading({ loading: true });
+  //   const handleSubmit = async (e)=>{
+  //       e.preventDefault();
+  //       setLoading({ loading: true });
 
-        try{
-        const {name, email, password} = credentials;
-        const responce = await fetch(`https://suga-server.herokuapp.com/api/auth/createuser`, {
-            method: 'POST',
-            headers: {
-             'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({name, email, password})
-          });
-          const json = await responce.json()
+  //       try{
+  //       const {name, email, password} = credentials;
+  //       const responce = await fetch(`https://suga-server.herokuapp.com/api/auth/createuser`, {
+  //           method: 'POST',
+  //           headers: {
+  //            'Content-Type': 'application/json',
+  //           },
+  //           body: JSON.stringify({name, email, password})
+  //         });
+  //         const json = await responce.json()
 
-          if (json.success){
-            localStorage.setItem('token', json.authtoken);
-            setLoading({ loading: false });
-            navigate("/login");
-        }
-        setLoading({ loading: false });
-        }catch(err){
-          setLoading({ loading: false });
-              message.warning("This email is alredy registered");
-          }
+  //         if (json.success){
+  //           localStorage.setItem('token', json.authtoken);
+  //           setLoading({ loading: false });
+  //           navigate("/login");
+  //       }
+  //       setLoading({ loading: false });
+  //       }catch(err){
+  //         setLoading({ loading: false });
+  //             message.warning("This email is alredy registered");
+  //         }
 
-  }
+  // }
+
+  // const onChange = (e) => {
+  //   setCredentials({ ...credentials, [e.target.name]: e.target.value })
+  // }
   const onChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value })
+    setData({ ...data, [e.target.name]: e.target.value })
   }
 
   return (
@@ -93,11 +132,11 @@ let navigate = useNavigate();
             id="confermPassword"
             className='RconfermPassword'
             required
-            name='cpassword'
-            onChange={onChange}
+            // name='cpassword'
+            // onChange={onChange}
             minLength={5}
-
-          /><br />
+          />
+          <br />
           <button type='submit' className='RproceedBtn'>
           {loading ? (
                   <CircularProgress color="inherit" size={20} />

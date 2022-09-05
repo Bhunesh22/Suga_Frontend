@@ -7,7 +7,9 @@ import twitter from './logo/twitter.png'
 import insta from './logo/instagram.png'
 import linkedIn from './logo/linkedIn.png'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 import { message } from 'antd';
+import CircularProgress from "@mui/material/CircularProgress";
 import 'antd/dist/antd.css';
 
 // import { FaDiscord, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -15,28 +17,54 @@ import 'antd/dist/antd.css';
 const Footer = () => {
 
     const [msg, setMsg] = useState({ name: "", email: "", message: ""})
+    const [loading, setLoading] = useState(false);
 
     // let navigate = useNavigate();
+
+	const [error, setError] = useState("");
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+    setLoading(true)
+    
+		try {
+			const url = "https://suga-server.herokuapp.com/api/message/msg";
+			const { data: res } = await axios.post(url, msg);	
+        setLoading(false)
+        message.success("Message sent successfully!");
+        setMsg({ name: "", email: "", message: ""})
+		} catch (error) {
+			if (
+				error.response &&
+				error.response.status >= 400 &&
+				error.response.status <= 500
+			) {
+				setError(error.response.data.message);
+        setLoading(false)
+			}
+		}
+	};
+
   
-    const handleSubmit = async (e) => {
-      e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //   e.preventDefault();
   
-      const res = await fetch(`https://suga-server.herokuapp.com/api/message/msg`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        //   'auth-token': localStorage.getItem('token'),
-        },
-        body: JSON.stringify({
-          name: msg.name,
-          email: msg.email,
-          message: msg.message,
-        })
-      });
-      const Json = await res.json()
-      message.success("Message sent successfully!");
-      console.log(Json);
-    }
+    //   const res = await fetch(`https://suga-server.herokuapp.com/api/message/msg`, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     //   'auth-token': localStorage.getItem('token'),
+    //     },
+    //     body: JSON.stringify({
+    //       name: msg.name,
+    //       email: msg.email,
+    //       message: msg.message,
+    //     })
+    //   });
+    //   const Json = await res.json()
+    //   message.success("Message sent successfully!");
+    //   console.log(Json);
+    // }
   
     const onChange = (e) => {
       setMsg({ ...msg, [e.target.name]: e.target.value })
@@ -94,7 +122,13 @@ const Footer = () => {
                         required
                         onChange={onChange}
                         /><br />
-                        <button type='submit' className='Fbtn' >Send</button>
+                        <button type='submit' className='Fbtn' >
+                        {loading ? (
+                  <CircularProgress color="inherit" size={20} />
+                ) : (
+                  "Send"
+                )}
+                            </button>
                     </form>
                 </div>
                 <div className="Fright">
