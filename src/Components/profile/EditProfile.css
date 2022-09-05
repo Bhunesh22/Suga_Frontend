@@ -19,8 +19,8 @@ html {
     color: #FFFFFF;
     display: flex;
     justify-content: center;
-   
-    margin-top: 64px;
+
+    margin-top: 40px;
 }
 
 .editProfileForm1 {
@@ -95,54 +95,62 @@ html {
     border-radius: 0%;
 }
 
-.row{
+.row {
     margin-left: auto;
     margin-right: auto;
 }
 
-col-md-6 > form-control{
+col-md-6>form-control {
     width: 305px;
 }
 
-col-md-12 > form-control{
+col-md-12>form-control {
     width: 624px;
 }
 
-.editProfileForm1{
+.editProfileForm1 {
     /* width: 60vw; */
     display: flex;
     justify-content: center;
 }
 
-.btn-primary{
-        --bs-btn-bg: none;
-        --bs-btn-border-color: none;
-        --bs-btn-hover-bg: none;
-}
 
-.btnFlex1{
+
+.btnFlexP {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+}
+
+.profileFormWtdth1 {
+    max-width: 700px;
+    
+    background-color: transparent;
+}
+
+.editProfileFormFlex2{
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 550px) {
+
     .profileTxt3 {
-      font-size: 32px;
-      margin-top: 4px;
+        font-size: 32px;
+        margin-top: 4px;
     }
 
     .editProfileForm1 {
         margin-top: 24px;
     }
-  
-    .editProfileForm1{
+
+    .editProfileForm1 {
         /* width: 90vw; */
         display: flex;
         justify-content: center;
     }
 
-    .editProfileForm1{
+    .editProfileForm1 {
         margin-bottom: 60px;
     }
 
