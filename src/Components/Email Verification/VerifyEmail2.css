@@ -5,27 +5,27 @@ html {
     box-sizing: border-box;
 }
 
-.verifyEmail1 {
+.verifyEmail2{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background: #0D0916;
     overflow: hidden;
 }
 
-.verifyBoxFlex2 {
+.verifyBoxFlex3 {
     display: flex;
     justify-content: center;
 }
 
-.verifyBox2 {
-    width: 914px;
+.verifyBox3 {
+    width: 614px;
 
 
     background: linear-gradient(212.88deg, #1F2751 0.2%, #101638 105.61%, rgba(16, 22, 56, 0) 105.62%);
     /* opacity: 0.96; */
     backdrop-filter: blur(250px);
-    margin-top: 146px;
-    margin-bottom: 200px;
+    margin-top: 10px;
+    /* margin-bottom: 200px; */
 
     display: flex;
     flex-direction: column;
@@ -33,7 +33,8 @@ html {
 }
 
 .doneTickLogo1{
-    margin-top: 19px;
+
+    transform: scale(0.6);
 }
 
 .sugaLogoEmail3 {
@@ -42,13 +43,13 @@ html {
 }
 
 .verifyLogo2 {
-    width: 434px;
-    height: 434px;
-    margin-top: 132px;
+    width: 300px;
+    height: 300px;
+    /* margin-top: 4px; */
 
 }
 
-.loginBtn2 {
+.loginBtn3 {
     width: 165px;
     height: 48px;
     color: #FFFFFF;
@@ -65,7 +66,7 @@ html {
 
 }
 
-.emailFlex3 {
+.emailFlex4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,67 +76,59 @@ html {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 20px;
+    /* line-height: 44px; */
 
     color: #FFFFFF;
 
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    /* margin-bottom: 10px; */
+
+    
 
 }
 
-/* .emailName2 {
-    font-family: 'Gilroy', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #FFFFFF;
-    margin-top: 8px;
-    margin-bottom: 162px;
-
-} */
 
 .clickToVerify1 {
-    width: 315px;
-    height: 48px;
+    width: 250px;
+    height: 40px;
 
     background: #4D69FD;
 
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.05em;
     border: none;
 
     color: #FFFFFF;
-    margin-top: 21px;
-    margin-bottom: 200px;
+    /* margin-top: 10px; */
+    margin-bottom: 40px;
 
 }
 
-.sugaLogoEmail2{
+.sugaLogoEmail3{
     cursor: pointer;
 }
 
 
 @media screen and (max-width: 550px) {
-    .sugaLogoEmail1 {
-        margin-left: -180px;
+    .sugaLogoEmail3 {
+        margin-left: -90px;
         margin-top: -20px;
     }
 
-    .loginBtn2 {
+    .loginBtn3 {
         margin-right: -150px;
     }
 
-    .emailFlex3 {
-        transform: scale(0.);
+    .emailFlex4 {
+        transform: scale(0.5);
     }
 
-    .verifyBoxFlex2 {
+    .verifyBoxFlex3 {
         transform: scale(0.7);
     }
 
@@ -144,25 +137,15 @@ html {
     }
 
     .verifyTxt2 {
-        font-size: 20px;
-    }
-
-    .emailName2 {
-
         font-size: 16px;
-        margin-bottom: 40px;
     }
 
 
-
-    .verifyBox2 {
-        margin-top: -100px;
+    .verifyBox3 {
+        margin-top: 1px;
 
     }
 
-    .verifyBox2 {
-        margin-bottom: 20px;
-    }
 
     .clickToVerify1{
         margin-bottom: 40px;
