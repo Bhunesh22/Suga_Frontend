@@ -64,7 +64,7 @@ function App() {
           <Route exact path='/editsettings' element={<EditSettings/>}></Route>
           <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
           <Route exact path='/emailverification' element={<VerifyEmail/>}></Route>
-          {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
+          <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route>
 
         </Routes>
       </Router>

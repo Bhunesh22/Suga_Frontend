@@ -32,7 +32,7 @@ html {
     align-items: center;
 }
 
-.sugaLogoEmail1 {
+.sugaLogoEmail1{
     margin-top: 33px;
     margin-left: 29px;
 }
@@ -77,6 +77,7 @@ html {
     color: #FFFFFF;
 
     margin-top: 5px;
+    margin-bottom: 100px;
 
 }
 
@@ -92,30 +93,12 @@ html {
 
 }
 
-.clickToVerify1 {
-    width: 315px;
-    height: 48px;
 
-    background: #4D69FD;
-
-    font-family: 'Gilroy', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    border: none;
-
-    color: #FFFFFF;
-    margin-top: 21px;
-    margin-bottom: 200px;
-
-}
 
 
 @media screen and (max-width: 550px) {
     .sugaLogoEmail1 {
-        margin-left: -180px;
+        margin-left: -90px;
         margin-top: -20px;
     }
 
@@ -152,8 +135,6 @@ html {
 
     }
 
-    .verifyBox1 {
-        margin-bottom: 20px;
-    }
+    
 
 }
