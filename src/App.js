@@ -42,7 +42,7 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           {/* <Route exact path="/navbar" element={<Navbar/>} /> */}
           {/* <Route exact path="/footer" element={<Footer/>} /> */}
-          <Route exact path="/paymentDrop" element={<PaymentDrop/>} />
+          {/* <Route exact path="/paymentDrop" element={<PaymentDrop/>} /> */}
           <Route exact path="/commingSoon" element={<CommingSoon/>} />
           {/* <Route exact path="/cards" element={<Cards/>} /> */}
           <Route exact path="/buyPopup" element={<BuyPopup/>} />
@@ -50,7 +50,7 @@ function App() {
           <Route exact path='/registrationfrominvite' element={< RegistrationFromInvite/>}></Route>
           <Route exact path='/login' element={<Login/>}></Route>
           <Route exact path='/wallet' element={<PhantomWallet/>}></Route>
-          <Route exact path='/nftdetail/:index/:name' element={<NftDetail/>}></Route>
+          {/* <Route exact path='/nftdetail/:index/:name' element={<NftDetail/>}></Route> */}
           <Route exact path='/marketplace' element={<Marketplace/>}></Route>
           <Route exact path='/marketplace/:type' element={<MarketplaceType/>}></Route>
           {/* <Route exact path='/card' element={<Card/>}></Route> */}
@@ -64,7 +64,7 @@ function App() {
           <Route exact path='/editsettings' element={<EditSettings/>}></Route>
           <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
           <Route exact path='/emailverification' element={<VerifyEmail/>}></Route>
-          <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route>
+          {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
 
         </Routes>
       </Router>
