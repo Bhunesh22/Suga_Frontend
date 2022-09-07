@@ -31,14 +31,15 @@ function VerifyEmail2() {
     return (
         <>
         {validUrl ? (
-            <div className='verifyEmail1'>
+            <div className='verifyEmail2'>
                 <div>
-                    <div className='emailFlex3'>
-                        <div><a className='sugaLogoEmail2' href='/'><img className='sugaLogoEmail3' src={SugaLogoEmail} /></a></div>
-                        <div><button className='loginBtn2'>Login</button></div>
+                    <div className='emailFlex4'>
+                        <div><a className='sugaLogoEmail3' href='/'><img className='sugaLogoEmail3' src={SugaLogoEmail} /></a></div>
+                        {/* <div><button className='loginBtn3'>Login</button></div> */}
+                        <div><Link to="/login"><button className='loginBtn3'>Login</button></Link></div>
                     </div>
-                    <div className='verifyBoxFlex2'>
-                        <div className='verifyBox2'>
+                    <div className='verifyBoxFlex3'>
+                        <div className='verifyBox3'>
                             <div><img className='verifyLogo2' src={VerifyLogo2} /></div>
                             <div className='verifyTxt2'>Congratulation your email ID is verified</div>
                             <div className='doneTickLogo1'><img src={OkLogo}/></div>
