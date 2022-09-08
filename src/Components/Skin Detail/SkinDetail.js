@@ -15,7 +15,7 @@ function SkinDetail() {
 
     const [data, setData] = useState([]);
     const [selectedData, setSelectedData] = useState([]);
-    // const [lootFarmData, setlootFarmData] = useState([]);
+    const [skinWalletData, setSkinWalletData] = useState([]);
 
     let { index } = useParams();
     let { name } = useParams();
@@ -26,28 +26,21 @@ function SkinDetail() {
 
     useEffect(() => {
         loadUserData();
-        // getLootFarmData();
+        getLootFarmData();
     }, []);
 
 
-    // const getLootFarmData = async () => {
-    // const res = await fetch(`https://www.skinwallet.com/market/api/offers/overview?appId=730`, {
-    //     method: 'GET',
-    //     // mode : "no-cors",
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //         'x-auth-token': "f76dfb08-8dc4-4d57-848c-d7870621a6b6"
-    //     },
-    // });
-    // const json = await res.json()
-    // console.log(json, "key")
-    // }
-
-
-    // let lootFarmFactoryNew = lootFarmData?.filter(function (el) {
-    //     return el?.name == "AK-47 | Aquamarine Revenge (Battle-Scarred)"
-    // })
-
+    const getLootFarmData = async () => {
+        const res = await fetch(`https://suga-server.herokuapp.com/api/skinwallet`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const json = await res.json()
+        // console.log(json, "key")
+        setSkinWalletData(json)
+    }
 
 
 
@@ -79,43 +72,55 @@ function SkinDetail() {
     }
 
     // console.log(data.slug, "slug");
-
-
     // console.log(selectedData)
+
+
+
+    //    Dmarket Price Details
 
     let factoryNew = selectedData.filter(function (el) {
         return el.title.toString().includes("Factory")
     })[0]
-    // console.log(factoryNew?.price.USD);
-    // console.log(factoryNew?.slug);
-
+    // console.log(factoryNew?.title, "name");
 
     let minimalWear = selectedData.filter(function (el) {
         return el.title.toString().includes("Minimal")
     })[0]
-    // console.log(minimalWear?.price.USD);
-    // console.log(minimalWear?.slug);
-
 
     let fieldTested = selectedData.filter(function (el) {
         return el.title.toString().includes("Field")
     })[0]
-    // console.log(fieldTested?.price.USD);
-
 
     let wellWorn = selectedData.filter(function (el) {
         return el.title.toString().includes("Well")
     })[0]
-    // console.log(wellWorn?.price.USD);
 
     let battleScarred = selectedData.filter(function (el) {
         return el.title.toString().includes("Battle")
     })[0]
 
-    // console.log(battleScarred?.price.USD)
-    // console.log(battleScarred?.price.USD);
 
+    //  Skin Wallet Price Details
+    let sw_fn = skinWalletData?.filter(function (el) {
+        return el?.marketHashName === factoryNew?.title
+    })
+    console.log(sw_fn[0]?.cheapestOffer.price?.amount)
 
+    let sw_mw = skinWalletData?.filter(function (el) {
+        return el?.marketHashName === minimalWear?.title
+    })
+
+    let sw_ft = skinWalletData?.filter(function (el) {
+        return el?.marketHashName === fieldTested?.title
+    })
+
+    let sw_ww = skinWalletData?.filter(function (el) {
+        return el?.marketHashName === wellWorn?.title
+    })
+
+    let sw_bs = skinWalletData?.filter(function (el) {
+        return el?.marketHashName === battleScarred?.title
+    })
 
 
     return (
@@ -204,6 +209,34 @@ function SkinDetail() {
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                     {battleScarred === undefined ? "NA" : battleScarred?.price.USD}
                                 </div></a></td>
+                            </tr>
+
+
+
+
+                            <tr style={{ borderBottom: "transparent" }}>
+
+                                <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
+
+                                <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_fn === undefined ? "NA" : sw_fn[0]?.cheapestOffer.price?.amount}
+                                </div></a></td>
+
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_mw === undefined ? "NA" : sw_mw[0]?.cheapestOffer.price?.amount}
+                                </div></a></td>
+
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_ft === undefined ? "NA" : sw_ft[0]?.cheapestOffer.price?.amount}
+                                </div></a></td>
+
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_ww === undefined ? "NA" : sw_ww[0]?.cheapestOffer.price?.amount}
+                                </div></a></td>
+
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_bs === undefined ? "NA" : sw_bs[0]?.cheapestOffer.price?.amount}
+                                </div></a></td>
 
 
                             </tr>
@@ -244,14 +277,16 @@ function SkinDetail() {
                             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                 <a href='/#'>
                                     <div class="accordion-body">
+                                        
                                         <div className='skinDetailAccordian1'>
                                             <div className='skinDetailAccordian2'>
                                                 <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
                                                 <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                                     {minimalWear === undefined ? "NA" : minimalWear?.price.USD}
                                                 </div></a></div>
-                                            </div>
+                                            </div>    
                                         </div>
+                                        
                                     </div>
                                 </a>
                             </div>

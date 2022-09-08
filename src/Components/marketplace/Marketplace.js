@@ -150,7 +150,7 @@ const Marketplace = () => {
                 {/* {searchTitle === ""? ( */}
                 <div className="Mmarket">
                     <div className="Ccontainer">
-                        {data.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>NO Data Found</div>) : data.objects.map((list, index) => {
+                        {data.length === 0 ? (<div style={{ color: "white", fontSize: "20px", textAling: "center" }}>Loading...</div>) : data.objects.map((list, index) => {
                             return (
                                 <Link to={`/skindetail/${list.itemId}/${selectedOption}/${list.slug}`}><MCard list={list} index={index} /></Link>
                             )

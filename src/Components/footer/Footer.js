@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import './Footer.css'
-import { Navigate } from 'react-router-dom'
+
+// import { Navigate } from 'react-router-dom'
+
 import logo from './logo/suga.png'
 import discord from './logo/discord.png'
 import twitter from './logo/twitter.png'
@@ -116,7 +118,7 @@ const Footer = () => {
                         className='Fthird' 
                         type="text" 
                         id="lname" 
-                        placeholder='typer your message here........' 
+                        placeholder='type your message here........' 
                         name = "message"
                         value = {msg.message}
                         required
