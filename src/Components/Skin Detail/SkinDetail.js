@@ -216,7 +216,7 @@ function SkinDetail() {
 
                             <tr style={{ borderBottom: "transparent" }}>
 
-                                <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
+                                <th scope="row"><div><img className='logoimages1' src={skinwallet} alt="Dmarket" /></div></th>
 
                                 <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                     {sw_fn === undefined ? "NA" : sw_fn[0]?.cheapestOffer.price?.amount}
