@@ -114,7 +114,8 @@ function RegistrationFromInvite() {
             name='email'
             onChange={onChange}
 
-          /><br />
+          />
+          <br />
           <span className='Rpassword'>Set Password</span>
           <input
             type="password"
@@ -125,7 +126,9 @@ function RegistrationFromInvite() {
             onChange={onChange}
             minLength={5}
 
-          /><br />
+          />
+          <h6 className='passwordRules1'>Use 8 or more characters, must contain upper case, lower case, numbers & special symbols</h6>
+          <br />
           <span className='RcnfrmPassword'>Confirm Password</span>
           <input
             type="password"

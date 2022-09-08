@@ -62,7 +62,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 30px;
     /* padding-top: 170px; */
 }
 
@@ -263,6 +263,14 @@
     color: #FFFFFF;
     background: transparent;
 }
+
+.passwordRules1{
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
 
 @media screen and (max-width: 550px) {
     .Rform{

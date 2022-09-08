@@ -320,7 +320,8 @@
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-    color: black;
+    color: #1f1f1f;
+    /* color: #000; */
 }
 
 .Hellipse2 {
