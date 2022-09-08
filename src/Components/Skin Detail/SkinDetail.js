@@ -8,6 +8,7 @@ import './SkinDetail.css'
 import Navbar from '../navbar/Navbar'
 import { customEvent } from '../utils/analyticsHelper';
 import dmarketLogo from './dmart logo.svg'
+import skinwallet from './skinwallet.svg'
 
 
 function SkinDetail() {
