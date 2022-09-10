@@ -85,7 +85,7 @@ const Footer = () => {
                 </div>
                 <div className="FsocialLogo">
                     <ul>
-                        <li><a href="https://discord.gg/ka66jCYB" target="_blank" rel="noreferrer"><img src={discord} alt="" /></a> </li>
+                        <li><a href="https://discord.gg/68F3AYfE" target="_blank" rel="noreferrer"><img src={discord} alt="" /></a> </li>
                         <li><a href="" target="_blank" rel="noreferrer"><img src={twitter} alt="" /></a></li>
                         <li><a href="https://www.instagram.com/sugaverse_infi/" target="_blank" rel="noreferrer"><img src={insta} alt="" /></a></li>
                         <li><a href="https://www.linkedin.com/company/suga-verse" target="_blank" rel="noreferrer"><img src={linkedIn} alt="" /></a></li>

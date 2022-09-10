@@ -30,6 +30,8 @@ import EditSettings from './Components/Settings/EditSettings';
 import AskToBuy from './Components/Ask to Buy/AskToBuy';
 import VerifyEmail from './Components/Email Verification/VerifyEmail'
 import VerifyEmail2 from './Components/Email Verification/VerifyEmail2'
+import forgetPassword from './Components/forget password/ForgotPassword'
+import setPassword from './Components/forget password/SetPassword'
 
 
 ReactGA.initialize('UA-231739890-1');
@@ -64,6 +66,8 @@ function App() {
           <Route exact path='/editsettings' element={<EditSettings/>}></Route>
           <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
           <Route exact path='/emailverification' element={<VerifyEmail/>}></Route>
+          <Route exact path='/forgetpassword' element={<forgetPassword/>}></Route>
+          <Route exact path='/setpassword' element={<setPassword/>}></Route>
           {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
 
         </Routes>
