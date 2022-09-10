@@ -67,6 +67,7 @@ function Login(props) {
 			) {
 				setError(error.response.data.message);
         setLoading(false)
+        message.error("Invalid Credentials");
 			}
 		}
 	};

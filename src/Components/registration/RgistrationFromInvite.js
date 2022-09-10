@@ -12,42 +12,62 @@ function RegistrationFromInvite() {
 
   const navigate = useNavigate();
   const [data, setData] = useState({
-		name: "",
-		email: "",
-		password: ""
-	});
-	const [error, setError] = useState("");
-	const [msg, setMsg] = useState("");
+    name: "",
+    email: "",
+    password: ""
+  });
+  const [cp, setCp] = useState({
+    confirmpassword: ""
+  });
+  const [error, setError] = useState("");
+  const [msg, setMsg] = useState("");
+  const [confirm_err, setConfirm_err] = useState(false);
 
-	// const handleChange = ({ currentTarget: input }) => {
-	// 	setData({ ...data, [input.name]: input.value });
-	// };
+  // const handleChange = ({ currentTarget: input }) => {
+  // 	setData({ ...data, [input.name]: input.value });
+  // };
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
-    setLoading(true)
-		try {
-			const url = "https://suga-server.herokuapp.com/api/users";
-			const { data: res } = await axios.post(url, data);
-			setMsg(res.message);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // setLoading(true)
+
+    if (!confirm_err) {
+      setLoading({ loading: true });
+    }
+
+    if (data.password != cp.confirmpassword) return;
+
+    try {
+      const url = "http://localhost:5000/api/users";
+      const { data: res } = await axios.post(url, data);
+      setMsg(res.message);
       setLoading(false)
       navigate("/emailverification")
-		} catch (error) {
-			if (
-				error.response &&
-				error.response.status >= 400 &&
-				error.response.status <= 500
-			) {
-				setError(error.response.data.message);
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        setError(error.response.data.message);
         setLoading(false)
-			}
-		}
-	};
+        message.error(error.response.data.message);
+      }
+    }
+  };
 
   const [loading, setLoading] = useState(false);
 
-//   const [credentials, setCredentials] = useState({name:"" ,email:"", password:""})
-// let navigate = useNavigate();
+  const confirm = (confirm) => {
+    if (confirm === data.password) {
+      setConfirm_err(false);
+    } else {
+      setConfirm_err(true);
+    }
+  };
+
+  //   const [credentials, setCredentials] = useState({name:"" ,email:"", password:""})
+  // let navigate = useNavigate();
 
   //   const handleSubmit = async (e)=>{
   //       e.preventDefault();
@@ -83,6 +103,10 @@ function RegistrationFromInvite() {
   const onChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value })
   }
+
+  const onInputChange = (e) => {
+    setCp({ ...cp, [e.target.name]: e.target.value });
+  };
 
   return (
     <div className='RegistrationFromInvite'>
@@ -129,23 +153,33 @@ function RegistrationFromInvite() {
           />
           <h6 className='passwordRules1'>Use 8 or more characters, must contain upper case, lower case, numbers & special symbols</h6>
           <br />
+          <div className="Rcp">
           <span className='RcnfrmPassword'>Confirm Password</span>
+          <p>
+          {confirm_err && (
+                  <div className="text-danger" style={{marginTop:"4px"}}>Password didn't matched</div>
+          )}
+          </p>
+          </div>
           <input
             type="password"
             id="confermPassword"
             className='RconfermPassword'
+            name="confirmpassword"
+            value={cp.confirmpassword}
             required
-            // name='cpassword'
-            // onChange={onChange}
-            minLength={5}
+            onChange={(e) => {
+              onInputChange(e);
+              confirm(e.target.value);
+            }}
           />
           <br />
           <button type='submit' className='RproceedBtn'>
-          {loading ? (
-                  <CircularProgress color="inherit" size={20} />
-                ) : (
-                  "Proceed"
-                )}
+            {loading ? (
+              <CircularProgress color="inherit" size={20} />
+            ) : (
+              "Proceed"
+            )}
           </button>
         </form>
       </div>
