@@ -99,6 +99,19 @@ html {
   
 }
 
+.image3 {
+    width: 155px;
+    height: 166px;
+    border: 2px solid #FFFFFF;
+    border-radius: 77.5px;
+}
+
+.instaDetails1{
+    display: flex;
+    gap: 8px;
+
+}
+
 @media screen and (max-width: 550px) {
     .ourTeamContainer {
         min-height: 100vh;
@@ -124,6 +137,12 @@ html {
     }
 
     .image2 {
+        width: 73px;
+        height: 76px;
+       
+    }
+
+    .image3 {
         width: 73px;
         height: 76px;
        
