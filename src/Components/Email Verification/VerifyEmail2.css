@@ -18,7 +18,7 @@ html {
 }
 
 .verifyBox3 {
-    width: 614px;
+    width: 514px;
 
 
     background: linear-gradient(212.88deg, #1F2751 0.2%, #101638 105.61%, rgba(16, 22, 56, 0) 105.62%);
@@ -34,7 +34,7 @@ html {
 
 .doneTickLogo1{
 
-    transform: scale(0.6);
+    transform: scale(0.5);
 }
 
 .sugaLogoEmail3 {
@@ -43,8 +43,8 @@ html {
 }
 
 .verifyLogo2 {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     /* margin-top: 4px; */
 
 }
@@ -76,7 +76,7 @@ html {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     /* line-height: 44px; */
 
     color: #FFFFFF;
@@ -90,15 +90,15 @@ html {
 
 
 .clickToVerify1 {
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 36px;
 
     background: #4D69FD;
 
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.05em;
     border: none;

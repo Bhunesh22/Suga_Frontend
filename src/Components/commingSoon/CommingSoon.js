@@ -23,7 +23,7 @@ function ComingSoon() {
 
         <div className="socialLogo1">
 
-          <div><a href="https://discord.gg/AYGQtcXb" target="_blank" rel="noreferrer"><img src={discord} alt="" /></a> </div>
+          <div><a href="https://discord.gg/68F3AYfE" target="_blank" rel="noreferrer"><img src={discord} alt="" /></a> </div>
           <div><a href="" target="_blank" rel="noreferrer"><img src={twitter} alt="" /></a></div>
           <div><a href="https://www.instagram.com/sugaverse_infi/" target="_blank" rel="noreferrer"><img src={insta} alt="" /></a></div>
           <div><a href="https://www.linkedin.com/company/suga-verse" target="_blank" rel="noreferrer"><img src={linkedIn} alt="" /></a></div>
