@@ -1,29 +1,41 @@
-import React, { useState } from 'react'
-import './ForgetPassword.css'
+import React from 'react'
+import './ForgotPassword.css'
+import sugaLogoBw2 from './suga logo bw2.svg'
+import { Link } from 'react-router-dom'
 import { useNavigate} from "react-router-dom";
-import UserWindow from './UserWindow';
 
 function ForgotPassword() {
 
     let navigate = useNavigate();
 
-  const [emailError, setEmailError] = useState('')
-  const validateEmail = (e) => {
-    var email = e.target.value
-  
-   
-}
-  return (
-    <div className='forgetPassword'>
-   
-        <div><img className='sugaLogoBW' src='/images/suga logo bw.svg'/></div>
-        <div><img className='sugaText' src='/images/SuGa text.png'/></div>
-        <button className='back' onClick={() => navigate(-1)}>Back</button>
-        <span className='sugaUsername'>SuGa username or email</span>
-        <input type="text" id="entertUsername" className='enterUsername'></input> <br />
-        <button className='shareLink' id='shareLink'>Share the link</button>
-    </div>
-  )
+    return (
+        <>
+            <div className='forgotPassword1'>
+                <div className='forgotPasswordTopFlex1'>
+                    <div>
+                       <Link to='/' ><img className='sugaLogoBw2' src={sugaLogoBw2} alt="sugalogo" /></Link>
+                    </div>
+                    <div>
+                        <button className='backBtn3' onClick={() => navigate(-1)}>Back</button>
+                    </div>
+                </div>
+                <div class="forgetPasswordDetail2">
+
+                    <div className='inputEmailLabelFlex2'>
+                        <label for="inputCredentials" class="form-label1">SuGa username or email</label>
+                        <input type="email" class="inputCredential1" id="inputCredentials" placeholder="name@example.com" />
+                    </div>
+                    <div>
+                        <button className='linkBtn2'>Share the link</button>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </>
+    )
 }
 
 export default ForgotPassword

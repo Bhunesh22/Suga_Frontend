@@ -66,7 +66,8 @@ function App() {
           <Route exact path='/editsettings' element={<EditSettings/>}></Route>
           <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
           <Route exact path='/emailverification' element={<VerifyEmail/>}></Route>
-          <Route exact path='/forgetpassword' element={<ForgotPassword/>}></Route>
+          <Route exact path='/forgotpassword' element={<ForgotPassword/>}></Route>
+        
           <Route exact path='/setpassword' element={<SetPassword/>}></Route>
           {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
 
