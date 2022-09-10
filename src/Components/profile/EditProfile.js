@@ -7,7 +7,7 @@ import { useNavigate, Link } from 'react-router-dom'
 
 function EditProfile() {
 
-    const [orderDetails, setOrderDetails] = useState({ firstname: "", lastname: "", email: "", contact: "", username: "", country: "" })
+    const [orderDetails, setOrderDetails] = useState({ firstname: "", lastname: "", contact: "", country: "" })
 
     let navigate = useNavigate();
 
@@ -23,8 +23,6 @@ function EditProfile() {
             body: JSON.stringify({
                 firstname: orderDetails.firstname,
                 lastname: orderDetails.lastname,
-                email: orderDetails.email,
-                username: orderDetails.username,
                 contact: orderDetails.contact,
                 country: orderDetails.country,
             })
@@ -73,19 +71,19 @@ function EditProfile() {
                                         value={orderDetails.lastname}
                                         onChange={onChange} />
                                 </div>
-                                <div className="col-md-6">
+                                {/* <div className="col-md-6">
                                     <label for="email2" className="form-label, editProfileLable1">Email</label>
                                     <input
                                         type="email"
                                         className="form-control"
                                         id="email2"
                                         placeholder='input email'
-                                        required
-                                        name="email"
-                                        value={orderDetails.email}
-                                        onChange={onChange}
+                                        // required
+                                        // name="email"
+                                        // value={orderDetails.email}
+                                        // onChange={onChange}
                                     />
-                                </div>
+                                </div> */}
                                 <div className="col-md-6">
                                     <label for="inputPhoneNumber2" className="form-label, editProfileLable1">Phone Number</label>
                                     <input
@@ -99,19 +97,19 @@ function EditProfile() {
                                         onChange={onChange}
                                     />
                                 </div>
-                                <div className="col-md-6">
+                                {/* <div className="col-md-6">
                                     <label for="inputUserName2" className="form-label, editProfileLable1">Username</label>
                                     <input
                                         type="text"
                                         className="form-control"
                                         id="inputUserName2"
-                                        name='username'
                                         placeholder='input username'
-                                        required
-                                        value={orderDetails.username}
-                                        onChange={onChange}
+                                        // name='username'
+                                        // required
+                                        // value={orderDetails.username}
+                                        // onChange={onChange}
                                     />
-                                </div>
+                                </div> */}
                                 <div className="col-md-6">
                                     <label for="email2" className="form-label, editProfileLable1">Country</label>
                                     <input
