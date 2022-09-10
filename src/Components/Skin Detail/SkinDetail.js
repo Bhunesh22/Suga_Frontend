@@ -148,7 +148,7 @@ function SkinDetail() {
     //  lootfarm Price Details --------------------------------------------------------------------
 
     const lootFarm = async () => {
-        const res = await fetch(`http://localhost:5000/api/lootfarm`, {
+        const res = await fetch(`https://suga-server.herokuapp.com/api/lootfarm`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -186,7 +186,7 @@ function SkinDetail() {
     //  SkinPort Price Details --------------------------------------------------------------------
 
     const skinPort = async () => {
-        const res = await fetch(`http://localhost:5000/api/skinport`, {
+        const res = await fetch(`https://suga-server.herokuapp.com/api/skinport`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
