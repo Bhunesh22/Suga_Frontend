@@ -16,35 +16,28 @@ import skinport from './skinport.svg'
 function SkinDetail() {
 
     const [data, setData] = useState([]);
+    const [skinName, setSkinName] = useState(data?.title);
     const [selectedData, setSelectedData] = useState([]);
     const [skinWalletData, setSkinWalletData] = useState([]);
+    const [skinPortData, setSkinPortData] = useState([]);
+    const [lootFarmData, setLootFarmData] = useState([]);
 
     let { index } = useParams();
     let { name } = useParams();
     let { slug } = useParams();
-    // console.log(index,"id")
-    // console.log(name, "name");
-    // console.log(slug, "slug");
+  
+
 
     useEffect(() => {
         loadUserData();
-        getLootFarmData();
+        skinWallet();
+        lootFarm();
+        skinPort();
     }, []);
 
 
-    const getLootFarmData = async () => {
-        const res = await fetch(`https://suga-server.herokuapp.com/api/skinwallet`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        });
-        const json = await res.json()
-        // console.log(json, "key")
-        setSkinWalletData(json)
-    }
 
-
+    // Dmarket Main data show on page 
 
     const loadUserData = async () => {
         const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${name}&Limit=100`, {
@@ -73,12 +66,20 @@ function SkinDetail() {
         setSelectedData(selectedItem)
     }
 
+    let rl = data?.slug?.length + 3
+    let itemName = data?.title?.toString()?.slice(0,rl)
+    // let sdsadds = itemName.toString()
+    // console.log(itemName, "name")
+
+  
+    console.log(itemName);
+    console.log(rl)
+
     // console.log(data.slug, "slug");
     // console.log(selectedData)
 
 
-
-    //    Dmarket Price Details
+    //    Dmarket Price Details--------------------------------------------------------------------
 
     let factoryNew = selectedData.filter(function (el) {
         return el.title.toString().includes("Factory")
@@ -102,26 +103,119 @@ function SkinDetail() {
     })[0]
 
 
-    //  Skin Wallet Price Details
+    //  Skin Wallet Price Details --------------------------------------------------------------------
+
+    const skinWallet = async () => {
+        const res = await fetch(`https://suga-server.herokuapp.com/api/skinwallet`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const json1 = await res.json()
+        // console.log(json, "key")
+        setSkinWalletData(json1)
+    }
+
+
     let sw_fn = skinWalletData?.filter(function (el) {
-        return el?.marketHashName === factoryNew?.title
+        return el?.marketHashName === itemName + "(Factory New)"
     })
-    console.log(sw_fn[0]?.cheapestOffer.price?.amount)
+    // console.log(sw_fn[0]?.cheapestOffer.price?.amount)
 
     let sw_mw = skinWalletData?.filter(function (el) {
-        return el?.marketHashName === minimalWear?.title
+        return el?.marketHashName === itemName + "(Minimal Wear)"
     })
 
     let sw_ft = skinWalletData?.filter(function (el) {
-        return el?.marketHashName === fieldTested?.title
+        return el?.marketHashName === itemName + "(Field-Tested)"
     })
 
     let sw_ww = skinWalletData?.filter(function (el) {
-        return el?.marketHashName === wellWorn?.title
+        return el?.marketHashName === itemName + "(Well-Worn)"
     })
 
     let sw_bs = skinWalletData?.filter(function (el) {
-        return el?.marketHashName === battleScarred?.title
+        return el?.marketHashName === itemName + "(Battle-Scarred)"
+    })
+
+
+    // console.log(sw_ww[0]?.marketHashName)
+
+
+
+
+    //  lootfarm Price Details --------------------------------------------------------------------
+
+    const lootFarm = async () => {
+        const res = await fetch(`http://localhost:5000/api/lootfarm`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const json2 = await res.json()
+        // console.log(json, "key")
+        setLootFarmData(json2)
+    }
+
+
+    let lf_fn = lootFarmData?.filter(function (el) {
+        return el?.name === itemName + "(Factory New)"
+    })
+    // console.log(lf_fn[0]?.price)
+
+    let lf_mw = lootFarmData?.filter(function (el) {
+        return el?.name === itemName + "(Minimal Wear)"
+    })
+
+    let lf_ft = lootFarmData?.filter(function (el) {
+        return el?.name === itemName + "(Field-Tested)"
+    })
+
+    let lf_ww = lootFarmData?.filter(function (el) {
+        return el?.name === itemName + "(Well-Worn)"
+    })
+
+    let lf_bs = lootFarmData?.filter(function (el) {
+        return el?.name === itemName + "(Battle-Scarred)"
+    })
+
+
+
+    //  SkinPort Price Details --------------------------------------------------------------------
+
+    const skinPort = async () => {
+        const res = await fetch(`http://localhost:5000/api/skinport`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const json3 = await res.json()
+        setSkinPortData(json3)
+    }
+
+
+    let sp_fn = skinPortData?.filter(function (el) {
+        return el?.market_hash_name === itemName + "(Factory New)"
+    })
+    // console.log(sp_fn[0]?.min_price)
+
+    let sp_mw = skinPortData?.filter(function (el) {
+        return el?.market_hash_name === itemName + "(Minimal Wear)"
+    })
+
+    let sp_ft = skinPortData?.filter(function (el) {
+        return el?.market_hash_name === itemName + "(Field-Tested)"
+    })
+
+    let sp_ww = skinPortData?.filter(function (el) {
+        return el?.market_hash_name === itemName + "(Well-Worn)"
+    })
+
+    let sp_bs = skinPortData?.filter(function (el) {
+        return el?.market_hash_name === itemName + "(Battle-Scarred)"
     })
 
 
@@ -193,23 +287,23 @@ function SkinDetail() {
                                 <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
 
                                 <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {factoryNew === undefined ? "NA" : factoryNew?.price.USD}
+                                    {factoryNew === undefined ? "NA" : factoryNew?.price.USD/100}
                                 </div></a></td>
 
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {minimalWear === undefined ? "NA" : minimalWear?.price.USD}
+                                    {minimalWear === undefined ? "NA" : minimalWear?.price.USD/100}
                                 </div></a></td>
 
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {fieldTested === undefined ? "NA" : fieldTested?.price.USD}
+                                    {fieldTested === undefined ? "NA" : fieldTested?.price.USD/100}
                                 </div></a></td>
 
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {wellWorn === undefined ? "NA" : wellWorn?.price.USD}
+                                    {wellWorn === undefined ? "NA" : wellWorn?.price.USD/100}
                                 </div></a></td>
 
                                 <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {battleScarred === undefined ? "NA" : battleScarred?.price.USD}
+                                    {battleScarred === undefined ? "NA" : battleScarred?.price.USD/100}
                                 </div></a></td>
                             </tr>
 
@@ -221,23 +315,23 @@ function SkinDetail() {
                                 <th scope="row"><div><img className='logoimages1' src={skinwallet} alt="Dmarket" /></div></th>
 
                                 <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_fn === undefined ? "NA" : sw_fn[0]?.cheapestOffer.price?.amount}
+                                    {sw_fn[0]?.marketHashName === undefined ? "NA" : sw_fn[0]?.cheapestOffer.price?.amount}
                                 </div></a></td>
 
                                 <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_mw === undefined ? "NA" : sw_mw[0]?.cheapestOffer.price?.amount}
+                                    {sw_mw[0]?.marketHashName === undefined ? "NA" : sw_mw[0]?.cheapestOffer.price?.amount}
                                 </div></a></td>
 
                                 <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_ft === undefined ? "NA" : sw_ft[0]?.cheapestOffer.price?.amount}
+                                    {sw_ft[0]?.marketHashName === undefined ? "NA" : sw_ft[0]?.cheapestOffer.price?.amount}
                                 </div></a></td>
 
                                 <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_ww === undefined ? "NA" : sw_ww[0]?.cheapestOffer.price?.amount}
+                                    {sw_ww[0]?.marketHashName === undefined ? "NA" : sw_ww[0]?.cheapestOffer.price?.amount}
                                 </div></a></td>
 
                                 <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_bs === undefined ? "NA" : sw_bs[0]?.cheapestOffer.price?.amount}
+                                    {sw_bs[0]?.marketHashName === undefined ? "NA" : sw_bs[0]?.cheapestOffer.price?.amount}
                                 </div></a></td>
 
 
@@ -246,26 +340,25 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={skinport} alt="Skinport" /></div></th>
 
-                                <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_fn === undefined ? "NA" : sw_fn[0]?.cheapestOffer.price?.amount}
+                                <td ><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_fn === undefined ? "NA" : sp_fn[0]?.min_price}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_mw === undefined ? "NA" : sw_mw[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_mw === undefined ? "NA" : sp_mw[0]?.min_price}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_ft === undefined ? "NA" : sw_ft[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_ft === undefined ? "NA" : sp_ft[0]?.min_price}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_ww === undefined ? "NA" : sw_ww[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_ww === undefined ? "NA" : sp_ww[0]?.min_price}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_bs === undefined ? "NA" : sw_bs[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_bs === undefined ? "NA" : sp_bs[0]?.min_price}
                                 </div></a></td>
-
 
                             </tr>
 
@@ -274,24 +367,24 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div></th>
 
-                                <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_fn === undefined ? "NA" : sw_fn[0]?.cheapestOffer.price?.amount}
+                                <td ><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_fn === undefined ? "NA" : lf_fn[0]?.price/100}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_mw === undefined ? "NA" : sw_mw[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_mw === undefined ? "NA" : lf_mw[0]?.price/100}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_ft === undefined ? "NA" : sw_ft[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_ft === undefined ? "NA" : lf_ft[0]?.price/100}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_ww === undefined ? "NA" : sw_ww[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_ww === undefined ? "NA" : lf_ww[0]?.price/100}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
-                                    {sw_bs === undefined ? "NA" : sw_bs[0]?.cheapestOffer.price?.amount}
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                    {sw_bs === undefined ? "NA" : lf_bs[0]?.price/100}
                                 </div></a></td>
 
 
