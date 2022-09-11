@@ -21,7 +21,7 @@ function PasswordChanged() {
                     <div className='verifyBoxFlex3'>
                         <div className='verifyBox3'>
                             <div><img className='verifyLogo2' src={VerifyLogo2} /></div>
-                            <div className='verifyTxt2'>Congratulation your email ID is verified</div>
+                            <div className='verifyTxt2'>Congratulation your password has been changed</div>
                             <div className='doneTickLogo1'><img src={OkLogo}/></div>
                             {/* <div className='emailName1'>email to: kunaldalotra02@gmail.com</div> */}
                             <div><Link to="/login"><button className='clickToVerify1'>Click to continue</button></Link></div>

@@ -32,16 +32,18 @@ function RegistrationFromInvite() {
 
     if (!confirm_err) {
       setLoading({ loading: true });
-    }
-
-    if (data.password != cp.confirmpassword) return;
-
+    }    
     try {
-      const url = "http://localhost:5000/api/users";
+      if (data.password != cp.confirmpassword){
+        message.error("Password and Confirm Password are must be same!");
+      }
+      else{
+      const url = "https://suga-server.herokuapp.com/api/users";
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setLoading(false)
       navigate("/emailverification")
+      }
     } catch (error) {
       if (
         error.response &&
@@ -147,7 +149,7 @@ function RegistrationFromInvite() {
             required
             name='password'
             onChange={onChange}
-            minLength={5}
+            minLength={8}
 
           />
           <h6 className='passwordRules1'>Use 8 or more characters, must contain upper case, lower case, numbers & special symbols</h6>
@@ -171,6 +173,7 @@ function RegistrationFromInvite() {
               onInputChange(e);
               confirm(e.target.value);
             }}
+            minLength={8}
           />
           <br />
           <button type='submit' className='RproceedBtn'>

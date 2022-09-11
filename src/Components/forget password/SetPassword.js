@@ -35,14 +35,17 @@ function SetPassword() {
       setLoading({ loading: true });
     }
 
-    if (data.password != cp.confirmpassword) return;
-
     try {
-      const url = `http://localhost:5000/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
+      if (data.password != cp.confirmpassword){
+        message.error("Password and Confirm Password are must be same!");
+      }
+      else{
+      const url = `https://suga-server.herokuapp.com/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setLoading(false)
       navigate("/password_changed")
+      }
     } catch (error) {
       if (
         error.response &&
@@ -97,7 +100,7 @@ function SetPassword() {
           required
             name='password'
             onChange={onChange}
-            minLength={5}
+            minLength={8}
           ></input>
         </div>
         <div className='setPasswordFlex3'>
@@ -121,6 +124,7 @@ function SetPassword() {
             onInputChange(e);
             confirm(e.target.value);
           }}
+          minLength={8}
           ></input>
         </div>
         <div><button type='submit' className='proceedBtn'>
