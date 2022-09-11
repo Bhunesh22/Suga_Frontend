@@ -30,12 +30,12 @@ function OurTeam() {
               <div><img className='image2' src={devesh} alt="Devesh Kapoor" /></div>
               <h2 className='memberName1'>Devesh Kapoor</h2>
               <div className='socialMediaDetails1'>
-              <div className='instaDetails1'><a href='https://instagram.com/d_koy_e?igshid=YmMyMTA2M2Y='><img src={instaLogo1} alt="Devesh Kapoor" /></a>
-                <a href='https://instagram.com/d_koy_e?igshid=YmMyMTA2M2Y='>d_koy_e</a>
-              </div>
-              <div className='discordDetails1'><a href='d_koy#1795'><img src={discord2} alt="Devesh Kapoor" /></a>
-                <a href='d_koy#1795'>d_koy#1795</a>
-              </div>
+                <div className='instaDetails1'><a href='https://instagram.com/d_koy_e?igshid=YmMyMTA2M2Y='><img src={instaLogo1} alt="Devesh Kapoor" /></a>
+                  <a href='https://instagram.com/d_koy_e?igshid=YmMyMTA2M2Y='>d_koy_e</a>
+                </div>
+                <div className='discordDetails1'><a href='#'><img src={discord2} alt="Devesh Kapoor" /></a>
+                  <a href='#'>d_koy#1795</a>
+                </div>
               </div>
               {/* <h3 className='memberPosition1'>CEO</h3> */}
             </div>
@@ -50,8 +50,13 @@ function OurTeam() {
             <div className='teamCard'>
               <div><img className='image2' src={muskan} alt="Muskan Garg" /></div>
               <h2 className='memberName1'>Muskan Garg</h2>
-              <div className='instaDetails1'><a href='https://www.instagram.com/muskan._.garagg/'><img src={instaLogo1} alt="Devesh Kapoor" /></a>
-                <a href='https://www.instagram.com/muskan._.garagg/'>muskan._.garagg</a>
+              <div className='socialMediaDetails1'>
+                <div className='instaDetails1'><a href='https://www.instagram.com/muskan._.garagg/'><img src={instaLogo1} alt="Devesh Kapoor" /></a>
+                  <a href='https://www.instagram.com/muskan._.garagg/'>muskan._.garagg</a>
+                </div>
+                <div className='discordDetails1'><a href='#'><img src={discord2} alt="Devesh Kapoor" /></a>
+                  <a href='#'>Muskan_garg#8907</a>
+                </div>
               </div>
               {/* <h3 className='memberPosition1'>CPO</h3> */}
             </div>
