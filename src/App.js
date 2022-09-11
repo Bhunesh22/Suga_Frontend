@@ -32,6 +32,7 @@ import VerifyEmail from './Components/Email Verification/VerifyEmail'
 import VerifyEmail2 from './Components/Email Verification/VerifyEmail2'
 import ForgotPassword from './Components/forget password/ForgotPassword'
 import SetPassword from './Components/forget password/SetPassword'
+import PasswordChanged from './Components/Email Verification/PasswordChanged';
 
 
 ReactGA.initialize('UA-231739890-1');
@@ -67,8 +68,8 @@ function App() {
           <Route exact path='/asktobuy' element={<AskToBuy/>}></Route>
           <Route exact path='/emailverification' element={<VerifyEmail/>}></Route>
           <Route exact path='/forgotpassword' element={<ForgotPassword/>}></Route>
-        
-          <Route exact path='/setpassword' element={<SetPassword/>}></Route>
+          <Route exact path='/password_changed' element={<PasswordChanged/>}></Route>
+          <Route exact path='/user/:id/password_reset/:token' element={<SetPassword/>}></Route>
           {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
 
         </Routes>

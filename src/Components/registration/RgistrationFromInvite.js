@@ -7,7 +7,6 @@ import { message } from 'antd';
 import 'antd/dist/antd.css';
 import axios from 'axios';
 
-
 function RegistrationFromInvite() {
 
   const navigate = useNavigate();

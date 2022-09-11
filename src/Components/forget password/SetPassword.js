@@ -1,8 +1,80 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './SetPassword.css'
 import sugaLogoBw2 from './suga logo bw2.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import CircularProgress from "@mui/material/CircularProgress";
+import { message } from 'antd';
+import 'antd/dist/antd.css';
+import axios from 'axios';
+
+
 function SetPassword() {
+
+  const param = useParams();
+  const navigate = useNavigate();
+
+  const [data, setData] = useState({
+    password: ""
+  });
+  const [cp, setCp] = useState({
+    confirmpassword: ""
+  });
+  const [error, setError] = useState("");
+  const [msg, setMsg] = useState("");
+  const [confirm_err, setConfirm_err] = useState(false);
+
+  // const handleChange = ({ currentTarget: input }) => {
+  // 	setData({ ...data, [input.name]: input.value });
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // setLoading(true)
+
+    if (!confirm_err) {
+      setLoading({ loading: true });
+    }
+
+    if (data.password != cp.confirmpassword) return;
+
+    try {
+      const url = `http://localhost:5000/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
+      const { data: res } = await axios.post(url, data);
+      setMsg(res.message);
+      setLoading(false)
+      navigate("/password_changed")
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        setError(error.response.data.message);
+        setLoading(false)
+        message.error(error.response.data.message);
+      }
+    }
+  };
+
+  const [loading, setLoading] = useState(false);
+
+  const confirm = (confirm) => {
+    if (confirm === data.password) {
+      setConfirm_err(false);
+    } else {
+      setConfirm_err(true);
+    }
+  };
+
+  const onChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value })
+  }
+
+  const onInputChange = (e) => {
+    setCp({ ...cp, [e.target.name]: e.target.value });
+  };
+
+
   return (
     <div className='setPasswordPage'>
       <div className='setPasswordTopFlex1'>
@@ -14,15 +86,52 @@ function SetPassword() {
         </div>
       </div>
       <div className='setPasswordDetails2'>
+        <form onSubmit={handleSubmit} >
+
         <div className='setPasswordFlex3'>
           <label className='password1'>Set password</label>
-          <input type="password" id="enterPassword" className='enterPassword'></input>
+          <input 
+          type="password" 
+          id="enterPassword" 
+          className='enterPassword'
+          required
+            name='password'
+            onChange={onChange}
+            minLength={5}
+          ></input>
         </div>
         <div className='setPasswordFlex3'>
-          <label className='cnfrmPassword'>Confirm password</label>
-          <input type="password" id="confermPassword" className='confermPassword'></input>
+
+        <div className="Rcp">
+            <label className='cnfrmPassword'>Confirm password</label>
+          <p>
+          {confirm_err && (
+                  <div className="text-danger" style={{marginTop:"4px"}}>Password didn't matched</div>
+          )}
+          </p>
+          </div>
+          <input 
+          type="password" 
+          id="confermPassword" 
+          className='confermPassword'
+          name="confirmpassword"
+          value={cp.confirmpassword}
+          required
+          onChange={(e) => {
+            onInputChange(e);
+            confirm(e.target.value);
+          }}
+          ></input>
         </div>
-        <div><button className='proceedBtn'>Proceed</button></div>
+        <div><button type='submit' className='proceedBtn'>
+        {loading ? (
+              <CircularProgress color="inherit" size={20} />
+            ) : (
+              "Proceed"
+            )}
+          </button></div>
+
+        </form>
       </div>
 
     </div>
