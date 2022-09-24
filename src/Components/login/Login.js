@@ -39,9 +39,7 @@ function Login(props) {
   //               setLoading({ loading: false });
   //               message.warning("Invalid Credentials");
   //           }
-            
   //   }
-
 
     // const onChange = (e)=>{
     //     setCredentials({...credentials, [e.target.name]: e.target.value})
