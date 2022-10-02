@@ -144,18 +144,23 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 101px;
+    width: 160px;
     height: 48px;
     border: 2px solid #4D69FD;
     border-radius: 4px;
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
     cursor: pointer;
 }
+
+.skinPrice1:hover{
+    border: 2px solid #F7F8FD;
+}
+
 
 .skinDetails2 {
     margin-top: 119px;
@@ -224,11 +229,25 @@ html {
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1050px){
+  .skinDetails2{
+    transform: scale(0.6);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+  }
+
+}
+
+@media screen and (max-width: 700px) {
     .skinBox1 {
-        transform: scale(0.75);
         margin-left: 0px;
+        transform: scale(0.75);
+       
     }
+
+    
 
     .skinBlueLine2 {
         display: none;
