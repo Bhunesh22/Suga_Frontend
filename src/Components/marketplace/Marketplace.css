@@ -111,66 +111,66 @@
 
 }
 
-.MheadContainer{
+.MheadContainer {
     height: 60px;
     background: linear-gradient(88.35deg, rgba(24, 32, 78, 0.2) 25.21%, rgba(34, 42, 88, 0.2) 67.59%);
-  backdrop-filter: blur(10px);  
+    backdrop-filter: blur(10px);
     width: 171px;
     margin: 0;
     padding: 0;
     cursor: pointer;
 }
 
-.Mheader{
+.Mheader {
     font-family: 'Gilroy-Regular', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 25px;
-  padding-top: 22px;
-  padding-left: 16px;
-  padding-bottom: 13px;
-  color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 22px;
+    padding-left: 16px;
+    padding-bottom: 13px;
+    color: #FFFFFF;
 }
 
-.MlistContainer{
+.MlistContainer {
     background: #101638;
     width: 171px;
     /* height: 113px; */
 }
 
-.MlistContainer ul{
+.MlistContainer ul {
     padding-left: 0px;
     padding-top: 4px;
     font-family: 'Gilroy-Regular', sans-serif;
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 25px;
-color: #FFFFFF;
-list-style: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+    list-style: none;
 }
 
-.MlistContainer ul li{
+.MlistContainer ul li {
     padding: 5px 0px 5px 16px;
 }
 
-.MlistContainer ul li:hover{
+.MlistContainer ul li:hover {
     background-color: #03071f;
 }
 
-.Marrow{
+.Marrow {
     color: #4D69FD;
     position: absolute;
     top: 26px;
     right: 10px;
 }
 
-.Mmarket{
+.Mmarket {
     display: grid;
     z-index: 3;
     margin: 33px 60px 0px 60px;
-    
+
 }
 
 .Ccontainer {
@@ -201,7 +201,7 @@ list-style: none;
     border: 2px solid #4D69FD;
 }
 
-.pagination .li-page-num:active{
+.pagination .li-page-num:active {
     background-color: #4D69FD;
 }
 
@@ -237,7 +237,7 @@ list-style: none;
 
 }
 
-.infinite-scroll-component{
+.infinite-scroll-component {
     height: auto;
     overflow: auto;
     display: flex;
@@ -247,46 +247,57 @@ list-style: none;
     justify-content: space-between;
 }
 
+.Mtop2 {
+    display: flex;
+    gap: 16px;
+    margin-left: 60px;
+}
+
+.dropdown {
+    height: 47px;
+    background: linear-gradient(88.35deg, rgba(24, 32, 78, 0.2) 25.21%, rgba(34, 42, 88, 0.2) 67.59%);
+    backdrop-filter: blur(5px);
+}
+
 @media screen and (max-width: 770px) {
-    .Ccontainer{
+    .Ccontainer {
         column-gap: 4px;
         row-gap: 18px;
         justify-content: space-evenly;
-    
+
     }
 
-    .infinite-scroll-component{
+    .infinite-scroll-component {
         column-gap: 4px;
         row-gap: 18px;
         justify-content: space-evenly;
     }
 
-    .Mmarket{
+    .Mmarket {
         justify-content: center;
         margin: 30px 20px 0px 20px;
     }
-    
+
 }
 
 @media screen and (max-width: 600px) {
-    .Mmarket{
+    .Mmarket {
         justify-content: center;
         margin: 30px 10px 0px 10px;
     }
 }
 
 @media screen and (max-width: 950px) {
-.Mleft{
-    display: none;
-}
+    .Mleft {
+        display: none;
+    }
 
-.Mright{
-    margin-left: 32px;
-}
+    .Mright {
+        margin-left: 32px;
+    }
 
-.Mmarket{
-    justify-content: center;
-}
+    .Mmarket {
+        justify-content: center;
+    }
 
 }
-

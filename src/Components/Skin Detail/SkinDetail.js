@@ -350,7 +350,7 @@ function SkinDetail() {
 
                             <tr style={{ borderBottom: "transparent" }}>
 
-                                <th scope="row"><div><img className='logoimages1' src={steam} alt="Steam" /></div></th>
+                                <th scope="row"><div><img className='logoimages1' src={steamLogo} alt="Steam" /></div></th>
 
                                 <td ><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Steam", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
 
@@ -505,7 +505,7 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></div>
+                                                    <div><div><img className='logoimages1' src={steamLogo} alt="Steam" /></div></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[0].slice(2)}</div>
                                                     </a></div>
@@ -558,7 +558,7 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
+                                                    <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Minimal-Wear%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[1].slice(2)}</div>
                                                     </a></div>
@@ -610,7 +610,7 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
+                                                    <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Field-Tested%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[2].slice(2)}</div>
                                                     </a></div>
@@ -661,7 +661,7 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
+                                                    <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Well-Worn%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[1].slice(3)}</div>
                                                     </a></div>
@@ -714,7 +714,7 @@ function SkinDetail() {
 
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
+                                                    <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Battle-Scarred%2`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[4].slice(2)}</div>
                                                     </a></div>
