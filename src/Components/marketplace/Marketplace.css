@@ -63,6 +63,7 @@
     justify-content: space-between;
     z-index: 5;
     margin-top: 50px;
+    margin-left: 60px;
 }
 
 .Mleft {
@@ -96,8 +97,10 @@
 .Mright {
     display: flex;
     z-index: 5;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
     margin-right: 60px;
-
 }
 
 .Mright p {
@@ -136,7 +139,8 @@
 .MlistContainer {
     background: #101638;
     width: 171px;
-    /* height: 113px; */
+    height: 200px;
+    overflow: scroll;
 }
 
 .MlistContainer ul {
@@ -256,6 +260,18 @@
 
 
 @media screen and (max-width: 770px) {
+    .Mright {
+        display: flex;
+        z-index: 5;
+        flex-wrap: wrap;
+        column-gap: 5px;
+        row-gap: 10px;
+        margin-right: 5px;
+        margin-left: 0px;
+    }
+    .Mtop {
+        margin-left: 10px;
+    }
     .Ccontainer {
         column-gap: 4px;
         row-gap: 18px;
@@ -289,7 +305,7 @@
     }
 
     .Mright {
-        margin-left: 32px;
+        margin-left: 5px;
     }
 
     .Mmarket {

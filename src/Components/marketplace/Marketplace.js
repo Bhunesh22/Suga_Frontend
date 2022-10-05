@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from 'react'
-// import nacl from "tweetnacl";
-// import * as https from 'https';
+
 import { Link, useParams } from 'react-router-dom';
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./Marketplace.css"
 import MCard from './card/MCard'
-// import DropDown from "./dropdown/DropDown"
-// import axios from 'axios';
+
 import { AiFillCaretDown } from 'react-icons/ai';
 import Navbar from '../navbar/Navbar';
 import { customEvent } from '../utils/analyticsHelper';
-// import Nftdetail from '../NftDetail/NftDetail';
-// import SkinDetail from '../Skin Detail/SkinDetail';
 
-const options = ["AK-47", "AWP", "M4A1-S", "MP9", "USP-S", "P250", "M249", "NAVAJA", "KARAMBIT", "BUTTERFLY-KNIFE"];
 
+
+
+const options1 = ["Desert-Eagle", "DUAL-BERETTAS", "FIVE-SEVEN", "GLOCK-18", "P2000", "P250", "R8-REVOLVER", "TEC-9", "USP-S"];
+
+const options2 = ["MAC-10", "MP5-SD", "MP7", "MP9", "MP9", "P90", "PP-BIZON", "UMP-45"];
+
+const options3 = ["AK-47", "AWP", "M4A1-S", "FAMAS", "GALIL-AR", "M4A4", "SG-553", "G3SG1", "SCAR-20", "SSG-08"];
+
+const options4 = ["NOVA", "SAWED-OFF", "XM1014", "M249", "NEGEV"];
+
+const options5 = ["HUNTSMAN-KNIFE", "BOWIE-KNIFE", "BUTTERFLY-KNIFE", "M9-BAYONET", "CLASSIC-KNIFE", "FALCHION-KNIFE", "NOMAD-KNIFE", "NAVAJA-KNIFE","FLIP-KNIFE","PARACORD-KNIFE","GUT-KNIFE","SHADOW-KNIFE","SKELETON-KNIFE","STILETTO-KNIFE","SURVIVAL-KNIFE","TALON-KNIFE","URSUS-KNIFE", ];
+
+const options6 = ["HAND-WRAPS", "MOTO-GLOVES","SPECIALIST-GLOVES","SPORT-GLOVES","BLOODHOUND-GLOVES","HYDRA-GLOVES","BROKEN-GLOVES","DRIVER-GLOVES", ];
 
 
 const Marketplace = () => {
@@ -22,19 +30,54 @@ const Marketplace = () => {
     let { type } = useParams();
     // console.log(type, "type of items")
 
-
-    const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(type === undefined ? "AK-47" : type);
-    const toggling = () => setIsOpen(!isOpen);
+
+    const [isOpen1, setIsOpen1] = useState(false);
+    const toggling1 = () => setIsOpen1(!isOpen1);
+
+    const [isOpen2, setIsOpen2] = useState(false);
+    const toggling2 = () => setIsOpen2(!isOpen2);
+
+    const [isOpen3, setIsOpen3] = useState(false);
+    const toggling3 = () => setIsOpen3(!isOpen3);
+
+    const [isOpen4, setIsOpen4] = useState(false);
+    const toggling4 = () => setIsOpen4(!isOpen4);
+
+    const [isOpen5, setIsOpen5] = useState(false);
+    const toggling5 = () => setIsOpen5(!isOpen5);
+
+    const [isOpen6, setIsOpen6] = useState(false);
+    const toggling6 = () => setIsOpen6(!isOpen6);
 
     useEffect(() => {
         // setItems(40)
         loadUserData();
     }, [selectedOption]);
 
-    const onOptionClicked = (value) => {
+    const onOptionClicked1 = (value) => {
         setSelectedOption(value);
-        setIsOpen(false);
+        setIsOpen1(false);
+    };
+    const onOptionClicked2 = (value) => {
+        setSelectedOption(value);
+        setIsOpen2(false);
+    };
+    const onOptionClicked3 = (value) => {
+        setSelectedOption(value);
+        setIsOpen3(false);
+    };
+    const onOptionClicked4 = (value) => {
+        setSelectedOption(value);
+        setIsOpen4(false);
+    };
+    const onOptionClicked5 = (value) => {
+        setSelectedOption(value);
+        setIsOpen5(false);
+    };
+    const onOptionClicked6 = (value) => {
+        setSelectedOption(value);
+        setIsOpen6(false);
     };
 
 
@@ -92,26 +135,24 @@ const Marketplace = () => {
 
                 <div className="Mtop">
 
-                    <div className="Mleft">
+                    {/* <div className="Mleft"> */}
                         {/* <form onSubmit={handleSearch}> */}
                         {/* <input type="text" onChange={(e) => { setSearchTitle(e.target.value); handleSearch() }} placeholder="&#61442;   search  " /> */}
                         {/* <button type='submit'>Search</button> */}
                         {/* </form> */}
-                    </div>
-
+                    {/* </div> */}
                     <div className="Mright">
-                        <p>Category :</p>
                         <div className="Mdropdown">
                             <div className="MheadContainer">
-                                <div className="Mheader"  onClick={() => { toggling();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
-                                    {selectedOption || "AK-47"}
+                                <div className="Mheader"  onClick={() => { toggling1();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
+                                    PISTOLS
                                 </div>
                                 <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
-                                {isOpen && (
+                                {isOpen1 && (
                                     <div className="MlistContainer">
                                         <ul>
-                                            {options.map(option => (
-                                                <li onClick={() => { onOptionClicked(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
+                                            {options1.map(option => (
+                                                <li onClick={() => { onOptionClicked1(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
                                                     {option}
                                                 </li>
                                             ))}
@@ -120,9 +161,113 @@ const Marketplace = () => {
                                 )}
                             </div>
                         </div>
+
+                        <div className="Mdropdown">
+                            <div className="MheadContainer">
+                                <div className="Mheader"  onClick={() => { toggling2();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
+                                SMG
+                                </div>
+                                <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
+                                {isOpen2 && (
+                                    <div className="MlistContainer">
+                                        <ul>
+                                            {options2.map(option => (
+                                                <li onClick={() => { onOptionClicked2(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
+                                                    {option}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+
+                        <div className="Mdropdown">
+                            <div className="MheadContainer">
+                                <div className="Mheader"  onClick={() => { toggling3();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
+                                RIFLE
+                                </div>
+                                <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
+                                {isOpen3 && (
+                                    <div className="MlistContainer">
+                                        <ul>
+                                            {options3.map(option => (
+                                                <li onClick={() => { onOptionClicked3(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
+                                                    {option}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className="Mdropdown">
+                            <div className="MheadContainer">
+                                <div className="Mheader"  onClick={() => { toggling4();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
+                                HEAVY
+                                </div>
+                                <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
+                                {isOpen4 && (
+                                    <div className="MlistContainer">
+                                        <ul>
+                                            {options4.map(option => (
+                                                <li onClick={() => { onOptionClicked4(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
+                                                    {option}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className="Mdropdown">
+                            <div className="MheadContainer">
+                                <div className="Mheader"  onClick={() => { toggling5();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
+                                KNIVES
+                                </div>
+                                <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
+                                {isOpen5 && (
+                                    <div className="MlistContainer">
+                                        <ul>
+                                            {options5.map(option => (
+                                                <li onClick={() => { onOptionClicked5(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
+                                                    {option}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className="Mdropdown">
+                            <div className="MheadContainer">
+                                <div className="Mheader"  onClick={() => { toggling6();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
+                                GLOVES
+                                </div>
+                                <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
+                                {isOpen6 && (
+                                    <div className="MlistContainer">
+                                        <ul>
+                                            {options6.map(option => (
+                                                <li onClick={() => { onOptionClicked6(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
+                                                    {option}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+
+
+
                     </div>
                 </div>
-                <div className='Mtop2'>
+
+                {/* <div className='Mtop2'>
+                    
                     <div>
                         <div class="dropdown" >
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -155,7 +300,6 @@ const Marketplace = () => {
                                 <li><a class="dropdown-item" href="#">P90</a></li>
                                 <li><a class="dropdown-item" href="#">PP-Bizon</a></li>
                                 <li><a class="dropdown-item" href="#">UMP-45</a></li>
-
                             </ul>
                         </div>
                     </div>
@@ -233,9 +377,7 @@ const Marketplace = () => {
                             </ul>
                         </div>
                     </div>
-
-                </div>
-
+                </div> */}
 
                 {/* {searchTitle === ""? ( */}
                 <div className="Mmarket">
