@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './Footer.css'
-
+import { customEvent } from '../utils/analyticsHelper';
 // import { Navigate } from 'react-router-dom'
 
 import logo from './logo/suga.png'
@@ -85,10 +85,10 @@ const Footer = () => {
                 </div>
                 <div className="FsocialLogo">
                     <ul>
-                        <li><a href="https://discord.gg/68F3AYfE" target="_blank" rel="noreferrer"><img src={discord} alt="" /></a> </li>
-                        <li><a href="" target="_blank" rel="noreferrer"><img src={twitter} alt="" /></a></li>
-                        <li><a href="https://www.instagram.com/sugaverse_infi/" target="_blank" rel="noreferrer"><img src={insta} alt="" /></a></li>
-                        <li><a href="https://www.linkedin.com/company/suga-verse" target="_blank" rel="noreferrer"><img src={linkedIn} alt="" /></a></li>
+                        <li onClick={() => customEvent("Discord","user","From Footer")}><a href="https://discord.gg/68F3AYfE" target="_blank" rel="noreferrer"><img src={discord} alt="" /></a> </li>
+                        <li onClick={() => customEvent("Twitter","user","From Footer")}><a href="" target="_blank" rel="noreferrer"><img src={twitter} alt="" /></a></li>
+                        <li onClick={() => customEvent("Instagram","user","From Footer")}><a href="https://www.instagram.com/sugaverse_infi/" target="_blank" rel="noreferrer"><img src={insta} alt="" /></a></li>
+                        <li onClick={() => customEvent("LinkedIn","user","From Footer")}><a href="https://www.linkedin.com/company/suga-verse" target="_blank" rel="noreferrer"><img src={linkedIn} alt="" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -124,7 +124,7 @@ const Footer = () => {
                         required
                         onChange={onChange}
                         /><br />
-                        <button type='submit' className='Fbtn' >
+                        <button type='submit' className='Fbtn' onClick={() => customEvent("Message","user","From Footer")} >
                         {loading ? (
                   <CircularProgress color="inherit" size={20} />
                 ) : (
@@ -145,7 +145,7 @@ const Footer = () => {
                     <div className="Fcol">
                         <p>Company</p>
                         <ul>
-                            <li><Link to="/ourteam">About Us</Link></li>
+                            <li onClick={() => customEvent("AboutUS","user","From Footer")}><Link to="/ourteam">About Us</Link></li>
                             <li>Careers</li>
                             <li>Copyright Policy</li>
                             <li>Terms and Conditions </li>

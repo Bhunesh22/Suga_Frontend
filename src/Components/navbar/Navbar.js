@@ -8,6 +8,7 @@ import { MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 import { VscChromeClose } from 'react-icons/vsc';
 import Dropdown from './Dropdown'
 import { Link, NavLink } from "react-router-dom"
+import { customEvent } from '../utils/analyticsHelper';
 
 const Navbar = () => {
 
@@ -56,8 +57,8 @@ const Navbar = () => {
         </div>
         <div className="Nmid">
           <p><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' /></p>
-          <p className='Nexchange'><NavLink to="/" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>Skins</NavLink></p>
-          <p className='Nmatches'><NavLink to="/commingSoon" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>NFT's</NavLink></p>
+          <p   onClick={() => customEvent("Skins",`${localStorage.getItem("token")}`,"skinpage")} className='Nexchange'><NavLink to="/" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>Skins</NavLink></p>
+          <p onClick={() => customEvent("NFT's",`${localStorage.getItem("token")}`,"NFT_page")} className='Nmatches'><NavLink to="/commingSoon" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>NFT's</NavLink></p>
           <p><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' /></p>
         </div>
 
@@ -67,7 +68,9 @@ const Navbar = () => {
         </div>
         <div className="NhamDrop">
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+            <li className="nav-item"
+            onClick={() => customEvent("Skins","skinpage",`${localStorage.getItem("token")}`)}
+            >
               <NavLink
                 exact
                 to="/"
@@ -78,7 +81,9 @@ const Navbar = () => {
                 Skins
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item"
+           onClick={() => customEvent("NFT's",`${localStorage.getItem("token")}`,"NFT_page")}
+            >
               <NavLink
                 exact
                 to="/comingsoon"
@@ -89,7 +94,9 @@ const Navbar = () => {
                 NFT's
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item"
+            onClick={() => customEvent("Wallet",`${localStorage.getItem("token")}`,"Wallet_page")}
+            >
               <NavLink
                 exact
                 to="/wallet"
@@ -100,7 +107,9 @@ const Navbar = () => {
                 Wallet
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li 
+               onClick={() => customEvent("Settings",`${localStorage.getItem("token")}`,"value")}
+              className="nav-item">
               <NavLink
                 exact
                 to="/comingsoon"
@@ -111,7 +120,9 @@ const Navbar = () => {
                 Settings
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li 
+            onClick={() => customEvent("Help Center",`${localStorage.getItem("token")}`,"value")}
+            className="nav-item">
               <NavLink
                 exact
                 to="/comingsoon"
@@ -122,7 +133,9 @@ const Navbar = () => {
                 Help Center
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li 
+            onClick={() => customEvent("AboutUs",`${localStorage.getItem("token")}`,"value")}
+            className="nav-item">
               <NavLink
                 exact
                 to="/ourteam"
@@ -133,7 +146,7 @@ const Navbar = () => {
                 About Us
               </NavLink>
             </li>
-            {localStorage.getItem('token') ? (<li className="nav-item">
+            {localStorage.getItem('token') ? (<li className="nav-item"  onClick={() => customEvent("Logout",`${localStorage.getItem("token")}`,"value")}>
               <NavLink
                 exact
                 to="/login"
@@ -149,7 +162,7 @@ const Navbar = () => {
         </div>
 
         <div className="Nlast">
-          {!localStorage.getItem("token") ? (<Link to="/login" className='Nlink' ><div className='Nbtn' style={{ cursor: "pointer" }}>Login</div></Link>) : (<>
+          {!localStorage.getItem("token") ? (<Link to="/login" className='Nlink' ><div className='Nbtn' onClick={() => customEvent("Login",`user`,"From Navbar")} style={{ cursor: "pointer" }}>Login</div></Link>) : (<>
             <div className="Nbox"></div>
             {!openProfile ? (<div className="Nimg" style={{ cursor: "pointer" }}>
               <img onClick={toggle} src={profile} alt="" />

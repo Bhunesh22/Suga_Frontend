@@ -9,6 +9,7 @@ import Footer from '../footer/Footer'
 import Navbar from '../navbar/Navbar'
 import Cards from './card/Cards'
 import { Link, useNavigate } from 'react-router-dom'
+import { customEvent } from '../utils/analyticsHelper';
 
 const Homepage = () => {
 
@@ -30,7 +31,7 @@ const Homepage = () => {
                     <h1>Gaming Assets &amp; Skins <span style={{color: "white"}}>Universe</span></h1>
                     {/* <h1 style={{ color: "white", marginTop: "0px" }}>OF GAMING AND NFT’S</h1> */}
                     <p>A one-stop market for your gaming inventory. Compare gaming assets at pure ease from the global marketplaces.</p>
-                    {!localStorage.getItem('token')? (<Link to="/registrationfrominvite"><button className='Hbtn'>Register</button></Link>) : (<Link to="/marketplace"><button className='Hbtn'>Explore</button></Link>)
+                    {!localStorage.getItem('token')? (<Link to="/registrationfrominvite"><button onClick={() => customEvent("Register","user","From Home page to do Register")} className='Hbtn'>Register</button></Link>) : (<Link to="/marketplace"><button className='Hbtn' onClick={() => customEvent("Explore",`${localStorage.getItem("token")}`,"From Home Page")}>Explore</button></Link>)
                     }
                     
                 </div>
@@ -78,7 +79,7 @@ const Homepage = () => {
                         <span>Fantasy Section</span>
                     </h1>
                     <p>Making NFT's accessible at ease for next million people</p>
-                    <Link to="/commingsoon"><button className='Hbtn'>Wander</button></Link>
+                    <Link to="/commingsoon"><button className='Hbtn' onClick={() => customEvent("Wander",`${localStorage.getItem("token")}`,"From Home Page")}>Wander</button></Link>
                 </div>
                 <div className="Hellipse2"></div>
             </div>

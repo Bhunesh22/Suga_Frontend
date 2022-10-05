@@ -105,8 +105,8 @@ function Login(props) {
       // value={credentials.password} 
       onChange={onChange}
       /><br/>
-      <NavLink to="/forgotpassword" className={({isActive}) => isActive ? "": "frgtPassword" }>Forgot Password?</NavLink>
-      <button type='submit' className='signIn' onClick={() => customEvent("login","buttonClick","user","value")}>
+      <NavLink to="/forgotpassword" onClick={() => customEvent("Forgot PassWord",`${localStorage.getItem("token")}`,"From login page")} className={({isActive}) => isActive ? "": "frgtPassword" }>Forgot Password?</NavLink>
+      <button type='submit' className='signIn' onClick={() => customEvent("login","user","value")}>
       {loading ? (
                   <CircularProgress color="inherit" size={20} />
                 ) : (
@@ -116,7 +116,7 @@ function Login(props) {
       <div className="Lbottom">
       <span className='account'>don't have an account?</span>
       <span>
-      <NavLink to="/registrationfrominvite" className={({isActive}) => isActive ? "": "registration" }>Register Now</NavLink></span>
+      <NavLink to="/registrationfrominvite" onClick={() => customEvent("Register Now",`user`,"From login page")} className={({isActive}) => isActive ? "": "registration" }>Register Now</NavLink></span>
       </div>
       {/* <span className='blankPassword'></span> */}
       </form>

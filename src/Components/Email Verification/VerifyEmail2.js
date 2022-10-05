@@ -7,6 +7,7 @@ import OkLogo from './images/ok  logo1.svg'
 import axios from 'axios';
 import { useParams, Link} from 'react-router-dom';
 // import { Fragment } from 'react';
+import { customEvent } from '../utils/analyticsHelper';
 
 function VerifyEmail2() {
 
@@ -36,7 +37,7 @@ function VerifyEmail2() {
                     <div className='emailFlex4'>
                         <div><a className='sugaLogoEmail3' href='/'><img className='sugaLogoEmail3' src={SugaLogoEmail} /></a></div>
                         {/* <div><button className='loginBtn3'>Login</button></div> */}
-                        <div><Link to="/login"><button className='loginBtn3'>Login</button></Link></div>
+                        <div><Link to="/login"><button className='loginBtn3' onClick={() => customEvent("Login","user","From (email verified page) page ")}>Login</button></Link></div>
                     </div>
                     <div className='verifyBoxFlex3'>
                         <div className='verifyBox3'>
@@ -44,7 +45,7 @@ function VerifyEmail2() {
                             <div className='verifyTxt2'>Congratulation your email ID is verified</div>
                             <div className='doneTickLogo1'><img src={OkLogo}/></div>
                             {/* <div className='emailName1'>email to: kunaldalotra02@gmail.com</div> */}
-                            <div><Link to="/login"><button className='clickToVerify1'>Click to continue</button></Link></div>
+                            <div><Link to="/login"><button className='clickToVerify1' onClick={() => customEvent("Login","user","From (email verified page) page ")}>Click to continue</button></Link></div>
                         </div>
                     </div>
                 </div>

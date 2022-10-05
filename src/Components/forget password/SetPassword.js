@@ -6,6 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { message } from 'antd';
 import 'antd/dist/antd.css';
 import axios from 'axios';
+import { customEvent } from '../utils/analyticsHelper';
 
 
 function SetPassword() {
@@ -127,7 +128,7 @@ function SetPassword() {
           minLength={8}
           ></input>
         </div>
-        <div><button type='submit' className='proceedBtn'>
+        <div><button type='submit' className='proceedBtn' onClick={() => customEvent("Password Edited",`${localStorage.getItem("token")}`,"From SetPassword page")}>
         {loading ? (
               <CircularProgress color="inherit" size={20} />
             ) : (

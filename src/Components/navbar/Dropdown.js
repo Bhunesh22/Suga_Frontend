@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import './dropdown.css'
+import { customEvent } from '../utils/analyticsHelper';
 
 const Main = styled("div")`
   font-family: sans-serif;
@@ -79,15 +80,15 @@ export default function Dropdown() {
         {/* {isOpen && ( */}
           <DropDownListContainer>
             <DropDownList>
-              <ListItem><NavLink to='/profile' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>View Profile</NavLink></ListItem>
+              <ListItem><NavLink to='/profile'  onClick={() => { onOptionClicked();  customEvent("View Profile",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>View Profile</NavLink></ListItem>
 
-              <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Settings</NavLink></ListItem>
+              <ListItem><NavLink to='/comingSoon'  onClick={() => { onOptionClicked();  customEvent("Settings",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Settings</NavLink></ListItem>
 
-              <ListItem><NavLink to='/wallet' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Wallet</NavLink></ListItem>
+              <ListItem><NavLink to='/wallet'  onClick={() => { onOptionClicked();  customEvent("Wallet",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Wallet</NavLink></ListItem>
 
-              <ListItem><NavLink to="/login" onClick={handleLogout}  className={({isActive}) => isActive ? "navActive": "navlink" }>Logout</NavLink></ListItem>
+              <ListItem><NavLink to="/login"  onClick={() => { onOptionClicked();  customEvent("Logout",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Logout</NavLink></ListItem>
 
-              <ListItem><NavLink to='/comingSoon' onClick={onOptionClicked} className={({isActive}) => isActive ? "navActive": "navlink" }>Help Center</NavLink></ListItem>
+              <ListItem><NavLink to='/comingSoon'  onClick={() => { onOptionClicked();  customEvent("Help Center",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Help Center</NavLink></ListItem>
 
             </DropDownList>
           </DropDownListContainer>

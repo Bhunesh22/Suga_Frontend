@@ -6,6 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { message } from 'antd';
 import 'antd/dist/antd.css';
 import axios from 'axios';
+import { customEvent } from '../utils/analyticsHelper';
 
 function RegistrationFromInvite() {
 
@@ -176,7 +177,7 @@ function RegistrationFromInvite() {
             minLength={8}
           />
           <br />
-          <button type='submit' className='RproceedBtn'>
+          <button type='submit' className='RproceedBtn' onClick={() => customEvent("Register","user","User is Registered")}>
             {loading ? (
               <CircularProgress color="inherit" size={20} />
             ) : (
