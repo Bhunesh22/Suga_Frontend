@@ -4,6 +4,7 @@ import Navbar from '../navbar/Navbar'
 import cancelIcon from "./images/edit profile cross.svg"
 import donelIcon from "./images/edit profile right.svg"
 import { useNavigate, Link } from 'react-router-dom'
+import { customEvent } from '../utils/analyticsHelper';
 
 function EditProfile() {
 
@@ -125,10 +126,10 @@ function EditProfile() {
 
                                 <div className='btnFlexP'>
                                     <div className="">
-                                        <button className="btn btn-primary1"><Link to="/profile"><img src={cancelIcon} alt="cancel" /></Link></button>
+                                        <button className="btn btn-primary1" onClick={() => customEvent("Cancel",`${localStorage.getItem("token")}`,"To not edit profile")}><Link to="/profile"><img src={cancelIcon} alt="cancel" /></Link></button>
                                     </div>
                                     <div className="">
-                                        <button type="submit" className="btn btn-primary1"><img src={donelIcon} alt="done" /></button>
+                                        <button type="submit" onClick={() => customEvent("Profile Edited",`${localStorage.getItem("token")}`,"From Edit Profile Page")} className="btn btn-primary1"><img src={donelIcon} alt="done" /></button>
                                     </div>
                                 </div>
 

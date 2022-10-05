@@ -9,6 +9,7 @@ import MCard from './card/MCard'
 // import axios from 'axios';
 import { AiFillCaretDown } from 'react-icons/ai';
 import Navbar from '../navbar/Navbar';
+import { customEvent } from '../utils/analyticsHelper';
 // import Nftdetail from '../NftDetail/NftDetail';
 // import SkinDetail from '../Skin Detail/SkinDetail';
 
@@ -102,7 +103,7 @@ const Marketplace = () => {
                         <p>Category :</p>
                         <div className="Mdropdown">
                             <div className="MheadContainer">
-                                <div className="Mheader" onClick={toggling}>
+                                <div className="Mheader"  onClick={() => { toggling();  customEvent("Category DropDown of Items",`${localStorage.getItem("token")}`,`${selectedOption}`); }}>
                                     {selectedOption || "AK-47"}
                                 </div>
                                 <span className="Marrow"><AiFillCaretDown style={{ color: "#4D69FD" }} /></span>
@@ -110,7 +111,7 @@ const Marketplace = () => {
                                     <div className="MlistContainer">
                                         <ul>
                                             {options.map(option => (
-                                                <li onClick={() => { onOptionClicked(option); /*handleFilter(option)*/; }} key={Math.random()}>
+                                                <li onClick={() => { onOptionClicked(option);  customEvent("Item DropDown From Market Page",`${localStorage.getItem("token")}`,`${selectedOption}`); }} key={Math.random()}>
                                                     {option}
                                                 </li>
                                             ))}
@@ -245,11 +246,11 @@ const Marketplace = () => {
                             hasMore={true}
                             loader={<h4 style={{ color: "white" }}>Loading...</h4>}
                         >
-                            {data && data.objects.map((list, index) => {
-                                return (
-                                    <Link to={`/skindetail/${list.itemId}/${selectedOption}/${list.slug}`}><MCard list={list} index={index} /></Link>
-                                )
-                            })}
+                             {data && data.objects.map((list, index) => {
+                            return (
+                                <Link to={`/skindetail/${list.itemId}/${selectedOption}/${list.slug}`}  onClick={() => customEvent("Asset Card From Market",`${localStorage.getItem("token")}`,`${list.slug}`)}><MCard list={list} index={index} /></Link>
+                            )
+                        })}
                         </InfiniteScroll>
 
                     </div>

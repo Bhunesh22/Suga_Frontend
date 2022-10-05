@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Profile.css'
 import Navbar from '../navbar/Navbar'
 import { Link } from 'react-router-dom'
+import { customEvent } from '../utils/analyticsHelper';
 
 function Profile() {
 
@@ -148,7 +149,7 @@ function Profile() {
                                 {/* </form> */}
 
 
-                                <div><Link to="/editprofile"><button className='editProfileBtn1'>Edit</button></Link></div>
+                                <div><Link to="/editprofile"><button onClick={() => customEvent("Edit Profile",`${localStorage.getItem("token")}`,"value")} className='editProfileBtn1'>Edit</button></Link></div>
                             </div>
                         </div>
                     </div>

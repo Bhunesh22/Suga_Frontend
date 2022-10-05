@@ -352,24 +352,24 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={steamLogo} alt="Steam" /></div></th>
 
-                                <td ><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Steam", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td ><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Steam",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
 
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[0].slice(2)}
                                 </div></a></td>
 
-                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Minimal-Wear%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Steam", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Minimal-Wear%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Steam",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{steamData[1] === undefined ? "NA" : steamData[1].slice(2)}
                                 </div></a></td>
 
-                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Field-Tested%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Steam", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Field-Tested%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Steam",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{steamData[2] === undefined ? "NA" : steamData[2].slice(2)}
                                 </div></a></td>
 
-                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Well-Worn%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Steam", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Well-Worn%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Steam",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{steamData[3] === undefined ? "NA" : steamData[3].slice(2)}
                                 </div></a></td>
 
-                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Battle-Scarred%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Steam", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Battle-Scarred%29`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Steam",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{steamData[4] === undefined ? "NA" : steamData[4].slice(2)}
                                 </div></a></td>
                             </tr>
@@ -379,24 +379,24 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></th>
 
-                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td ><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
 
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{factoryNew === undefined ? "NA" : ((factoryNew?.price.USD / 100) * inr).toString().slice(0, ((factoryNew?.price.USD / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{minimalWear === undefined ? "NA" : ((minimalWear?.price.USD / 100) * inr).toString().slice(0, ((minimalWear?.price.USD / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{fieldTested === undefined ? "NA" : ((fieldTested?.price.USD / 100) * inr).toString().slice(0, ((fieldTested?.price.USD / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{wellWorn === undefined ? "NA" : ((wellWorn?.price.USD / 100) * inr).toString().slice(0, ((wellWorn?.price.USD / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{battleScarred === undefined ? "NA" : ((battleScarred?.price.USD / 100) * inr).toString().slice(0, ((battleScarred?.price.USD / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
                             </tr>
@@ -407,23 +407,23 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={skinwallet} alt="skinwallet" /></div></th>
 
-                                <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td ><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_fn[0]?.marketHashName === undefined ? "NA" : ((sw_fn[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_fn[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_mw[0]?.marketHashName === undefined ? "NA" : ((sw_mw[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_mw[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_ft[0]?.marketHashName === undefined ? "NA" : ((sw_ft[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_ft[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_ww[0]?.marketHashName === undefined ? "NA" : ((sw_ww[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_ww[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://www.skinwallet.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_bs[0]?.marketHashName === undefined ? "NA" : ((sw_bs[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_bs[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}
 
                                 </div></a></td>
@@ -434,23 +434,23 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={skinport} alt="Skinport" /></div></th>
 
-                                <td ><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td ><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_fn === undefined ? "NA" : ((sp_fn[0]?.min_price) * inr).toString().slice(0, ((sp_fn[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_mw === undefined ? "NA" : ((sp_mw[0]?.min_price) * inr).toString().slice(0, ((sp_mw[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_ft === undefined ? "NA" : ((sp_ft[0]?.min_price) * inr).toString().slice(0, ((sp_ft[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_ww === undefined ? "NA" : ((sp_ww[0]?.min_price) * inr).toString().slice(0, ((sp_ww[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://skinport.com/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_bs === undefined ? "NA" : ((sp_bs[0]?.min_price) * inr).toString().slice(0, ((sp_bs[0]?.min_price) * inr).toString().indexOf(".") + 3)}
 
                                 </div></a></td>
@@ -462,23 +462,23 @@ function SkinDetail() {
 
                                 <th scope="row"><div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div></th>
 
-                                <td ><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td ><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_fn === undefined ? "NA" : ((lf_fn[0]?.price / 100) * inr).toString().slice(0, ((lf_fn[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_mw === undefined ? "NA" : ((lf_mw[0]?.price / 100) * inr).toString().slice(0, ((lf_mw[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_ft === undefined ? "NA" : ((lf_ft[0]?.price / 100) * inr).toString().slice(0, ((lf_ft[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_ww === undefined ? "NA" : ((lf_ww[0]?.price / 100) * inr).toString().slice(0, ((lf_ww[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                 </div></a></td>
 
-                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                <td><a href={`https://loot.farm/`} target="_blank"><div className='skinPrice1' onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                     <img className='rupeeLogo' src={rupeeBold} alt="rupee" />{sw_bs === undefined ? "NA" : ((lf_bs[0]?.price / 100) * inr).toString().slice(0, ((lf_bs[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
 
                                 </div></a></td>
@@ -506,35 +506,35 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><div><img className='logoimages1' src={steamLogo} alt="Steam" /></div></div>
-                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></div>
+                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[0].slice(2)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></div>
-                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug} + "-factory-new"}`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{factoryNew === undefined ? "NA" : ((factoryNew?.price.USD / 100) * inr).toString().slice(0, ((factoryNew?.price.USD / 100) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinwallet} alt="Skinwallet" /></div>
-                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_fn === undefined ? "NA" : ((sw_fn[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_fn[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinport} alt="Skinport" /></div>
-                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_fn === undefined ? "NA" : ((sp_fn[0]?.min_price) * inr).toString().slice(0, ((sp_fn[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                                     </div>
                                                     </a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div>
-                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_fn === undefined ? "NA" : ((lf_fn[0]?.price / 100) * inr).toString().slice(0, ((lf_fn[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
@@ -559,34 +559,36 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
+                                                  
+                                                   
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
-                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Minimal-Wear%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Minimal-Wear%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[1].slice(2)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-minimal-wear"}`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{minimalWear === undefined ? "NA" : ((minimalWear?.price.USD / 100) * inr).toString().slice(0, ((minimalWear?.price.USD / 100) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinwallet} alt="Skinwallet" /></div>
-                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_mw === undefined ? "NA" : ((sw_mw[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_mw[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinport} alt="Skinport" /></div>
-                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_mw === undefined ? "NA" : ((sp_mw[0]?.min_price) * inr).toString().slice(0, ((sp_mw[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div>
-                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_mw === undefined ? "NA" : ((lf_mw[0]?.price / 100) * inr).toString().slice(0, ((lf_mw[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
@@ -611,34 +613,36 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
+                                                   
+                                                  
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
-                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Field-Tested%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Field-Tested%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[2].slice(2)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-field-tested"}`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{fieldTested === undefined ? "NA" : ((fieldTested?.price.USD / 100) * inr).toString().slice(0, ((fieldTested?.price.USD / 100) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinwallet} alt="Skinwallet" /></div>
-                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_ft === undefined ? "NA" : ((sw_ft[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_ft[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinport} alt="Skinport" /></div>
-                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_ft === undefined ? "NA" : ((sp_ft[0]?.min_price) * inr).toString().slice(0, ((sp_ft[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div>
-                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_ft === undefined ? "NA" : ((lf_ft[0]?.price / 100) * inr).toString().slice(0, ((lf_ft[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
@@ -662,15 +666,16 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
+                                                   
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
-                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Well-Worn%29`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Well-Worn%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[1].slice(3)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-well-worn"}`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{wellWorn === undefined ? "NA" : ((wellWorn?.price.USD / 100) * inr).toString().slice(0, ((wellWorn?.price.USD / 100) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
@@ -678,19 +683,19 @@ function SkinDetail() {
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinwallet} alt="Skinwallet" /></div>
-                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_ww === undefined ? "NA" : ((sw_ww[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_ww[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)} </div>
                                                     </a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinport} alt="Skinport" /></div>
-                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_ww === undefined ? "NA" : ((sp_ww[0]?.min_price) * inr).toString().slice(0, ((sp_ww[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div>
-                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_ww === undefined ? "NA" : ((lf_ww[0]?.price / 100) * inr).toString().slice(0, ((lf_ww[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
@@ -715,34 +720,35 @@ function SkinDetail() {
 
 
                                                 <div className='skinDetailsWithPrice1'>
+                                                   
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
-                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Battle-Scarred%2`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Battle-Scarred%2`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[4].slice(2)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div>
-                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div onClick={() => customEvent("SkinDetail", "Dmarket", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://dmarket.com/ingame-items/item-list/csgo-skins?title=${name === undefined ? "ak-47-asiimov" : data.slug + "-battle-scarred"}`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{battleScarred === undefined ? "NA" : ((battleScarred?.price.USD / 100) * inr).toString().slice(0, ((battleScarred?.price.USD / 100) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
 
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinwallet} alt="Skinwallet" /></div>
-                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinWallet", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://www.skinwallet.com/`} target="_blank"><div onClick={() => customEvent( "SkinWallet",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_bs === undefined ? "NA" : ((sw_bs[0]?.cheapestOffer.price?.amount) * inr).toString().slice(0, ((sw_bs[0]?.cheapestOffer.price?.amount) * inr).toString().indexOf(".") + 3)}</div>
                                                     </a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={skinport} alt="Skinport" /></div>
-                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "SkinPort", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://skinport.com/`} target="_blank"><div onClick={() => customEvent( "SkinPort",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_bs === undefined ? "NA" : ((sp_bs[0]?.min_price) * inr).toString().slice(0, ((sp_bs[0]?.min_price) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>
                                                 <div className='skinDetailsWithPrice1'>
                                                     <div><img className='logoimages1' src={lootfarm} alt="Lootfarm" /></div>
-                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent("SkinDetail", "LootFarm", "user", name === undefined ? "ak-47-asiimov" : data.slug)}>
+                                                    <div><a href={`https://loot.farm/`} target="_blank"><div onClick={() => customEvent( "LootFarm",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{sw_bs === undefined ? "NA" : ((lf_bs[0]?.price / 100) * inr).toString().slice(0, ((lf_bs[0]?.price / 100) * inr).toString().indexOf(".") + 3)}
                                                     </div></a></div>
                                                 </div>

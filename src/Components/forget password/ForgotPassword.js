@@ -7,6 +7,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { message } from 'antd';
 import 'antd/dist/antd.css';
 import axios from 'axios';
+import { customEvent } from '../utils/analyticsHelper';
 
 function ForgotPassword() {
     const [loading, setLoading] = useState(false);
@@ -75,7 +76,7 @@ function ForgotPassword() {
                         />
                     </div>
                     <div>
-                        <button type='submit' className='linkBtn2'>
+                        <button type='submit' className='linkBtn2' onClick={() => customEvent("Forgot Password Edit Request",`${localStorage.getItem("token")}`,"From FP page")}>
                         {loading ? (
               <CircularProgress color="inherit" size={20} />
             ) : (
