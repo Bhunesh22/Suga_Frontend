@@ -154,7 +154,7 @@ const Marketplace = () => {
                                 <li><a class="dropdown-item" href="#">P90</a></li>
                                 <li><a class="dropdown-item" href="#">PP-Bizon</a></li>
                                 <li><a class="dropdown-item" href="#">UMP-45</a></li>
-                          
+
                             </ul>
                         </div>
                     </div>
@@ -234,6 +234,7 @@ const Marketplace = () => {
                     </div>
 
                 </div>
+
 
                 {/* {searchTitle === ""? ( */}
                 <div className="Mmarket">

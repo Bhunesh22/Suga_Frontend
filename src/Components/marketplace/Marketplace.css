@@ -253,11 +253,7 @@
     margin-left: 60px;
 }
 
-.dropdown {
-    height: 47px;
-    background: linear-gradient(88.35deg, rgba(24, 32, 78, 0.2) 25.21%, rgba(34, 42, 88, 0.2) 67.59%);
-    backdrop-filter: blur(5px);
-}
+
 
 @media screen and (max-width: 770px) {
     .Ccontainer {

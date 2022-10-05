@@ -489,6 +489,7 @@ function SkinDetail() {
                         </tbody>
                     </table>
                 </div>
+                
                 {/* mobile view */}
                 <div className='mobileView1'>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
