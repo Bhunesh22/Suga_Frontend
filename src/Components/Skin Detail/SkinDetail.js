@@ -506,7 +506,7 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                    <div><div><img className='logoimages1' src={dmarketLogo} alt="Dmarket" /></div></div>
+                                                    <div><div><img className='logoimages1' src={steamLogo} alt="Dmarket" /></div></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Factory-New%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[0].slice(2)}</div>
                                                     </a></div>

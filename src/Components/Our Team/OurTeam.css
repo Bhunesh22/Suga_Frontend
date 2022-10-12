@@ -96,7 +96,7 @@ html {
 .image2 {
     width: 155px;
     height: 166px;
-  
+
 }
 
 .image3 {
@@ -106,22 +106,39 @@ html {
     border-radius: 77.5px;
 }
 
-.instaDetails1{
+.instaDetails1 {
     display: flex;
     gap: 8px;
 
 }
 
-.discordDetails1{
+.discordDetails1 {
     margin-top: -4px;
 }
 
-.socialMediaDetails1{
+.socialMediaDetails1 {
     display: flex;
     gap: 20px;
+
 }
 
 @media screen and (max-width: 550px) {
+
+    .discordLogo2{
+        width: 24px;
+        height: 24px;
+    }
+
+    /* .instaLogo2 {
+        width: 16px;
+        height: 16px;
+    } */
+
+    .socialMediaDetails1 {
+        flex-direction: column;
+        gap: 2px;
+    }
+
     .ourTeamContainer {
         min-height: 100vh;
         width: 100vw;
@@ -148,13 +165,13 @@ html {
     .image2 {
         width: 73px;
         height: 76px;
-       
+
     }
 
     .image3 {
         width: 73px;
         height: 76px;
-       
+
     }
 
 
