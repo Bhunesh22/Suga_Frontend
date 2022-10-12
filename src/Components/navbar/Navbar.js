@@ -86,7 +86,7 @@ const Navbar = () => {
             >
               <NavLink
                 exact
-                to="/comingsoon"
+                to="/commingsoon"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
