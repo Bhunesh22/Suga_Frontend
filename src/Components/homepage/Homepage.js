@@ -79,7 +79,7 @@ const Homepage = () => {
                         <span>Fantasy Section</span>
                     </h1>
                     <p>Making NFT's accessible at ease for next million people</p>
-                    <Link to="/commingsoon"><button className='Hbtn' onClick={() => customEvent("Wander",`${localStorage.getItem("token")}`,"From Home Page")}>Wander</button></Link>
+                    <Link to="/comingsoon"><button className='Hbtn' onClick={() => customEvent("Wander",`${localStorage.getItem("token")}`,"From Home Page")}>Wander</button></Link>
                 </div>
                 <div className="Hellipse2"></div>
             </div>
