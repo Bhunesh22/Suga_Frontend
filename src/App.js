@@ -58,7 +58,7 @@ function App() {
           {/* <Route exact path='/card' element={<Card/>}></Route> */}
           <Route exact path='/profile' element={<Profile/>}></Route>
           <Route exact path='/skindetail/:index/:name/:slug' element={<SkinDetail/>}></Route>
-          <Route exact path='/ourteam' element={<OurTeam/>}></Route>
+          <Route exact path='/comingSoon' element={<OurTeam/>}></Route>
           <Route exact path='/editprofile' element={<EditProfile/>}></Route>
 
           <Route exact path="/users/:id/verify/:token" element={<VerifyEmail2/>}></Route>
