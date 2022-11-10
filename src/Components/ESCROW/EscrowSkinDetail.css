@@ -1,0 +1,164 @@
+.orderDetails {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+.orderQuantity {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderUnitprice {
+    width: 331px;
+    height: 72px;
+    background: rgba(77, 105, 253, 0.15);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    color: #A3B1E4;
+}
+
+
+
+.orderPrice1 {
+    color: #FFFFFF;
+}
+
+.orderDeleveryDetails {
+    width: 331px;
+    height: 409px;
+    background: #191F42;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+
+}
+
+.deliveryDetailsFlex2 {
+    display: flex;
+    min-width: 240px;
+    justify-content: space-between;
+    
+}
+
+.deliveryDetails3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 16px;
+    color: #949494;
+}
+
+.orderPrice2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.orderDeleveryDetailsFlex3 {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.buyTradeURL {
+    width: 246px;
+    height: 39px;
+    background: #F9F9F9;
+    border: 0.5px solid #CECECE;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.29);
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    color: #4F4C4C;
+}
+
+.buyItemBtn1 {
+    width: 246px;
+    height: 48px;
+    background: #4D69FD;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    border: none;
+}
+
+.orderLine1 {
+    width: 246px;
+    height: 0px;
+    border: 0.4px solid #5B6599;
+}
+
+.orderDetails2 {
+    width: 550px;
+    height: 271px;
+    background: #191F42;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.orderDetails2Flex1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* align-items: center; */
+    /* min-width: 470px; */
+}
+
+.orderDetailName1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    color: #A3B1E4;
+}
+
+.orderDetailValue1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+}
+
+.orderDetails2Flex2 {
+    display: flex;
+    /* justify-content: space-around; */
+    min-width: 400px;
+    justify-content: space-between;
+}
+

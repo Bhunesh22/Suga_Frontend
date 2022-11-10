@@ -57,8 +57,8 @@ const Navbar = () => {
         </div>
         <div className="Nmid">
           <p><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowLeft size='2.8rem' /></p>
-          <p   onClick={() => customEvent("Skins",`${localStorage.getItem("token")}`,"skinpage")} className='Nexchange'><NavLink to="/" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>Skins</NavLink></p>
-          <p onClick={() => customEvent("NFT's",`${localStorage.getItem("token")}`,"NFT_page")} className='Nmatches'><NavLink to="/commingSoon" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>NFT's</NavLink></p>
+          <p   onClick={() => customEvent("Skins",`${localStorage.getItem("token")}`,"skinpage")} className='Nexchange'><NavLink to="/" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>SKINS</NavLink></p>
+          <p onClick={() => customEvent("NFT's",`${localStorage.getItem("token")}`,"NFT_page")} className='Nmatches'><NavLink to="/escrowmarketplace" className={({ isActive }) => isActive ? "skinsActive1" : "skins1"}>ESCROW</NavLink></p>
           <p><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(70px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' style={{ transform: 'translate(35px, 0px)' }} /><MdOutlineKeyboardArrowRight size='2.8rem' /></p>
         </div>
 
@@ -86,12 +86,12 @@ const Navbar = () => {
             >
               <NavLink
                 exact
-                to="/commingsoon"
+                to="/escrowmarketplace"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                NFT's
+              ESCROW
               </NavLink>
             </li>
             <li className="nav-item"
