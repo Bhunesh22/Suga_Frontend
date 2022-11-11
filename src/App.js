@@ -35,6 +35,7 @@ import SetPassword from './Components/forget password/SetPassword'
 import PasswordChanged from './Components/Email Verification/PasswordChanged';
 import EscrowMarketplace from './Components/ESCROW/EscrowMarketplace';
 import EscrowSkinDetail from './Components/ESCROW/EscrowSkinDetail';
+import SellSkin from './Components/ESCROW/Sell/SellSkin';
 
 ReactGA.initialize('UA-231739890-1'); 
 
@@ -75,6 +76,7 @@ function App() {
           {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
           <Route exact path='/escrowmarketplace' element={<EscrowMarketplace/>}></Route>
           <Route exact path='/escrowskindetail' element={<EscrowSkinDetail/>}></Route>
+          <Route exact path='/sellskin' element={<SellSkin/>}></Route>
           
         </Routes>
       </Router>
