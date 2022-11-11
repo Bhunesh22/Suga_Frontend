@@ -109,9 +109,40 @@ html {
     width: 400px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
 
 }
 
-.fileInput1{
+.fileInput1 {
     background: transparent;
+}
+
+.skinName2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.skinInputflex2 {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skinNameInput2 {
+    background: #F9F9F9;
+   
+    border: 0.5px solid #CECECE;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.29);
+    height: 20px;
+}
+
+.skinInputflex1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
