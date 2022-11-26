@@ -22,7 +22,7 @@ function SellSkin() {
                                         <div class="input-group, inputFile1">
                                             {/* <img src={uploadIcon} /> */}
                                             <input type="file" class="form-control, fileInput1" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                            <div className='skinInputflex1'>
+                                            {/* <div className='skinInputflex1'>
                                                 <div className='skinInputflex2'>
                                                     <label className='skinName2'>Skin Name:</label>
                                                     <input type='text' className='skinNameInput2'></input>
@@ -31,13 +31,13 @@ function SellSkin() {
                                                     <label className='skinName2'>Exterior:</label>
                                                     <input type='text' className='skinNameInput2'></input>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
 
                                     <div className='listingPrice'>
-                                        <div className='listingHeading2'>Enter your listing price....</div>
-                                        <input typeof='number' className='sellingPriceInput1'></input>
+                                        {/* <div className='listingHeading2'>Enter your listing price....</div> */}
+                                        <input typeof='number' className='sellingPriceInput1' placeholder='Enter your listing price....'></input>
                                         <img src={rupeeIcon} />
                                     </div>
                                 </div>

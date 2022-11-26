@@ -62,7 +62,7 @@ html {
     background: #FFFFFF;
     box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 

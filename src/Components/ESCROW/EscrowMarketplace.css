@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Mcontainer {
+    background: #0D0916;
+    min-height: 2300px;
+    display: flow-root;
+}
+
+.NMcontainer {
+    position: relative;
+    z-index: 10;
+    top: 0px;
+}
+
+
+
+.Mmarket {
+    display: grid;
+    z-index: 3;
+    margin: 33px 60px 0px 60px;
+
+}
+
+.Ccontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    column-gap: 20px;
+    z-index: 4;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-top: 52px;
+    gap: 18px;
+}
+
+.pagination .li-page-num {
+    width: 32px;
+    height: 31px;
+    left: 454px;
+    top: 1912px;
+    border: 2px solid #4D69FD;
+}
+
+.pagination .li-page-num:active {
+    background-color: #4D69FD;
+}
+
+.pagination .a-page-num {
+    cursor: pointer;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 5px 13px 7px 11px;
+}
+
+.pagination .li-page-next {
+    width: 95px;
+    height: 31px;
+    background: #4D69FD;
+    padding-top: 3px;
+}
+
+.pagination .a-page-next {
+    cursor: pointer;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 8px 29px 8px 29px;
+
+}
+
+.infinite-scroll-component {
+    height: auto;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+
+
+
+@media screen and (max-width: 770px) {
+  
+    .Ccontainer {
+        column-gap: 4px;
+        row-gap: 18px;
+        justify-content: space-evenly;
+
+    }
+
+    .infinite-scroll-component {
+        column-gap: 4px;
+        row-gap: 18px;
+        justify-content: space-evenly;
+    }
+
+    .Mmarket {
+        justify-content: center;
+        margin: 30px 20px 0px 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .Mmarket {
+        justify-content: center;
+        margin: 30px 10px 0px 10px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+  
+    .Mmarket {
+        justify-content: center;
+    }
+
+}

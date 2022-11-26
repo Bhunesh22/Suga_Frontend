@@ -1,0 +1,291 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.MNcard {
+    width: 315px;
+    height: 275px;
+    background: linear-gradient(219.83deg, rgba(91, 101, 153, 0.5) -0.82%, rgba(34, 41, 77, 0.5) 107.94%);
+    backdrop-filter: blur(12px);
+}
+
+.ECtop {
+    display: flex;
+}
+
+.EClogo {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #445ACD;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 8px;
+    z-index: 10;
+}
+
+.EClogo img {
+    margin-top: 6px;
+    margin-left: 6px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.ECimg {
+    position: absolute;
+    left: 40px;
+    top: 5px;
+    z-index: 2;
+}
+
+.ECimg img {
+    width: 224px;
+    height: 173px;
+    object-fit: contain;
+}
+
+.ECbtns {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.ECbtn1 {
+    display: flex;
+    width: 108px;
+    height: 34px;
+    background: #23294A;
+    padding-top: 6px;
+
+}
+
+.ECbtn1 img {
+    height: 21px;
+    width: 21px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.ECbtn1 p {
+    /* margin-left: 15px; */
+    width: 77px;
+    padding-top: 4px;
+    text-align: center;
+
+}
+
+.ECbtn2 {
+    margin-top: 8px;
+    margin-left: 25px;
+    width: 82px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #00FF94;
+    background: transparent;
+
+    padding-top: 4.5px;
+}
+
+.ECline {
+    position: absolute;
+    left: 22px;
+    top: 200px;
+    width: 270px;
+    height: 2px;
+    border-radius: 50%;
+    background: #4D69FD;
+    filter: blur(1px);
+    transform: rotate(-180deg);
+    z-index: 1.6;
+}
+
+.ECmid {
+    display: flex;
+}
+
+.ECmid p:nth-child(1) {
+    position: absolute;
+    top: 210px;
+    left: 23px;
+    font-family: 'Gilroy-Bold';
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+
+}
+
+.ECmid p:nth-child(2) {
+    position: absolute;
+    top: 191px;
+    right: 39px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #FFC700;
+
+}
+
+.ECmid p:nth-child(3) {
+    position: absolute;
+    top: 193px;
+    right: 16px;
+    color: #FFC700;
+}
+
+.ECbottom {
+    display: flex;
+}
+
+.ECleft {
+    display: flex;
+}
+
+.ECleft img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 23px;
+    top: 240px;
+    object-fit: contain;
+}
+
+.ECleft p {
+    position: absolute;
+    width: 151px;
+    height: 26px;
+    left: 60px;
+    top: 245px;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    line-height: 13px;
+    font-weight: 600;
+    color: #A3B1E4;
+}
+
+.ECright p:nth-child(1) {
+    position: absolute;
+    left: 258px;
+    top: 220px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    color: #4D69FD;
+
+}
+
+.ECright p:nth-child(2) {
+    position: absolute;
+    left: 265px;
+    top: 240px;
+    font-family: 'Gilroy-bold', sans-serif;
+    font-size: 20px;
+    line-height: 12px;
+    text-align: right;
+    color: #A3B1E4;
+}
+
+@media screen and (max-width: 700px) {
+    .MNcard {
+        width: 170px;
+        height: 190px;
+    }
+
+    .ECimg {
+        left: 22px;
+        top: -5px;
+    }
+
+    .ECimg img {
+        width: 120px;
+        height: 100px;
+    }
+
+    .ECline {
+        left: 15px;
+        top: 85px;
+        width: 140px;
+    }
+
+    .ECmid p:nth-child(1) {
+        top: 95px;
+        left: 15px;
+        padding: 0px 5px;
+        font-size: 13px;
+        line-height: 16px;
+
+    }
+
+    .ECleft img {
+        width: 18px;
+        height: 20px;
+        left: 15px;
+        top: 147px
+    }
+    .ECleft p {
+        width: 120px;
+        height: 26px;
+        left: 40px;
+        top: 145px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .MNcard {
+        width: 150px;
+        height: 190px;
+    }
+
+    .ECimg {
+        left: 22px;
+        top: -5px;
+    }
+
+    .ECimg img {
+        width: 100px;
+        height: 100px;
+    }
+    .ECline {
+        left: 11px;
+        top: 85px;
+        width: 120px;
+    }
+
+    .ECmid p:nth-child(1) {
+        top: 95px;
+        left: 15px;
+        padding: 0px 5px;
+        font-size: 13px;
+        line-height: 16px;
+
+    }
+
+    .ECleft img {
+        width: 18px;
+        height: 20px;
+        left: 15px;
+        top: 147px
+    }
+    .ECleft p {
+        width: 120px;
+        height: 26px;
+        left: 40px;
+        top: 145px;
+    }
+}
