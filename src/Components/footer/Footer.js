@@ -145,8 +145,8 @@ const Footer = () => {
                     <div className="Fcol">
                         <p>Company</p>
                         <ul>
-                            <li onClick={() => customEvent("AboutUS","user","From Footer")}><Link to="/ourteam">About Us</Link></li>
-                            <li>Careers</li>
+                            <li onClick={() => customEvent("AboutUS","user","From Footer")}><a target="_blank" href="https://merchant.razorpay.com/policy/KkkVi8b6SFV7SP/refund"> Refund policy</a></li>
+                            <li> <a target="_blank" href="https://merchant.razorpay.com/policy/KkkVi8b6SFV7SP/shipping">Shipping and Delivery</a></li>
                             <li>Copyright Policy</li>
                             <li>Terms and Conditions </li>
                         </ul>

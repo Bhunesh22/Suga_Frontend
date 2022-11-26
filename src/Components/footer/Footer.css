@@ -192,6 +192,10 @@
     padding-top: 19px;
 }
 
+.Fright li a{
+    color: white;
+}
+
 
 @media screen and (max-width: 1350px) {
     .Ffirst {
