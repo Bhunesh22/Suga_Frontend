@@ -75,7 +75,7 @@ function App() {
           <Route exact path='/loaderio-8c31020cd7202c6845b8e6f70795b477' element={"loaderio-8c31020cd7202c6845b8e6f70795b477"}></Route>
           {/* <Route exact path='/emailverification2' element={<VerifyEmail2/>}></Route> */}
           <Route exact path='/escrowmarketplace' element={<EscrowMarketplace/>}></Route>
-          <Route exact path='/escrowskindetail' element={<EscrowSkinDetail/>}></Route>
+          <Route exact path='/escrowskindetail/:index' element={<EscrowSkinDetail/>}></Route>
           <Route exact path='/sellskin' element={<SellSkin/>}></Route>
           
         </Routes>

@@ -41,7 +41,7 @@ const EscrowMarketplace = () => {
                     <div className="Ccontainer">
                     {data && data.map((list, index) => {
                                 return (
-                                    <Link to={``} ><ECard list={list} index={index} /></Link>
+                                    <Link to={`/escrowskindetail/${index}`} ><ECard list={list} index={index} /></Link>
                                 )
                             })}
                     </div>
