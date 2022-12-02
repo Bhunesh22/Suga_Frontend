@@ -26,7 +26,7 @@ function EscrowSkinDetail() {
     const [error, setError] = useState("");
 
 
-    const [data1, setData1] = useState({trade_url : "", username_seller: ""});
+    const [data1, setData1] = useState({trade_url : "", username_seller: "", sellerId: ""});
     // console.log(data[index].username);
 
     useEffect(() => {
@@ -35,7 +35,7 @@ function EscrowSkinDetail() {
     
 
     let fetchData = async () => {
-        const responce = await fetch(`https://suga-server.herokuapp.com/api/sell`, {
+        const responce = await fetch(`http://localhost:5000/api/sell`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,13 +47,12 @@ function EscrowSkinDetail() {
     };
 
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
        
         setLoading(true)
         try {
-            const url = "https://suga-server.herokuapp.com/api/buy";
+            const url = "http://localhost:5000/api/buy";
           
            
             await axios.post(url, data1 , {headers: {'auth-token': localStorage.getItem('token')}} );
@@ -76,7 +75,7 @@ function EscrowSkinDetail() {
 
 
     const handleChange = (e) => {
-        setData1({trade_url: e.target.value, username_seller : data[index] == undefined ? "none" : data[index].username})
+        setData1({trade_url: e.target.value, username_seller : data[index] == undefined ? "none" : data[index].username, sellerId : data[index] == undefined ? "none" : data[index].userId})
     }
 
 

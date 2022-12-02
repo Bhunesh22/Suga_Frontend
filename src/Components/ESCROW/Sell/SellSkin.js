@@ -28,7 +28,7 @@ function SellSkin() {
        
         setLoading(true)
         try {
-            const url = "https://suga-server.herokuapp.com/api/sell";
+            const url = "http://localhost:5000/api/sell";
           
             // axios({
             //     method: 'post',
