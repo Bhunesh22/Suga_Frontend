@@ -85,6 +85,8 @@ export default function Dropdown() {
               <ListItem><NavLink to='/comingSoon'  onClick={() => { onOptionClicked();  customEvent("Settings",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Settings</NavLink></ListItem>
 
               <ListItem><NavLink to='/wallet'  onClick={() => { onOptionClicked();  customEvent("Wallet",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Wallet</NavLink></ListItem>
+              
+              <ListItem><NavLink to='/mylistings'  onClick={() => { onOptionClicked();  customEvent("My Listings",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>My Listings</NavLink></ListItem>
 
               <ListItem><NavLink to="/login"  onClick={() => { onOptionClicked();  customEvent("Logout",`${localStorage.getItem("token")}`,`From navbar DropDownList`); }} className={({isActive}) => isActive ? "navActive": "navlink" }>Logout</NavLink></ListItem>
 
