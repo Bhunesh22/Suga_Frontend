@@ -83,7 +83,7 @@ html {
 
 .CreateListing1 {
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
     width: 168px;
     height: 48px;
     background: #4D69FD;
@@ -125,10 +125,17 @@ html {
 
     background: linear-gradient(219.83deg, rgba(91, 101, 153, 0.5) -0.82%, rgba(34, 41, 77, 0.5) 107.94%);
     backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .assetName {
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .assetName1 {
@@ -167,8 +174,40 @@ html {
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-  
+
     letter-spacing: 0.02em;
 
     color: #4D69FD;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteIcon2 {
+    background: transparent;
+    border: none;
+}
+
+.CSGOIcon2 {
+    width: 24px;
+    height: 24px;
+}
+
+.assetImageIcon2 {
+    background: transparent;
+    width: 112px;
+    height: 118px;
+}
+
+.tradeButton1 {
+    width: 39px;
+    height: 39px;
+}
+
+.tradeButton {
+    width: 39px;
+    height: 39px;
+    background: transparent;
+    border: none;
+   
 }
