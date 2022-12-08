@@ -36,8 +36,6 @@ import PasswordChanged from './Components/Email Verification/PasswordChanged';
 import EscrowMarketplace from './Components/ESCROW/EscrowMarketplace';
 import EscrowSkinDetail from './Components/ESCROW/EscrowSkinDetail';
 import SellSkin from './Components/ESCROW/Sell/SellSkin';
-import MyListings from './Components/ESCROW/Listings/MyListings';
-import MyOrders from './Components/ESCROW/Listings/MyOrders';
 
 ReactGA.initialize('UA-231739890-1'); 
 
@@ -79,8 +77,6 @@ function App() {
           <Route exact path='/escrowmarketplace' element={<EscrowMarketplace/>}></Route>
           <Route exact path='/escrowskindetail/:index' element={<EscrowSkinDetail/>}></Route>
           <Route exact path='/sellskin' element={<SellSkin/>}></Route>
-          <Route exact path='/mylistings' element={<MyListings/>}></Route>
-          <Route exact path='/myorders' element={<MyOrders/>}></Route>
           
         </Routes>
       </Router>
