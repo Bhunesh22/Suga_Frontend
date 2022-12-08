@@ -58,6 +58,8 @@ html {
     overflow: hidden;
     margin-top: -2px;
     margin-bottom: 40px;
+
+  
 }
 
 .listingsDetail2 {
@@ -209,5 +211,60 @@ html {
     height: 39px;
     background: transparent;
     border: none;
-   
+
 }
+
+.inputAccountDetails1 {
+    height: 48px;
+    max-width: 621px;
+    background: linear-gradient(269.02deg, #121738 27.95%, #0D1129 100.64%);
+    border: none;
+}
+
+.accountDetails1 {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.submitAccDetails1Btn {
+    height: 48px;
+    width: 266px;
+    background: #4D69FD;
+    border: none;
+    margin-top: 24px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* display: flex;
+align-items: center;
+text-align: center; */
+
+    color: #FFFFFF;
+}
+
+.accountDetails4{
+    max-width: 621px;
+}
+
+.accountDetails5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; 
+
+    margin-top: 40px;
+}
+
+/* .accountDetails6{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+   
+
+} */

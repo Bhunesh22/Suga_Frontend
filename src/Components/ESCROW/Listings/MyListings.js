@@ -22,7 +22,47 @@ function MyListings() {
                         <div><NavLink to='/mylistings' className={({ isActive }) => isActive ? "activeListingBar" : "listingBar"}>My Listings</NavLink></div>
                         <div><NavLink to='/myorders' className={({ isActive }) => isActive ? "activeListingBar" : "listingBar"}>My Orders</NavLink></div>
                     </div>
+
+
                     <div className='listingsDetail1'>
+
+
+                        {/* for new user */}
+
+                        <div className='accountDetails6'>
+
+                            <div className='accountDetails4'>
+                                <form className="row g-3 container" >
+
+                                    <div className='accountDetails5'>
+                                        <div className="col-md-12">
+                                            <input type="text" className="form-control" placeholder='Enter UPI details to contunue creating list' />
+                                        </div>
+                                        <div className="col-md-12">
+                                            <input type="text" className="form-control" placeholder='Enter bank account' />
+                                        </div>
+                                        <div className="col-md-12">
+                                            <input type="text" className="form-control" placeholder='Confirm bank account' />
+                                        </div>
+                                        <div className="col-md-12">
+                                            <input type="text" className="form-control" placeholder='IFSC Code' />
+                                        </div>
+
+
+                                        <div>
+                                            <button type='submit' className='submitAccDetails1Btn'>Submit</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+
+
+
+
+                        {/* for existing user */}
                         <div className='listingsDetail2'>
                             <Link to='/sellskin' className='CreateListing1'>Create Listing</Link>
                             <div>
