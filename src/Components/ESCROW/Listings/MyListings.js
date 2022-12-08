@@ -38,6 +38,13 @@ function MyListings() {
                                         <div className="col-md-12">
                                             <input type="text" className="form-control" placeholder='Enter UPI details to contunue creating list' />
                                         </div>
+
+                                        <div className='listingFlex2'>
+                                            <div className='listingLine1' />
+                                            <h4 className='orText2'>OR</h4>
+                                            <div className='listingLine1' />
+                                        </div>
+
                                         <div className="col-md-12">
                                             <input type="text" className="form-control" placeholder='Enter bank account' />
                                         </div>

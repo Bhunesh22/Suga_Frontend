@@ -59,7 +59,7 @@ html {
     margin-top: -2px;
     margin-bottom: 40px;
 
-  
+
 }
 
 .listingsDetail2 {
@@ -248,15 +248,15 @@ text-align: center; */
     color: #FFFFFF;
 }
 
-.accountDetails4{
+.accountDetails4 {
     max-width: 621px;
 }
 
-.accountDetails5{
+.accountDetails5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; 
+    gap: 12px;
 
     margin-top: 40px;
 }
@@ -268,3 +268,28 @@ text-align: center; */
    
 
 } */
+
+.listingLine1 {
+    width: 255px;
+    height: 0px;
+
+    border: 1px solid #939393;
+}
+
+.listingFlex2 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.orText2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+
+   margin-top: 6px;
+}
