@@ -41,7 +41,7 @@ function SetPassword() {
         message.error("Password and Confirm Password are must be same!");
       }
       else{
-      const url = `https://suga-server.herokuapp.com/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
+      const url = `https://sugabackend.azurewebsites.net/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setLoading(false)

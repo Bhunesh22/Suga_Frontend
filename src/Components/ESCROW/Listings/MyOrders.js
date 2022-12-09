@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Navbar from '../../navbar/Navbar'
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,29 @@ import TradeCancelIcon1 from './tradeCancelIcon.svg';
 // import { Button } from 'antd';
 
 function MyOrders() {
+
+  const [data, setData] = useState();
+  const [user, setUser] = useState({ res: "non_valid" });
+
+  useEffect(() => {
+      fetchData()
+  }, [])
+
+
+  let fetchData = async () => {
+      const responce = await fetch(`https://sugabackend.azurewebsites.net/api/buy/order`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'auth-token': localStorage.getItem('token')
+          }
+      });
+      const Json = await responce.json()
+      //    console.log(Json)
+      setData(Json)
+  };
+
+  console.log(data)
   return (
     <>
       <div className='myListings'>
@@ -21,14 +44,18 @@ function MyOrders() {
             <div><NavLink to='/mylistings' className={({ isActive }) => isActive ? "activeListingBar" : "listingBar"}>My Listings</NavLink></div>
             <div><NavLink to='/myorders' className={({ isActive }) => isActive ? "activeListingBar" : "listingBar"}>My Orders</NavLink></div>
           </div>
-          <div className='listingsDetail1'>
+
+          {data ? 
+          (<div className='listingsDetail1'>
             <div className='listingsDetail2'>
 
               <div>
+
                 <table class="table">
                   <thead>
-                    <tr>
 
+          
+                    <tr>
                       <th scope="col" className='listingDetail3'>Asset</th>
                       <th scope="col" className='listingDetail3'>Price</th>
                       <th scope="col" className='listingDetail3'>Status</th>
@@ -36,75 +63,39 @@ function MyOrders() {
                   </thead>
                   <tbody>
 
+
+                  {data && data.map((list, index) => {
+                     return (
                     <tr>
 
                       <td>
                         <div className='assetDetail1'>
-                          <div className='assetImage1'><img className='assetImageIcon2' src={assetImageIcon} /></div>
+                          <div className='assetImage1'><img className='assetImageIcon2' src={list.image} /></div>
                           <div className='assetName'>
                             <h1 className='assetName1'>M4 A1 - S</h1>
                             <img className='CSGOIcon2' src={CSGOIcon2} />
-                            <h4 className='assetName2'>Counter Strike : Global Offensive <br />
-                              Ristricted Sniper Rifle</h4>
+                            <h4 className='assetName2'>{list.username_seller}</h4>
                           </div>
                         </div>
                       </td>
-                      <td className='assetPrice1'>10000</td>
+                      <td className='assetPrice1'>{list.price}</td>
                       <td>
                         <div className='assetStatus1'>
-                          <div>Confirm Inventory<button className='tradeButton'><img className='tradeButton1' src={TradeDoneIcon1} /></button><button className='tradeButton'><img className='tradeButton1' src={TradeCancelIcon1} /></button></div>
-                          <div><button className='deleteIcon2'><img src={deleteIcon2} /></button></div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-
-                      <td>
-                        <div className='assetDetail1'>
-                          <div className='assetImage1'><img className='assetImageIcon2' src={assetImageIcon} /></div>
-                          <div className='assetName'>
-                            <h1 className='assetName1'>M4 A1 - S</h1>
-                            <img className='CSGOIcon2' src={CSGOIcon2} />
-                            <h4 className='assetName2'>Counter Strike : Global Offensive <br />
-                              Ristricted Sniper Rifle</h4>
-                          </div>
-                        </div>
-                      </td>
-                      <td className='assetPrice1'>10000</td>
-                      <td>
-                        <div className='assetStatus1'>
-                          <div>Paid: Awaiting Confirmation</div>
+                          <div>{list.status}<button className='tradeButton'><img className='tradeButton1' src={TradeDoneIcon1} /></button><button className='tradeButton'><img className='tradeButton1' src={TradeCancelIcon1} /></button></div>
                           <div><button className='deleteIcon2'><img src={deleteIcon2} /></button></div>
                         </div>
                       </td>
                     </tr>
 
-                    <tr>
+                  )})}
 
-                      <td>
-                        <div className='assetDetail1'>
-                          <div className='assetImage1'><img className='assetImageIcon2' src={assetImageIcon} /></div>
-                          <div className='assetName'>
-                            <h1 className='assetName1'>M4 A1 - S</h1>
-                            <img className='CSGOIcon2' src={CSGOIcon2} />
-                            <h4 className='assetName2'>Counter Strike : Global Offensive <br />
-                              Ristricted Sniper Rifle</h4>
-                          </div>
-                        </div>
-                      </td>
-                      <td className='assetPrice1'>10000</td>
-                      <td>
-                        <div className='assetStatus1'>
-                          <div>Trade Completed</div>
-                          <div><button className='deleteIcon2'><img src={deleteIcon2} /></button></div>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
+          ): (<div style={{display: 'flex', justifyContent:"center", alignItems:"center"}}>No item listed</div>)}
+
         </div>
       </div>
     </>

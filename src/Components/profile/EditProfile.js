@@ -15,7 +15,7 @@ function EditProfile() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch(`https://suga-server.herokuapp.com/api/userdetails/profile`, {
+        const res = await fetch(`https://sugabackend.azurewebsites.net/api/userdetails/profile`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

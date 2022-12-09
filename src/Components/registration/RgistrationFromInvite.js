@@ -39,7 +39,7 @@ function RegistrationFromInvite() {
         message.error("Password and Confirm Password are must be same!");
       }
       else{
-      const url = "https://suga-server.herokuapp.com/api/users";
+      const url = "https://sugabackend.azurewebsites.net/api/users";
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setLoading(false)

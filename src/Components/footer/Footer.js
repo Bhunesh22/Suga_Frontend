@@ -30,7 +30,7 @@ const Footer = () => {
     setLoading(true)
     
 		try {
-			const url = "https://suga-server.herokuapp.com/api/message/msg";
+			const url = "https://sugabackend.azurewebsites.net/api/message/msg";
 			const { data: res } = await axios.post(url, msg);	
         setLoading(false)
         message.success("Message sent successfully!");

@@ -17,7 +17,7 @@ function VerifyEmail2() {
 	useEffect(() => {
 		const verifyEmailUrl = async () => {
 			try {
-				const url = `https://suga-server.herokuapp.com/api/users/${param.id}/verify/${param.token}`;
+				const url = `https://sugabackend.azurewebsites.net/api/users/${param.id}/verify/${param.token}`;
 				const { data } = await axios.get(url);
 				console.log(data);
 				setValidUrl(true);

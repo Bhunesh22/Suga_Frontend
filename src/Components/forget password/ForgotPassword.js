@@ -28,7 +28,7 @@ function ForgotPassword() {
         setLoading({ loading: true });
     
         try {
-          const url = "https://suga-server.herokuapp.com/api/forgetpassword/resetPasswordRequest";
+          const url = "https://sugabackend.azurewebsites.net/api/forgetpassword/resetPasswordRequest";
           const { data: res } = await axios.post(url, data);
           setMsg(res.message);
           setLoading(false)

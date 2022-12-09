@@ -12,7 +12,7 @@ function PhantomWallet() {
     const handleSubmit = async (e) => {
       e.preventDefault();
   
-      const res = await fetch(`https://suga-server.herokuapp.com/api/wallet/phantom`, {
+      const res = await fetch(`https://sugabackend.azurewebsites.net/api/wallet/phantom`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

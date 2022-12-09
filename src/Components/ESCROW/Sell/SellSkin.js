@@ -28,17 +28,8 @@ function SellSkin() {
        
         setLoading(true)
         try {
-            const url = "http://localhost:5000/api/sell";
+            const url = "https://sugabackend.azurewebsites.net/api/sell";
           
-            // axios({
-            //     method: 'post',
-            //     url: url,
-            //     headers: {'auth-token': localStorage.getItem('token')}, 
-            //     data: {
-            //       image: (formData),
-            //     //   price: data.price,
-            //     }
-            //   });
             await axios.post(url, formData, {headers: {'auth-token': localStorage.getItem('token')}} );
             // window.location = "/";
             setLoading(false)
@@ -51,7 +42,7 @@ function SellSkin() {
             ) {
                 setError(error.response.data.message);
                 setLoading(false)
-                message.error("Please Login to sell");
+                message.error("Please register as seller");
                
             }
         }

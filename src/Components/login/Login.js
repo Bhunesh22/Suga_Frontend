@@ -52,7 +52,7 @@ function Login(props) {
 		e.preventDefault();
     setLoading(true)
 		try {
-			const url = "http://localhost:5000/api/auth1";
+			const url = "https://sugabackend.azurewebsites.net/api/auth1";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";

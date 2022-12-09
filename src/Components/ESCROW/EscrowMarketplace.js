@@ -19,7 +19,7 @@ const EscrowMarketplace = () => {
     
 
     let fetchData = async () => {
-        const responce = await fetch(`http://localhost:5000/api/sell`, {
+        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/sell`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

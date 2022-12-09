@@ -124,7 +124,7 @@ function SkinDetail() {
     //  Skin Wallet Price Details --------------------------------------------------------------------
 
     const skinWallet = async () => {
-        const res = await fetch(`https://suga-server.herokuapp.com/api/skinwallet`, {
+        const res = await fetch(`https://sugabackend.azurewebsites.net/api/skinwallet`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ function SkinDetail() {
     //  lootfarm Price Details --------------------------------------------------------------------
 
     const lootFarm = async () => {
-        const res = await fetch(`https://suga-server.herokuapp.com/api/lootfarm`, {
+        const res = await fetch(`https://sugabackend.azurewebsites.net/api/lootfarm`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -204,7 +204,7 @@ function SkinDetail() {
     //  SkinPort Price Details --------------------------------------------------------------------
 
     const skinPort = async () => {
-        const res = await fetch(`https://suga-server.herokuapp.com/api/skinport`, {
+        const res = await fetch(`https://sugabackend.azurewebsites.net/api/skinport`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -256,7 +256,7 @@ function SkinDetail() {
             bs: itemName + "(Battle-Scarred)",
         }
 
-        const url = "https://suga-server.herokuapp.com/api/steam";
+        const url = "https://sugabackend.azurewebsites.net/api/steam";
         const res = await axios.post(url, hName);
 
         setSteamData(res.data)
@@ -270,7 +270,7 @@ function SkinDetail() {
     //  currency exchnage Details --------------------------------------------------------------------
 
     const currency = async () => {
-        const res = await fetch(`https://suga-server.herokuapp.com/api/exchange`, {
+        const res = await fetch(`https://sugabackend.azurewebsites.net/api/exchange`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
