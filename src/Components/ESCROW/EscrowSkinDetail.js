@@ -58,6 +58,7 @@ function EscrowSkinDetail() {
             // window.location = "/";
             setLoading(false)
             message.success("Success");
+            e.target.reset();
         } catch (error) {
             if (
                 error.response &&
