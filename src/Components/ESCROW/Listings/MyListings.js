@@ -23,16 +23,16 @@ function MyListings() {
     const [user, setUser] = useState({ res: "non_valid" });
 
     const [data1, setData1] = useState({ upi: "", account_number: "", ifsc: "", contact: "" });
-	const [error, setError] = useState("");
+    const [error, setError] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-       
+
         setLoading(true)
         try {
             const url = "https://sugabackend.azurewebsites.net/api/register_as_seller";
-          
-            await axios.post(url, data1, {headers: {'auth-token': localStorage.getItem('token')}} );
+
+            await axios.post(url, data1, { headers: { 'auth-token': localStorage.getItem('token') } });
             window.location = "/mylistings";
             setLoading(false)
             message.success("Registered as a seller Successfully");
@@ -45,13 +45,13 @@ function MyListings() {
                 setError(error.response.data.message);
                 setLoading(false)
                 message.error("Please login to register");
-               
+
             }
         }
     };
 
-    const onChange = (e)=>{
-        setData1({...data1, [e.target.name]: e.target.value})
+    const onChange = (e) => {
+        setData1({ ...data1, [e.target.name]: e.target.value })
     }
 
 
@@ -87,6 +87,23 @@ function MyListings() {
         setData(Json)
     };
 
+    const deleteItem = async (id) => {
+        // API call
+        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/sell/deletenote/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token')
+            },
+        });
+        const json = responce.json();
+        console.log(json);
+
+        message.success("Item is deleted successfully");
+        const newData = data.filter((data) => { return data._id !== id })
+        setData(newData)
+    }
+
     // console.log(data);
 
     return (
@@ -114,13 +131,13 @@ function MyListings() {
 
                                     <div className='accountDetails5'>
                                         <div className="col-md-12">
-                                            <input 
-                                            type="text" 
-                                            className="form-control" 
-                                            name = "upi"
-                                            required
-                                            onChange={onChange}
-                                            placeholder='Enter UPI details to contunue creating list' />
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                name="upi"
+                                                required
+                                                onChange={onChange}
+                                                placeholder='Enter UPI details to contunue creating list' />
                                         </div>
 
                                         <div className='listingFlex2'>
@@ -130,42 +147,42 @@ function MyListings() {
                                         </div>
 
                                         <div className="col-md-12">
-                                            <input 
-                                            type="text" 
-                                            name = "account_number"
-                                            required
-                                            onChange={onChange}
-                                            className="form-control" placeholder='Enter bank account' />
+                                            <input
+                                                type="text"
+                                                name="account_number"
+                                                required
+                                                onChange={onChange}
+                                                className="form-control" placeholder='Enter bank account' />
                                         </div>
                                         <div className="col-md-12">
                                             <input type="text" className="form-control" placeholder='Confirm bank account' />
                                         </div>
                                         <div className="col-md-12">
-                                            <input 
-                                            type="text" 
-                                            name = "ifsc"
-                                            required
-                                            onChange={onChange}
-                                            className="form-control" placeholder='IFSC Code' />
+                                            <input
+                                                type="text"
+                                                name="ifsc"
+                                                required
+                                                onChange={onChange}
+                                                className="form-control" placeholder='IFSC Code' />
                                         </div>
                                         <div className="col-md-12">
-                                            <input 
-                                            type="text" 
-                                            name = "contact"
-                                            required
-                                            onChange={onChange}
-                                            className="form-control" placeholder='Contact' />
+                                            <input
+                                                type="text"
+                                                name="contact"
+                                                required
+                                                onChange={onChange}
+                                                className="form-control" placeholder='Contact' />
                                         </div>
 
 
                                         <div>
                                             <button type='submit' className='submitAccDetails1Btn'>
-                                            {loading ? (
-                                            <CircularProgress color="inherit" size={20} />
-                                        ) : (
-                                            "Submit"
-                                        )}
-                                                </button>
+                                                {loading ? (
+                                                    <CircularProgress color="inherit" size={20} />
+                                                ) : (
+                                                    "Submit"
+                                                )}
+                                            </button>
                                         </div>
                                     </div>
 
@@ -176,62 +193,70 @@ function MyListings() {
 
 
 
-                        {/* for existing user */}
-                        <div className='listingsDetail2'>
-                            <Link to='/sellskin' className='CreateListing1'>Create Listing</Link>
 
 
-                            {data.length != 0 ? 
-                            (<div>
-                                <table class="table">
 
-                                    <thead>
-                                        <tr>
+                        {data.length != 0 ?
+                            (
+                                <div className='listingsDetail2'>
+                                    <Link to='/sellskin' className='CreateListing1'>Create Listing</Link>
 
-                                            <th scope="col" className='listingDetail3'>Asset</th>
-                                            <th scope="col" className='listingDetail3'>Price</th>
-                                            <th scope="col" className='listingDetail3'>Status</th>
-                                        </tr>
-                                    </thead>
+                                    <div>
+                                        <table class="table">
 
-                                    <tbody>
-
-                                        {data && data.map((list, index) => {
-                                            return (
-
+                                            <thead>
                                                 <tr>
-                                                    <td>
-                                                        <div className='assetDetail1'>
-                                                            <div className='assetImage1'><img className='assetImageIcon2' src={list.image} /></div>
-                                                            <div className='assetName'>
-                                                                <h1 className='assetName1'>M4 A1 - S</h1>
-                                                                <img className='CSGOIcon2' src={CSGOIcon2} />
-                                                                <h4 className='assetName2'>Counter Strike : Global Offensive <br />
-                                                                    Ristricted Sniper Rifle</h4>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td className='assetPrice1'>{list.price}</td>
-                                                    <td>
-                                                        <div className='assetStatus1'>
-                                                            <div>{list.status}<button className='tradeButton'><img className='tradeButton1' src={TradeDoneIcon1} /></button><button className='tradeButton'><img className='tradeButton1' src={TradeCancelIcon1} /></button></div>
-                                                            <div><button className='deleteIcon2'><img src={deleteIcon2} /></button></div>
-                                                        </div>
-                                                    </td>
+
+                                                    <th scope="col" className='listingDetail3'>Asset</th>
+                                                    <th scope="col" className='listingDetail3'>Price</th>
+                                                    <th scope="col" className='listingDetail3'>Status</th>
                                                 </tr>
+                                            </thead>
 
-                                            )
-                                        })}
+                                            <tbody>
 
-                                    </tbody>
-                                </table>
-                            </div>) : 
-                            (<div style={{display: 'flex', justifyContent:"center", alignItems:"center", fontSize: "30px", color: "white"}}>No item listed</div>)
-                            }
+                                                {data && data.map((list, index) => {
+                                                    return (
+
+                                                        <tr>
+                                                            <td>
+                                                                <div className='assetDetail1'>
+                                                                    <div className='assetImage1'><img className='assetImageIcon2' src={list.image} /></div>
+                                                                    <div className='assetName'>
+                                                                        {/* <h1 className='assetName1'>M4 A1 - S</h1> */}
+                                                                        {/* <img className='CSGOIcon2' src={CSGOIcon2} />
+                                                                <h4 className='assetName2'>Counter Strike : Global Offensive <br />
+                                                                    Ristricted Sniper Rifle</h4> */}
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td className='assetPrice1'>{list.price}</td>
+                                                            <td>
+                                                                <div className='assetStatus1'>
+                                                                    <div>{list.status}<button className='tradeButton'><img className='tradeButton1' src={TradeDoneIcon1} /></button><button className='tradeButton'><img className='tradeButton1' src={TradeCancelIcon1} /></button></div>
+                                                                    <div><button 
+                                                                    className='deleteIcon2' 
+                                                                    onClick={()=>{deleteItem(list._id)}}
+                                                                    ><img src={deleteIcon2} /></button></div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                    )
+                                                })}
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            ) :
+                            (<div style={user.res != 'Valid_Seller' ? { display: 'none' } : { display: 'flex', justifyContent: "center", alignItems: "center", fontSize: "30px", color: "white" }}>No item listed</div>)
+                        }
 
 
-                        </div>
                     </div>
+
                 </div>
             </div>
         </>

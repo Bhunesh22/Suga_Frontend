@@ -54,8 +54,6 @@ function EscrowSkinDetail() {
         setLoading(true)
         try {
             const url = "https://sugabackend.azurewebsites.net/api/buy";
-          
-           
             await axios.post(url, data1 , {headers: {'auth-token': localStorage.getItem('token')}} );
             // window.location = "/";
             setLoading(false)
@@ -76,7 +74,7 @@ function EscrowSkinDetail() {
 
 
     const handleChange = (e) => {
-        setData1({trade_url: e.target.value, contact_buyer: e.target.value,username_seller : data[index] == undefined ? "none" : data[index].username, sellerId : data[index] == undefined ? "none" : data[index].userId, image: data[index] == undefined ? "none" : data[index].image, price : data[index] == undefined ? "none" : data[index].price, status : data[index] == undefined ? "none" : data[index].status})
+        setData1({...data1, [e.target.name]: e.target.value,username_seller : data[index] == undefined ? "none" : data[index].username, sellerId : data[index] == undefined ? "none" : data[index].userId, image: data[index] == undefined ? "none" : data[index].image, price : data[index] == undefined ? "none" : data[index].price, status : data[index] == undefined ? "none" : data[index].status})
     }
 
 

@@ -17,7 +17,6 @@ function SellSkin() {
     const [status, setStatus] = useState('')
     const [error, setError] = useState("");
     const [data, setData] = useState({price: ""});
-
     
     const formData = new FormData();
     formData.append("image",img);
@@ -34,6 +33,11 @@ function SellSkin() {
             // window.location = "/";
             setLoading(false)
             message.success("Listing Uploaded Successfully");
+            // setData({price: ""});
+            // setImg();
+            // formData.append("image",img);
+            // formData.append("price",data.price);
+            e.target.reset();
         } catch (error) {
             if (
                 error.response &&
@@ -47,6 +51,7 @@ function SellSkin() {
             }
         }
     };
+
 
     const handleFileChange = (e) => {
         setImg(e.target.files[0]);
