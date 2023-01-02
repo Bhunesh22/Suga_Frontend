@@ -33,10 +33,6 @@ function SellSkin() {
             // window.location = "/";
             setLoading(false)
             message.success("Listing Uploaded Successfully");
-            // setData({price: ""});
-            // setImg();
-            // formData.append("image",img);
-            // formData.append("price",data.price);
             e.target.reset();
         } catch (error) {
             if (
