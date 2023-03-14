@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
+*,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: boder-box;
+  color: white;
+  font-family: 'Gilroy-Medium', sans-serif;
+}
+
+.SNcontainer{
+    width: 100%;
+    display: flex;
+}
+
+.SNnavigation{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #0D0916; 
+    padding: 25px
+}
+
+.Sntop{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.SNlogo{
+    display: flex;
+    justify-content: center;
+}
+
+.SNlogo img{
+    width: 60px;
+    height: 65px;
+}
+
+.SNdrop{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 3px 5px;
+    background: white;
+    border-radius: 3px;
+    color: #0D0916;
+    height: 30px;
+    cursor: pointer;
+}
+
+.SNoptions{
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.SNtext{
+    font-size: 15px;
+}
+
+.SNprofile{
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.SNprofile img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.SNprofile p{
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+
+/* .SNdropAnimation{
+    transition: display 1s;
+} */

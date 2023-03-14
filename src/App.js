@@ -29,6 +29,7 @@ import EscrowSkinDetail from './Components/ESCROW/EscrowSkinDetail';
 import SellSkin from './Components/ESCROW/Sell/SellSkin';
 import MyListings from './Components/ESCROW/Listings/MyListings';
 import MyOrders from './Components/ESCROW/Listings/MyOrders';
+import SideNavigation from './Components/SkinDeal/SideNavigation/SideNavigation';
 
 ReactGA.initialize('UA-231739890-1'); 
 
@@ -64,6 +65,7 @@ function App() {
           <Route exact path='/sellskin' element={<SellSkin/>}></Route>
           <Route exact path='/mylistings' element={<MyListings/>}></Route>
           <Route exact path='/myorders' element={<MyOrders/>}></Route>
+          <Route exact path='/skindeal' element={<SideNavigation/>}></Route>
           
         </Routes>
       </Router>
