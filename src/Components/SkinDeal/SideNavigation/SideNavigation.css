@@ -6,13 +6,13 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: boder-box;
-  color: white;
-  font-family: 'Gilroy-Medium', sans-serif;
 }
 
 .SNcontainer{
     width: 100%;
     display: flex;
+    color: white;
+    font-family: 'Gilroy-Medium', sans-serif;
 }
 
 .SNnavigation{
@@ -23,6 +23,12 @@ body {
     justify-content: space-between;
     background: #0D0916; 
     padding: 25px
+}
+
+.SNpages{
+    width: 80vw;
+    height: 100vh;
+    background: #0D0916; 
 }
 
 .Sntop{
@@ -85,6 +91,30 @@ body {
     padding-top: 5px;
 }
 
-/* .SNdropAnimation{
-    transition: display 1s;
-} */
+.SNmail{
+    color: grey;
+    font-size: 11px;
+}
+
+.SNnew{
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .SNnavigation{
+        padding: 25px 15px 25px 15px;
+    }
+
+    .SNmail{
+        font-size: 9px;
+    }
+
+    .SNtext{
+        font-size: 13px;
+    }
+    .SNnew{
+        font-size: 11px;
+    }
+}

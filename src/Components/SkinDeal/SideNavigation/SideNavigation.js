@@ -9,6 +9,7 @@ import { CgProfile } from 'react-icons/cg';
 import { TbSettings } from 'react-icons/tb';
 import { MdPermPhoneMsg } from 'react-icons/md';
 import { MdOutlineLogout } from 'react-icons/md';
+import NewTransaction from "../NewTransaction/NewTransaction";
 
 const SideNavigation = () => {
 
@@ -33,11 +34,11 @@ const SideNavigation = () => {
           </div>
 
           <div style={{height: drop ? "70px" : "0px", transition: "height 0.5s", overflow: "hidden", marginTop: "10px"}} >
-          <div style={{textAlign: "center", fontSize: "13px", padding: "5px"}}>
+          <div className="SNnew">
               New Transactions
           </div>
 
-          <div style={{textAlign: "center", fontSize: "13px", padding: "5px"}}>
+          <div className="SNnew">
               My Transactions
           </div>
           </div>
@@ -72,14 +73,16 @@ const SideNavigation = () => {
             <img src={Profile} alt="" />
           <div className="SNnames">
             <p>Bhunesh</p>
-            <p style={{fontSize: "11px", color: "gray"}}>bhunesh321@gmail.com</p>
+            <p className="SNmail">bhunesh321@gmail.com</p>
           </div>
         </div>
         
         </div>
 
       </div>
-      <div className="SNpages"></div>
+      <div className="SNpages">
+          <NewTransaction/>
+      </div>
     </div>
   );
 };
