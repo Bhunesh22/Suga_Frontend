@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './Profile.css'
 import Navbar from '../navbar/Navbar'
 import { Link } from 'react-router-dom'
 import { customEvent } from '../utils/analyticsHelper';
+import GlobalContext from "../../Context/globalContext";
 
 function Profile() {
 
-    const [user, setUser] = useState()
+    const {user} = useContext(GlobalContext)
+
+    // const [user, setUser] = useState()
     const [editedData, setEditedData] = useState()
 
     useEffect(() => {
-        loadUserData();
+        // loadUserData();
         getUser();
     }, []);
 
-    const loadUserData = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/auth1/getuser`, {
-            method: 'GET',
-            headers: {
-                'auth-token': localStorage.getItem('token')
-            }
-        });
-        const Json = await responce.json()
-        setUser(Json)
-    }
+    // const loadUserData = async () => {
+    //     const responce = await fetch(`https://sugabackend.azurewebsites.net/api/auth1/getuser`, {
+    //         method: 'GET',
+    //         headers: {
+    //             'auth-token': localStorage.getItem('token')
+    //         }
+    //     });
+    //     const Json = await responce.json()
+    //     setUser(Json)
+    // }
 
     // console.log(user, "intial");
 
@@ -52,7 +55,7 @@ function Profile() {
 
     // console.log(arrayIsEmpty())
 
-    // console.log(editedData, "edited data")
+    console.log(editedData, "edited data")
 
 
     return (

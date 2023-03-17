@@ -40,11 +40,13 @@ body {
 .SNlogo{
     display: flex;
     justify-content: center;
+    
 }
 
 .SNlogo img{
     width: 60px;
     height: 65px;
+    cursor: pointer;
 }
 
 .SNdrop{
@@ -100,6 +102,7 @@ body {
     font-size: 13px;
     text-align: center;
     padding: 5px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {

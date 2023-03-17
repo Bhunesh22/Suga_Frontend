@@ -1,5 +1,6 @@
 import ReactGA from 'react-ga';
 
+import GlobalState from './Context/GlobalState';
 import Homepage from "./Components/homepage/Homepage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Components/login/Login"
@@ -36,6 +37,8 @@ ReactGA.initialize('UA-231739890-1');
 function App() {
   return (
     <>
+
+    <GlobalState>
       <Router>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
@@ -69,6 +72,7 @@ function App() {
           
         </Routes>
       </Router>
+      </GlobalState>
     </>
 
   );

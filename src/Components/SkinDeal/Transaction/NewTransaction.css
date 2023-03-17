@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
+
+.NTcontainer {
+  height: 100vh;
+  width: 100%;
+  background: url("../COD-T.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gilroy-Medium", sans-serif;
+  padding: 45px 0px;
+}
+
+.NTtop {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Goldman", cursive;
+  padding: 0px 0px 0px 100px;
+}
+
+.NTmid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.NT1st {
+  font-size: 30px;
+  color: #4d69fd;
+  font-family: "Goldman", cursive;
+}
+
+.NT2nd {
+  font-weight: 500;
+  font-size: 21px;
+  color: white;
+  text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}
+
+.NTbtn {
+  width: 100%;
+  font-size: 17px;
+  background: #4d69fd;
+  text-align: center;
+  padding: 10px 15px;
+  width: 40vw;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.NTdash {
+  width: 40vw;
+  border-top: 2px solid white;
+  margin: 30px 0px 40px 0px;
+  filter: blur(2px);
+  transform: rotate(-180deg);
+}
+
+.NTinput {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.NTinput input {
+  width: 100%;
+  background: rgba(217, 217, 217, 0.4);
+  border: none;
+  font-size: 17px;
+  padding: 10px 15px;
+  color: white;
+  width: 40vw;
+  outline: none;
+}
+
+.NTinput input::placeholder {
+  color: white;
+}
+
+.NT3rd {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
+}

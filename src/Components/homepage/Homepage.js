@@ -31,7 +31,7 @@ const Homepage = () => {
                     <h1>Gaming Assets &amp; Skins <span style={{color: "white"}}>Universe</span></h1>
                     {/* <h1 style={{ color: "white", marginTop: "0px" }}>OF GAMING AND NFT’S</h1> */}
                     <p>A one-stop market for your gaming inventory. Compare gaming assets at pure ease from the global marketplaces.</p>
-                    {!localStorage.getItem('token')? (<Link to="/registrationfrominvite"><button onClick={() => customEvent("Register","user","From Home page to do Register")} className='Hbtn'>Register</button></Link>) : (<Link to="/marketplace"><button className='Hbtn' onClick={() => customEvent("Explore",`${localStorage.getItem("token")}`,"From Home Page")}>Explore</button></Link>)
+                    {!localStorage.getItem('token')? (<Link to="/registrationfrominvite"><button onClick={() => customEvent("Register","user","From Home page to do Register")} className='Hbtn'>Register</button></Link>) : (<Link to="/skindeal"><button className='Hbtn' onClick={() => customEvent("Explore",`${localStorage.getItem("token")}`,"From Home Page")}>Explore</button></Link>)
                     }
                     
                 </div>

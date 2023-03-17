@@ -1,90 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
 @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
 
-.NTcontainer {
+.PMcontainer {
   height: 100vh;
   width: 100%;
-  background: url("./COD-T.png");
+  background: url("../COD-T.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
   font-family: "Gilroy-Medium", sans-serif;
   padding: 45px 0px;
+  overflow-y: scroll;
 }
 
-.NTtop {
+.PMtop {
   font-size: 40px;
   font-weight: 500;
   font-family: "Goldman", cursive;
   padding: 0px 0px 0px 100px;
 }
 
-.NTmid {
+.PMmid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-.NT1st {
-  font-size: 30px;
-  color: #4d69fd;
-  font-family: "Goldman", cursive;
+.PMqr{
+    height: 50vh;
+    width: 20vw;
+    margin-top: -110px;
+    margin-bottom: 50px;
 }
 
-.NT2nd {
+
+.PM2nd {
   font-weight: 500;
   font-size: 21px;
   color: white;
   text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
 }
 
-.NTbtn {
+.PMbtn {
   width: 100%;
-  font-size: 17px;
+  font-size: 16px;
   background: #4d69fd;
   text-align: center;
-  padding: 10px 15px;
+  padding: 8px 15px;
   width: 40vw;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 30px;
 }
 
-.NTdash {
-  width: 40vw;
-  border-top: 2px solid white;
-  margin: 30px 0px 40px 0px;
-  filter: blur(2px);
-  transform: rotate(-180deg);
-}
 
-.NTinput {
-  width: 100%;
-  margin-bottom: 30px;
+
+.PMcode {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.NTinput input {
+  justify-content: space-between;
   width: 100%;
   background: rgba(217, 217, 217, 0.4);
-  border: none;
-  font-size: 17px;
-  padding: 10px 15px;
+  font-size: 18px;
+  padding: 6px 15px;
   color: white;
   width: 40vw;
-  outline: none;
+  gap: 10px;
 }
 
-.NTinput input::placeholder {
-  color: white;
-}
-
-.NT3rd {
-  margin-bottom: 4px;
-  font-weight: 500;
-  font-size: 18px;
-  color: white;
-  text-shadow: 0px 0px 20px rgba(177, 255, 193, 0.5);
-}
