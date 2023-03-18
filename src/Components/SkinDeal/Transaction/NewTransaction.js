@@ -9,21 +9,25 @@ import axios from 'axios';
 
 const NewTransaction = () => {
 
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState({id : ""});
   const [loading, setLoading] = useState(false);
   const [btnColor , SetBtnColor] = useState({color : "rgb(77, 105, 253, 0.5)"})
 
-  const {showPage} = useContext(GlobalContext);
+  const {showPage, Deal} = useContext(GlobalContext);
 
-  const formData = new FormData();
-  formData.append("join_code",code);
+  const handleChange = (e) => {
+    setCode({ ...code, id: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
     try {
-      const url = "https://sugabackend.azurewebsites.net/api/users";
-      await axios.post(url, formData, {headers: {'auth-token': localStorage.getItem('token')}} );
+      const url = "http://localhost:5000/api/skin_deal/individual_deal";
+      await axios.post(url, code, {headers: {'auth-token': localStorage.getItem('token')}} ).then((response) => {
+        console.log(response);
+        Deal(response.data)
+      })
       setLoading(false)
       showPage("JT")
     } catch (error) {
@@ -39,7 +43,7 @@ const NewTransaction = () => {
   };
 
   useEffect(() => {
-    if(code.length >= 5){
+    if(code.id.length >= 5){
         SetBtnColor({color : "#4d69fd"})
     }
     else{
@@ -64,7 +68,7 @@ const NewTransaction = () => {
         <input 
         type="text" 
         required 
-        onChange={(e) => setCode(e.target.value)}
+        onChange={handleChange}
         placeholder="Paste the transaction code here" />
         </div>
         <button className="NTbtn" type="submit"  style={{

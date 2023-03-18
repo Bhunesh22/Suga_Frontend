@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import "./JoinTransaction.css";
 import { BiRupee } from 'react-icons/bi';
+import GlobalContext from "../../../Context/globalContext";
 
 const Transaction = () => {
 
+  const { deal } = useContext(GlobalContext);
+  console.log(deal)
   return (
     <div className="TTcontainer">
     <div className="TTtop">Transaction # 1058965</div>
@@ -38,6 +41,11 @@ const Transaction = () => {
       <div className="TTinput">
       <p className="TT3rd">Description  </p>
       <div className="TTdata">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi temporibus tempora itaque sed id molestias qui distinctio explicabo, dicta reiciendis quam rem blanditiis voluptatibus pariatur ut commodi unde vitae iusto.</div>
+      </div>
+
+      <div className="TTinput" >
+      <p className="TT3rd">Your bank account no. or UPI <span style={{color: "red"}}>*</span></p>
+      <input type="text" placeholder="enter your UPI...." />
       </div>
 
       <p className="TTbtn">Agree</p>

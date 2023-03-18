@@ -5,11 +5,19 @@ import logo1 from "./face.png"
 import logo2 from "./mail.png"
 import logo3 from "./whatsapp.png"
 import GlobalContext from '../../../Context/globalContext';
+import { message } from "antd";
+import "antd/dist/antd.css";
 
 const Joincode = () => {
 
-  const {showPage} = useContext(GlobalContext);
+  const {showPage, joinCode} = useContext(GlobalContext);
 
+  console.log(joinCode, "join")
+
+  const copyClickHandler=()=>{
+    navigator.clipboard.writeText(joinCode);
+    message.success(" Code Coppied! ")
+}
   return (
     <div className="JCcontainer">
       <div className="JCtop">New Transaction</div>
@@ -17,8 +25,8 @@ const Joincode = () => {
       <div className="JCmid">
         <p className="JC1st">Great! <span style={{fontSize: "18px", padding: "0px 0px 0px 5px"}}>Share this code with the other party</span></p>
 
-        <div className="JCcode">
-            <p>112233445566</p>
+        <div className="JCcode" onClick={copyClickHandler}>
+            <p>{joinCode}</p>
             <p><MdOutlineContentCopy size={22}/></p>
         </div>
        

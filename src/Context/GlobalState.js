@@ -5,10 +5,25 @@ import { useState, useEffect } from "react";
 const GlobalState = (props) => {
   
   const [show, setShow] = useState("NT")
-
+  
   const showPage = (value) =>{
     setShow(value)
   }
+
+
+  const [joinCode, setJoinCode] = useState("NO");
+
+  const JoinCode = (value) => {
+    setJoinCode(value)
+  }
+
+
+  const [deal, setDeal] = useState({});
+
+  const Deal = (value) => {
+    setDeal(value)
+  }
+
 
   const [user, setUser] = useState();
 
@@ -114,7 +129,11 @@ const loadUserData = async () => {
     value={{ 
       show, 
       showPage ,
-      user
+      user,
+      joinCode,
+      JoinCode,
+      deal,
+      Deal
       }}>
       {props.children}
     </GlobalContext.Provider>
