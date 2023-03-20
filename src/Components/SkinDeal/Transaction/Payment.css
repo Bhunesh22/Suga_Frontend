@@ -56,36 +56,22 @@
 
 
 
-.PMcode {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.PMcode input{
   background: rgba(217, 217, 217, 0.4);
-  /* font-size: 18px; */
+  outline: none;
+  font-size: 17px;
   font-weight: 500;
-  padding: 0px;
+  padding: 8px 10px;
   color: white;
   width: 40vw;
-  gap: 10px;
-}
-
-.PMcode input{
-  width: 100%;
-  font-size: 17px;
-}
-
-input[type=file]::file-selector-button {
-  margin-right: 2vw;
   border: none;
-  background: #4d69fd;
-  padding: 8px 20px;
-  border-radius: 0px;
-  width: 12vw;
-  color: #fff;
-  cursor: pointer;
-  transition: background .2s ease-in-out;
+  margin-bottom: 20px;
 }
 
-input[type=file]::file-selector-button:hover {
-  background: #0d45a5;
+.PMcode input::placeholder{
+ 
+  color: white;
+ 
 }
+
+

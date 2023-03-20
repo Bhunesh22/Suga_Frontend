@@ -17,6 +17,8 @@ import Payment from "../Transaction/Payment";
 import GlobalContext from "../../../Context/globalContext";
 import CommingSoon from "../Transaction/CommingSoon";
 import { useNavigate } from "react-router-dom";
+import MyTransaction from "../Transaction/MyTransaction";
+import Deal from "../Transaction/Deal";
 
 const SideNavigation = (props) => {
   const [drop, setDrop] = useState(true);
@@ -24,6 +26,14 @@ const SideNavigation = (props) => {
   const navigate = useNavigate();
 
   const { show, showPage, user } = useContext(GlobalContext);
+
+  if(props.payment === "payment"){
+    showPage("Payment")
+  }
+
+  if(props.deal === "deal"){
+    showPage("Deal")
+  }
 
   const logOut = () => {
     localStorage.removeItem("token");
@@ -77,10 +87,10 @@ const SideNavigation = (props) => {
           >
             <div
               className="SNnew"
-              onClick={() => showPage("NT")}
+              onClick={() => {navigate("/skindeal"); showPage("NT");}}
               style={{
                 color:
-                  show == "TT" || show == "JT" || show == "JC" || show == "NT"
+                  show == "TT" || show == "JT" || show == "JC" || show == "NT" || show == "Payment"
                     ? "#FFC700"
                     : "white",
               }}
@@ -90,28 +100,28 @@ const SideNavigation = (props) => {
 
             <div
               className="SNnew"
-              onClick={() => showPage("MT")}
-              style={{ color: show == "MT" ? "#FFC700" : "white" }}
+              onClick={() => {navigate("/skindeal"); showPage("MT");}}
+              style={{ color: show == "MT" || show == "Deal" ? "#FFC700" : "white" }}
             >
               My Transactions
             </div>
           </div>
 
-          <div className="SNoptions" onClick={() => showPage("PP")}>
+          <div className="SNoptions" onClick={() => {navigate("/skindeal"); showPage("PP");}}>
             <p className="SNicon">
               <CgProfile style={{ width: "20px", height: "20px" }} color={show == "PP" ? "#FFC700" : "white"} />
             </p>
             <p className="SNtext" style={{ color: show == "PP" ? "#FFC700" : "white" }}>Profile</p>
           </div>
 
-          <div className="SNoptions" onClick={() => showPage("CU")}>
+          <div className="SNoptions" onClick={() => {navigate("/skindeal"); showPage("CU");}}>
             <p className="SNicon">
               <MdPermPhoneMsg style={{ width: "20px", height: "20px" }}  color={show == "CU" ? "#FFC700" : "white"}/>
             </p>
             <p className="SNtext" style={{ color: show == "CU" ? "#FFC700" : "white" }}>Contact Us</p>
           </div>
 
-          <div className="SNoptions" onClick={() => showPage("SS")}>
+          <div className="SNoptions" onClick={() => {navigate("/skindeal"); showPage("SS");}}>
             <p className="SNicon">
               <TbSettings style={{ width: "20px", height: "20px" }} color={show == "SS" ? "#FFC700" : "white"} />
             </p>
@@ -158,13 +168,35 @@ const SideNavigation = (props) => {
         <div
           style={{
             display:
-              show == "MT" || show == "SS" || show == "PP" || show == "CU"
+              show == "SS" || show == "PP" || show == "CU"
                 ? "block"
                 : "none",
           }}
         >
-          {/* <CommingSoon /> */}
+          <CommingSoon />
+          {/* <Payment/> */}
+        </div>
+
+        <div
+          style={{
+            display:
+              show == "MT"
+                ? "block"
+                : "none",
+          }}
+        >
+          <MyTransaction/>
+          {/* <Payment/> */}
+        </div>
+
+
+
+        <div style={{ display: show == "Payment" ? "block" : "none" }}>
           <Payment/>
+        </div>
+
+        <div style={{ display: show == "Deal" ? "block" : "none" }}>
+          <Deal/>
         </div>
       </div>
     </div>

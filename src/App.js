@@ -69,6 +69,8 @@ function App() {
           <Route exact path='/mylistings' element={<MyListings/>}></Route>
           <Route exact path='/myorders' element={<MyOrders/>}></Route>
           <Route exact path='/skindeal' element={<SideNavigation/>}></Route>
+          <Route exact path='/skindeal/payment/:id' element={<SideNavigation payment={"payment"}/>}></Route>
+          <Route exact path='/skindeal/deal/:id' element={<SideNavigation deal={"deal"}/>}></Route>
           
         </Routes>
       </Router>

@@ -116,3 +116,16 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+.TTcheck{
+  display: flex;
+  gap: 15px;
+  font-size: 17px;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+input.TTbig{
+ width: 14px;
+ height: 14px;
+}

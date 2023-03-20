@@ -6,16 +6,33 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { message } from "antd";
 import "antd/dist/antd.css";
 
+
 const Transaction = () => {
+  let object;
+
   const { showPage, JoinCode } = useContext(GlobalContext);
   const [role, setRole] = useState("buyer");
-  const [btnColor, SetBtnColor] = useState({ color: "rgb(77, 105, 253, 0.5)" });
-  const [deal, setDeal] = useState({
+
+  if(role == "buyer"){
+    object = {
     role: role,
     payment_for: "",
     amount: "",
     description: "",
-  });
+    buyer_trade_url: ""}
+    }else{
+      object = {
+        role: role,
+        payment_for: "",
+        amount: "",
+        description: "",
+        seller_upi: ""}
+    }
+  
+
+  const [checked, setchecked] = useState(false);
+  const [btnColor, SetBtnColor] = useState({ color: "rgb(77, 105, 253, 0.5)" });
+  const [deal, setDeal] = useState(object);
   const [loading, setLoading] = useState(false);
 
   const onchange = (e) => {
@@ -28,15 +45,17 @@ const Transaction = () => {
     try {
       const url = "http://localhost:5000/api/skin_deal";
 
-      await axios.post(url, deal, {
-        headers: { "auth-token": localStorage.getItem("token") },
-      }).then((response) => {
-        console.log(response);
-        JoinCode(response.data.id)
-      })
-      setLoading(false)
-      showPage("JC")
-      e.target.reset()
+      await axios
+        .post(url, deal, {
+          headers: { "auth-token": localStorage.getItem("token") },
+        })
+        .then((response) => {
+          console.log(response);
+          JoinCode(response.data.id);
+        });
+      setLoading(false);
+      showPage("JC");
+      e.target.reset();
     } catch (error) {
       if (
         error.response &&
@@ -48,17 +67,23 @@ const Transaction = () => {
     }
   };
 
+  const handleCheck = () => {
+    setchecked(!checked);
+  };
+  
+  
   useEffect(() => {
     if (
       deal.payment_for.length > 0 &&
       deal.amount.length > 0 &&
-      deal.description.length > 0
+      deal.description.length > 0 &&
+      checked 
     ) {
       SetBtnColor({ color: "#4d69fd" });
     } else {
       SetBtnColor({ color: "rgb(77, 105, 253, 0.5)" });
     }
-  }, [deal]);
+  }, [deal, checked]);
 
   return (
     <div className="TTcontainer">
@@ -116,6 +141,37 @@ const Transaction = () => {
             />
           </div>
 
+          <div
+            className="TTinput"
+            style={{ display: role == "seller" ? "flex" : "none" }}
+          >
+            <p className="TT3rd">
+              Your bank account no. or UPI{" "}
+              <span style={{ color: "red" }}>*</span>
+            </p>
+            <input 
+            type="text" 
+            placeholder="enter your UPI...." 
+            name="seller_upi"
+            onChange={onchange}
+            />
+          </div>
+
+          <div
+            className="TTinput"
+            style={{ display: role == "buyer" ? "flex" : "none" }}
+          >
+            <p className="TT3rd">
+              Your steam trade url <span style={{ color: "red" }}>*</span>
+            </p>
+            <input 
+            type="text" 
+            placeholder="enter your trade url...." 
+            name="buyer_trade_url"
+            onChange={onchange}
+            />
+          </div>
+
           <div className="TTinput">
             <p className="TT3rd">
               Description <span style={{ color: "red" }}>*</span>
@@ -128,21 +184,24 @@ const Transaction = () => {
             />
           </div>
 
-          <div
-            className="TTinput"
-            style={{ display: role == "seller" ? "flex" : "none" }}
-          >
-            <p className="TT3rd">
-              Your bank account no. or UPI{" "}
-              <span style={{ color: "red" }}>*</span>
-            </p>
-            <input type="text" placeholder="enter your UPI...." />
-          </div>
-
           {/* <div className="TTinput" style={{display: role == "seller" ? "flex" : "none"}} >
       <p className="TT3rd">Add image of selling assets <span style={{color: "red"}}>*</span></p>
       <input type="file" style={{padding: "0px", fontSize: "17px"}} />
       </div> */}
+
+          <div className="TTcheck">
+            <input
+              type="checkbox"
+              id="check"
+              checked={checked}
+              className="TTbig"
+              onChange={handleCheck}
+            />
+            <label htmlFor="check">
+              Agree the terms and conditions{" "}
+              <span style={{ color: "red" }}>*</span>
+            </label>
+          </div>
 
           <button
             className="TTbtn"

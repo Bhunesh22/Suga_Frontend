@@ -13,7 +13,7 @@ const NewTransaction = () => {
   const [loading, setLoading] = useState(false);
   const [btnColor , SetBtnColor] = useState({color : "rgb(77, 105, 253, 0.5)"})
 
-  const {showPage, Deal} = useContext(GlobalContext);
+  const {showPage, Deal, JoinCode} = useContext(GlobalContext);
 
   const handleChange = (e) => {
     setCode({ ...code, id: e.target.value });
@@ -49,7 +49,7 @@ const NewTransaction = () => {
     else{
         SetBtnColor({color : "rgb(77, 105, 253, 0.5)"})
     }
-
+    JoinCode(code.id);
 }, [code])
 
   return (
