@@ -10,7 +10,7 @@ const GlobalState = (props) => {
     setShow(value)
   }
 
-
+ 
   const [joinCode, setJoinCode] = useState("NO");
 
   const JoinCode = (value) => {
@@ -128,7 +128,7 @@ const loadUserData = async () => {
     <GlobalContext.Provider 
     value={{ 
       show, 
-      showPage ,
+      showPage,
       user,
       joinCode,
       JoinCode,

@@ -35,8 +35,8 @@ const Payment = () => {
           JoinCode(response.data.id);
         });
       setLoading(false);
-      showPage("MT");
       navigate("/skindeal")
+      showPage("MT");
       e.target.reset();
     } catch (error) {
       if (

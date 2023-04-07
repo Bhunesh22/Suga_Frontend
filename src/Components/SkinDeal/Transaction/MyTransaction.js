@@ -7,20 +7,20 @@ import { Link } from 'react-router-dom';
 
 const MyTransaction = () => {
 
-    const {user} = useContext(GlobalContext);
+    const {user, showPage} = useContext(GlobalContext);
 
-    console.log(user)
+    console.log(user , "user")
 
-    const [data, setData] = useState()
+    const [data, setData] = useState([])
 
     useEffect(() => {
         loadUserData();
-    }, []);
+    }, [showPage]);
 
-    function ucfirst(str) {
-        var firstLetter = str.substr(0, 1);
-        return firstLetter.toUpperCase() + str.substr(1);
-    }
+    // function ucfirst(str) {
+    //     var firstLetter = str.substr(0, 1);
+    //     return firstLetter.toUpperCase() + str.substr(1);
+    // }
 
 
     const loadUserData = async () => {
@@ -36,6 +36,7 @@ const MyTransaction = () => {
         setData(Json)
     }
 
+    console.log(data, "datamt")
     // console.log(data)
   return (
     <div className="MTcontainer">
@@ -57,11 +58,11 @@ const MyTransaction = () => {
     {data && data?.map((list, index) => {
         return (
             <tr>
-            <th scope="row">{user && user?._id == list?.userId ? ucfirst(list.role): list.role == "buyer" ? "Seller" : "Buyer"}</th>
+            <th scope="row">{user && user?._id == list?.userId ? list.role : list.role == "buyer" ? "Seller" : "Buyer"}</th>
             <td>{list.payment_for}</td>
             <td>{list.amount}</td>
             <td>{list.transaction_proof == "pending" ? "Pending" : "Done"}</td>
-            <td>{list.buyer_status == "pending" && list.seller_status == "pending" ? <Link to={`/skindeal/deal/${list._id}`}>Click Here</Link> : <Link to={`/skindeal/deal/${list._id}`}>Success</Link>}</td>
+            <td>{list.buyer_status == "pending" || list.seller_status == "pending" ? <Link to={`/skindeal/deal/${list._id}`}>Click Here</Link> : <Link to={`/skindeal/deal/${list._id}`}>Success</Link>}</td>
           </tr>
         )
     })}

@@ -30,7 +30,7 @@ const Deal = () => {
 
     useEffect(() => {
         loadUserData();
-    }, []);
+    }, [id]);
 
     // function ucfirst(str) {
     //     var firstLetter = str.substr(0, 1);
@@ -167,7 +167,7 @@ const Deal = () => {
         return firstLetter.toUpperCase() + str.substr(1);
     }
 
-   
+   console.log(role)
 
   
   return (
@@ -202,11 +202,11 @@ const Deal = () => {
       </div>
 
     
-      <div style={{display: data.seller_status == "pending" && role == "seller" ? "block" : "none"}}>
+      <div style={{display: data?.transaction_proof != "pending" && role == "Seller" ? "block" : "none"}}>
 
           <div
             className="TTinput"
-            style={{ display: role == "Seller" ? "flex" : "none" }}
+            // style={{ display: role == "Seller" ? "flex" : "none" }}
           >
            <p className="TT3rd" style={{color: "#4d69fd", fontSize: "22px"}}>
               Confirmation{" "}
@@ -248,14 +248,13 @@ const Deal = () => {
             )}
           </button>
         </div>
+        </div>
 
 
-
-
-        <div style={{display: data.buyer_status == "pending" && role == "buyer" ? "block" : "none"}}>
+        <div style={{display: data?.seller_status == "agree" && role == "Buyer" ? "block" : "none"}}>
       <div
             className="TTinput"
-            style={{ display: role == "Buyer" ? "flex" : "none" }}
+            // style={{ display: role == "Buyer" ? "flex" : "none" }}
           >
             <p className="TT3rd" style={{color: "#4d69fd", fontSize: "22px"}}>
               Confirmation{" "}
@@ -303,7 +302,6 @@ const Deal = () => {
           </div>
       </div>
 
-    </div>
   )
 }
 
