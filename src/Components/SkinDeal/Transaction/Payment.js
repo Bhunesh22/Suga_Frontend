@@ -24,7 +24,7 @@ const Payment = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const url = `http://localhost:5000/api/skin_deal/paymentstatus/${id}`;
+      const url = `https://sugabackend.azurewebsites.net/api/skin_deal/paymentstatus/${id}`;
 
       await axios
         .patch(url, payment, {

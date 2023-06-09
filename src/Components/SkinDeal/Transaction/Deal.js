@@ -39,7 +39,7 @@ const Deal = () => {
 
 
     const loadUserData = async () => {
-        const responce = await fetch(`http://localhost:5000/api/skin_deal/individual_deal/${id}`, {
+        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/skin_deal/individual_deal/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const Deal = () => {
 
 
         try {
-          const url = `http://localhost:5000/api/skin_deal/finalstatus/${id}`;
+          const url = `https://sugabackend.azurewebsites.net/api/skin_deal/finalstatus/${id}`;
     
           await axios
             .patch(url, status,  {
@@ -131,7 +131,7 @@ const Deal = () => {
         }
 
         try {
-          const url = `http://localhost:5000/api/skin_deal/finalstatus/${id}`;
+          const url = `https://sugabackend.azurewebsites.net/api/skin_deal/finalstatus/${id}`;
     
           await axios
             .patch(url, status,  {
@@ -202,7 +202,7 @@ const Deal = () => {
       </div>
 
     
-      <div style={{display: data?.transaction_proof != "pending" && role == "Seller" ? "block" : "none"}}>
+      <div style={{display: data?.transaction_proof != "pending" && role == "Seller" && data?.seller_status != "agree" ? "block" : "none"}}>
 
           <div
             className="TTinput"
@@ -251,7 +251,7 @@ const Deal = () => {
         </div>
 
 
-        <div style={{display: data?.seller_status == "agree" && role == "Buyer" ? "block" : "none"}}>
+        <div style={{display: data?.seller_status == "agree" && role == "Buyer" && data?.buyer_status == "pending" ? "block" : "none"}}>
       <div
             className="TTinput"
             // style={{ display: role == "Buyer" ? "flex" : "none" }}

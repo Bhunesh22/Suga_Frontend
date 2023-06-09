@@ -33,7 +33,7 @@ const Transaction = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const url = `http://localhost:5000/api/skin_deal/updatestatus/${joinCode}`;
+      const url = `https://sugabackend.azurewebsites.net/api/skin_deal/updatestatus/${joinCode}`;
 
       await axios
         .patch(url, data, {

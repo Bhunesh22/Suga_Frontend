@@ -23,7 +23,7 @@ const NewTransaction = () => {
     e.preventDefault();
     setLoading(true)
     try {
-      const url = "http://localhost:5000/api/skin_deal/individual_deal";
+      const url = "https://sugabackend.azurewebsites.net/api/skin_deal/individual_deal";
       await axios.post(url, code, {headers: {'auth-token': localStorage.getItem('token')}} ).then((response) => {
         console.log(response);
         Deal(response.data)

@@ -24,7 +24,7 @@ const MyTransaction = () => {
 
 
     const loadUserData = async () => {
-        const responce = await fetch(`http://localhost:5000/api/skin_deal/mytransactions`, {
+        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/skin_deal/mytransactions`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
