@@ -15,20 +15,20 @@ function ForgotPassword() {
     const [data, setData] = useState({
         email: ""
       });
-    
+
       const [error, setError] = useState("");
       const [msg, setMsg] = useState("");
-  
+
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         // setLoading(true)
-    
+
         setLoading({ loading: true });
-    
+
         try {
-          const url = "https://sugabackend.azurewebsites.net/api/forgetpassword/resetPasswordRequest";
+          const url = "https://suga-backend-0bkm.onrender.com/api/forgetpassword/resetPasswordRequest";
           const { data: res } = await axios.post(url, data);
           setMsg(res.message);
           setLoading(false)
@@ -45,7 +45,7 @@ function ForgotPassword() {
           }
         }
       };
-    
+
       const onChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value })
       }
@@ -65,10 +65,10 @@ function ForgotPassword() {
                     <form onSubmit={handleSubmit}>
                     <div className='inputEmailLabelFlex2'>
                         <label for="inputCredentials" class="form-label1">Enter your email</label>
-                        <input 
-                        type="email" 
-                        class="inputCredential1" 
-                        id="inputCredentials" 
+                        <input
+                        type="email"
+                        class="inputCredential1"
+                        id="inputCredentials"
                         placeholder="name@example.com"
                         required
                         name='email'

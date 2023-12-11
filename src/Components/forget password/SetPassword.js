@@ -41,7 +41,7 @@ function SetPassword() {
         message.error("Password and Confirm Password are must be same!");
       }
       else{
-      const url = `https://sugabackend.azurewebsites.net/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
+      const url = `https://suga-backend-0bkm.onrender.com/api/forgetpassword/${param.id}/resetpassword/${param.token}`;
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setLoading(false)
@@ -94,9 +94,9 @@ function SetPassword() {
 
         <div className='setPasswordFlex3'>
           <label className='password1'>Set password</label>
-          <input 
-          type="password" 
-          id="enterPassword" 
+          <input
+          type="password"
+          id="enterPassword"
           className='enterPassword'
           required
             name='password'
@@ -114,9 +114,9 @@ function SetPassword() {
           )}
           </p>
           </div>
-          <input 
-          type="password" 
-          id="confermPassword" 
+          <input
+          type="password"
+          id="confermPassword"
           className='confermPassword'
           name="confirmpassword"
           value={cp.confirmpassword}

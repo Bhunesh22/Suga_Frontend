@@ -52,7 +52,7 @@ function Login(props) {
 		e.preventDefault();
     setLoading(true)
 		try {
-			const url = "https://sugabackend.azurewebsites.net/api/auth1";
+			const url = "https://suga-backend-0bkm.onrender.com/api/auth1";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";
@@ -75,9 +75,9 @@ function Login(props) {
     }
 
   return (
-    
+
     <div className='loginPage'>
-     
+
       <Link  to="/"><img className='LsugaLogoBW' src='/images/suga logo bw.svg'/></Link>
       <div><img className='LsugaText' src='/images/SuGa text.png'/></div>
 
@@ -86,23 +86,23 @@ function Login(props) {
       <form onSubmit={handleSubmit}>
 
       <span className='sugaUsername'>Email</span>
-      <input 
-      type="email" 
-      id="setUsername" 
-      className='setUsername' 
-      name="email" 
-      // value={credentials.email} 
-      onChange={onChange}  
+      <input
+      type="email"
+      id="setUsername"
+      className='setUsername'
+      name="email"
+      // value={credentials.email}
+      onChange={onChange}
 
-      /><br />     
+      /><br />
 
       <span className='password'>Password</span>
-      <input 
-      type="password" 
-      id="setPassword" 
-      className='setPassword' 
-      name='password' 
-      // value={credentials.password} 
+      <input
+      type="password"
+      id="setPassword"
+      className='setPassword'
+      name='password'
+      // value={credentials.password}
       onChange={onChange}
       /><br/>
       <NavLink to="/forgotpassword" onClick={() => customEvent("Forgot PassWord",`${localStorage.getItem("token")}`,"From login page")} className={({isActive}) => isActive ? "": "frgtPassword" }>Forgot Password?</NavLink>
@@ -122,7 +122,7 @@ function Login(props) {
       </form>
       </div>
     </div>
-  
+
   )
 }
 

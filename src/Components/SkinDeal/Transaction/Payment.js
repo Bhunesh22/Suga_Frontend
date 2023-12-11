@@ -24,7 +24,7 @@ const Payment = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const url = `https://sugabackend.azurewebsites.net/api/skin_deal/paymentstatus/${id}`;
+      const url = `https://suga-backend-0bkm.onrender.com/api/skin_deal/paymentstatus/${id}`;
 
       await axios
         .patch(url, payment, {
@@ -49,7 +49,7 @@ const Payment = () => {
     }
   };
 
-  
+
   useEffect(() => {
     if (
       payment.transaction_proof.length >= 5

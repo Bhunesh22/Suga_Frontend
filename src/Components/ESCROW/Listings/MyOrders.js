@@ -20,7 +20,7 @@ function MyOrders() {
 
 
   let fetchData = async () => {
-      const responce = await fetch(`https://sugabackend.azurewebsites.net/api/buy/order`, {
+      const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/buy/order`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function MyOrders() {
             <div><NavLink to='/myorders' className={({ isActive }) => isActive ? "activeListingBar" : "listingBar"}>My Orders</NavLink></div>
           </div>
 
-          {data ? 
+          {data ?
           (<div className='listingsDetail1'>
             <div className='listingsDetail2'>
 
@@ -54,7 +54,7 @@ function MyOrders() {
                 <table class="table">
                   <thead>
 
-          
+
                     <tr>
                       <th scope="col" className='listingDetail3'>Asset</th>
                       <th scope="col" className='listingDetail3'>Price</th>

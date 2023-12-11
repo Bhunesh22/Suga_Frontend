@@ -24,7 +24,7 @@ const MyTransaction = () => {
 
 
     const loadUserData = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/skin_deal/mytransactions`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/skin_deal/mytransactions`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const MyTransaction = () => {
           </tr>
         )
     })}
-   
+
   </tbody>
 </table>
 </div>
@@ -85,7 +85,7 @@ const MyTransaction = () => {
             " Create"
           )}
         </button> */}
-     
+
   </div>
   )
 }

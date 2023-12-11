@@ -18,7 +18,7 @@ function Profile() {
     }, []);
 
     // const loadUserData = async () => {
-    //     const responce = await fetch(`https://sugabackend.azurewebsites.net/api/auth1/getuser`, {
+    //     const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/auth1/getuser`, {
     //         method: 'GET',
     //         headers: {
     //             'auth-token': localStorage.getItem('token')
@@ -31,7 +31,7 @@ function Profile() {
     // console.log(user, "intial");
 
     const getUser = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/userdetails/fetchuserdata`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/userdetails/fetchuserdata`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

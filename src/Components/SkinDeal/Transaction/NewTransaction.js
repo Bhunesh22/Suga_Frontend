@@ -23,7 +23,7 @@ const NewTransaction = () => {
     e.preventDefault();
     setLoading(true)
     try {
-      const url = "https://sugabackend.azurewebsites.net/api/skin_deal/individual_deal";
+      const url = "https://suga-backend-0bkm.onrender.com/api/skin_deal/individual_deal";
       await axios.post(url, code, {headers: {'auth-token': localStorage.getItem('token')}} ).then((response) => {
         console.log(response);
         Deal(response.data)
@@ -65,9 +65,9 @@ const NewTransaction = () => {
         <form onSubmit={handleSubmit}>
         <div className="NTinput">
         <p className="NT3rd">Join Transaction</p>
-        <input 
-        type="text" 
-        required 
+        <input
+        type="text"
+        required
         onChange={handleChange}
         placeholder="Paste the transaction code here" />
         </div>

@@ -14,7 +14,7 @@ const BuyPopup = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`https://sugabackend.azurewebsites.net/api/userdetails/details`, {
+    const res = await fetch(`https://suga-backend-0bkm.onrender.com/api/userdetails/details`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

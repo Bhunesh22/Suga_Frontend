@@ -19,9 +19,9 @@ const Deal = () => {
     const { showPage, user } = useContext(GlobalContext);
     const [status, setStatus] = useState();
     const [confirnation, setConfirmation] = useState()
-  
+
     // const [role, setRole] = useState("buyer");
-  
+
     // const [checked, setchecked] = useState(false);
     const [btnColor, SetBtnColor] = useState({ color: "rgb(77, 105, 253, 0.5)" });
     const [loading, setLoading] = useState(false);
@@ -39,7 +39,7 @@ const Deal = () => {
 
 
     const loadUserData = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/skin_deal/individual_deal/${id}`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/skin_deal/individual_deal/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,8 +52,8 @@ const Deal = () => {
     }
 
     console.log(data)
-  
-  
+
+
 
     let role;
 
@@ -68,14 +68,14 @@ const Deal = () => {
             role = "Buyer"
         }
     }
-    
+
     const handleSubmit1 = async (e) => {
         e.preventDefault();
         setLoading(true);
         setConfirmation("disagree");
-    
+
     let status;
-        
+
     if(role == "Buyer"){
         status = {
             buyer_status: "disagree"
@@ -89,8 +89,8 @@ const Deal = () => {
 
 
         try {
-          const url = `https://sugabackend.azurewebsites.net/api/skin_deal/finalstatus/${id}`;
-    
+          const url = `https://suga-backend-0bkm.onrender.com/api/skin_deal/finalstatus/${id}`;
+
           await axios
             .patch(url, status,  {
               headers: { "auth-token": localStorage.getItem("token") },
@@ -110,15 +110,15 @@ const Deal = () => {
         }
       };
 
-    
+
     const handleSubmit2 = async (e) => {
         e.preventDefault();
         setLoading(true);
         setConfirmation("agree")
 
-        
+
         let status;
-        
+
         if(role == "Buyer"){
             status = {
                 buyer_status: "agree"
@@ -131,8 +131,8 @@ const Deal = () => {
         }
 
         try {
-          const url = `https://sugabackend.azurewebsites.net/api/skin_deal/finalstatus/${id}`;
-    
+          const url = `https://suga-backend-0bkm.onrender.com/api/skin_deal/finalstatus/${id}`;
+
           await axios
             .patch(url, status,  {
               headers: { "auth-token": localStorage.getItem("token") },
@@ -151,10 +151,10 @@ const Deal = () => {
           }
         }
       };
-    
+
     // useEffect(() => {
     //   if (
-    //     checked 
+    //     checked
     //   ) {
     //     SetBtnColor({ color: "#4d69fd" });
     //   } else {
@@ -169,18 +169,18 @@ const Deal = () => {
 
    console.log(role)
 
-  
+
   return (
     <div className="TTcontainer">
     <div className="TTtop">Transaction # <span style={{fontSize: "25px", color: "#4d69fd"}}>{id}</span></div>
 
     <div className="TTmid" style={{marginTop: "70px"}}>
-      
+
       <div className="TTinput">
       <p className="TT3rd">Your Role</p>
       <div className="TTdata">{role}</div>
       </div>
-      
+
       <div className="TTinput">
       <p className="TT3rd">Payment for  </p>
       <div className="TTdata">{data && data.payment_for}</div>
@@ -201,7 +201,7 @@ const Deal = () => {
       <div className="TTdata">{data && data.transaction_proof == "pending" ? "Pending" : "Done"}</div>
       </div>
 
-    
+
       <div style={{display: data?.transaction_proof != "pending" && role == "Seller" && data?.seller_status != "agree" ? "block" : "none"}}>
 
           <div
@@ -214,7 +214,7 @@ const Deal = () => {
             </p>
             <p style={{width: "40vw", fontSize: "18px"}}>Please select "Agree" if you confirm that you have sent the asset to the buyer, or select "Disagree" if you do not want to continue with the deal.</p>
           </div>
-        
+
         <div className="TTbtns" style={{display: "flex", gap: "4vw"}}>
 
         <button
@@ -262,7 +262,7 @@ const Deal = () => {
             </p>
             <p style={{width: "40vw", fontSize: "18px"}}>Please select "Agree" if you confirm that you received the asset from the seller, or select "Disagree" if you do not agree to receive the asset from the seller.</p>
           </div>
-        
+
         <div className="TTbtns" style={{display: "flex", gap: "4vw"}}>
 
         <button

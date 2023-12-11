@@ -28,7 +28,7 @@ const Transaction = () => {
         description: "",
         seller_upi: ""}
     }
-  
+
 
   const [checked, setchecked] = useState(false);
   const [btnColor, SetBtnColor] = useState({ color: "rgb(77, 105, 253, 0.5)" });
@@ -43,7 +43,7 @@ const Transaction = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const url = "https://sugabackend.azurewebsites.net/api/skin_deal";
+      const url = "https://suga-backend-0bkm.onrender.com/api/skin_deal";
 
       await axios
         .post(url, deal, {
@@ -70,14 +70,14 @@ const Transaction = () => {
   const handleCheck = () => {
     setchecked(!checked);
   };
-  
-  
+
+
   useEffect(() => {
     if (
       deal.payment_for.length > 0 &&
       deal.amount.length > 0 &&
       deal.description.length > 0 &&
-      checked 
+      checked
     ) {
       SetBtnColor({ color: "#4d69fd" });
     } else {
@@ -149,9 +149,9 @@ const Transaction = () => {
               Your bank account no. or UPI{" "}
               <span style={{ color: "red" }}>*</span>
             </p>
-            <input 
-            type="text" 
-            placeholder="enter your UPI...." 
+            <input
+            type="text"
+            placeholder="enter your UPI...."
             name="seller_upi"
             onChange={onchange}
             />
@@ -164,9 +164,9 @@ const Transaction = () => {
             <p className="TT3rd">
               Your steam trade url <span style={{ color: "red" }}>*</span>
             </p>
-            <input 
-            type="text" 
-            placeholder="enter your trade url...." 
+            <input
+            type="text"
+            placeholder="enter your trade url...."
             name="buyer_trade_url"
             onChange={onchange}
             />

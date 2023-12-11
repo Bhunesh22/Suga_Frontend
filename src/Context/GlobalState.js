@@ -3,14 +3,14 @@ import GlobalContext from "./globalContext";
 import { useState, useEffect } from "react";
 
 const GlobalState = (props) => {
-  
+
   const [show, setShow] = useState("NT")
-  
+
   const showPage = (value) =>{
     setShow(value)
   }
 
- 
+
   const [joinCode, setJoinCode] = useState("NO");
 
   const JoinCode = (value) => {
@@ -32,7 +32,7 @@ const GlobalState = (props) => {
 }, []);
 
 const loadUserData = async () => {
-    const responce = await fetch(`https://sugabackend.azurewebsites.net/api/auth1/getuser`, {
+    const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/auth1/getuser`, {
         method: 'GET',
         headers: {
             'auth-token': localStorage.getItem('token')
@@ -57,7 +57,7 @@ const loadUserData = async () => {
 //    const json = await responce.json()
 //    console.log(json)
 //    setNotes(json)
-       
+
 //      }
 
 //   // Add a Note
@@ -125,9 +125,9 @@ const loadUserData = async () => {
 //   }
 
   return (
-    <GlobalContext.Provider 
-    value={{ 
-      show, 
+    <GlobalContext.Provider
+    value={{
+      show,
       showPage,
       user,
       joinCode,

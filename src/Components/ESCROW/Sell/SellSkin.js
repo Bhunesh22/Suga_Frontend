@@ -17,18 +17,18 @@ function SellSkin() {
     const [status, setStatus] = useState('')
     const [error, setError] = useState("");
     const [data, setData] = useState({price: ""});
-    
+
     const formData = new FormData();
     formData.append("image",img);
     formData.append("price",data.price);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-       
+
         setLoading(true)
         try {
-            const url = "https://sugabackend.azurewebsites.net/api/sell";
-          
+            const url = "https://suga-backend-0bkm.onrender.com/api/sell";
+
             await axios.post(url, formData, {headers: {'auth-token': localStorage.getItem('token')}} );
             // window.location = "/";
             setLoading(false)
@@ -43,7 +43,7 @@ function SellSkin() {
                 setError(error.response.data.message);
                 setLoading(false)
                 message.error("Please register as seller");
-               
+
             }
         }
     };

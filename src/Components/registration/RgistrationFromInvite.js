@@ -33,13 +33,13 @@ function RegistrationFromInvite() {
 
     if (!confirm_err) {
       setLoading({ loading: true });
-    }    
+    }
     try {
       if (data.password != cp.confirmpassword){
         message.error("Password and Confirm Password are must be same!");
       }
       else{
-      const url = "https://sugabackend.azurewebsites.net/api/users";
+      const url = "https://suga-backend-0bkm.onrender.com/api/users";
       const { data: res } = await axios.post(url, data);
       setMsg(res.message);
       setLoading(false)

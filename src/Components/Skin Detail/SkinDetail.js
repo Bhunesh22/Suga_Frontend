@@ -55,7 +55,7 @@ function SkinDetail() {
     }, []);
 
 
-    // Dmarket Main data show on page 
+    // Dmarket Main data show on page
 
     const loadUserData = async () => {
         const responce = await fetch(`https://api.dmarket.com/exchange/v1/offers-by-title?Title=${name}&Limit=1000`, {
@@ -124,7 +124,7 @@ function SkinDetail() {
     //  Skin Wallet Price Details --------------------------------------------------------------------
 
     const skinWallet = async () => {
-        const res = await fetch(`https://sugabackend.azurewebsites.net/api/skinwallet`, {
+        const res = await fetch(`https://suga-backend-0bkm.onrender.com/api/skinwallet`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ function SkinDetail() {
     //  lootfarm Price Details --------------------------------------------------------------------
 
     const lootFarm = async () => {
-        const res = await fetch(`https://sugabackend.azurewebsites.net/api/lootfarm`, {
+        const res = await fetch(`https://suga-backend-0bkm.onrender.com/api/lootfarm`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -204,7 +204,7 @@ function SkinDetail() {
     //  SkinPort Price Details --------------------------------------------------------------------
 
     const skinPort = async () => {
-        const res = await fetch(`https://sugabackend.azurewebsites.net/api/skinport`, {
+        const res = await fetch(`https://suga-backend-0bkm.onrender.com/api/skinport`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -256,7 +256,7 @@ function SkinDetail() {
             bs: itemName + "(Battle-Scarred)",
         }
 
-        const url = "https://sugabackend.azurewebsites.net/api/steam";
+        const url = "https://suga-backend-0bkm.onrender.com/api/steam";
         const res = await axios.post(url, hName);
 
         setSteamData(res.data)
@@ -270,7 +270,7 @@ function SkinDetail() {
     //  currency exchnage Details --------------------------------------------------------------------
 
     const currency = async () => {
-        const res = await fetch(`https://sugabackend.azurewebsites.net/api/exchange`, {
+        const res = await fetch(`https://suga-backend-0bkm.onrender.com/api/exchange`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -489,7 +489,7 @@ function SkinDetail() {
                         </tbody>
                     </table>
                 </div>
-                
+
                 {/* mobile view */}
                 <div className='mobileView1'>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -559,8 +559,8 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                  
-                                                   
+
+
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Minimal-Wear%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[1].slice(2)}</div>
@@ -613,8 +613,8 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                   
-                                                  
+
+
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Field-Tested%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[2].slice(2)}</div>
@@ -666,7 +666,7 @@ function SkinDetail() {
                                             <div className='skinDetailAccordian2'>
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                   
+
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Well-Worn%29`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[1].slice(3)}</div>
@@ -720,7 +720,7 @@ function SkinDetail() {
 
 
                                                 <div className='skinDetailsWithPrice1'>
-                                                   
+
                                                     <div><img className='logoimages1' src={steamLogo} alt="Steam" /></div>
                                                     <div><a href={`https://steamcommunity.com/market/listings/730/${itemName}%28Battle-Scarred%2`} target="_blank"><div onClick={() => customEvent( "Dmarket",  name === undefined ? "ak-47-asiimov" : data?.title, `${localStorage.getItem("token")}`)}>
                                                         <img className='rupeeLogo' src={rupeeBoldBlue} alt="rupee" />{steamData[0] === undefined ? "NA" : steamData[4].slice(2)}</div>

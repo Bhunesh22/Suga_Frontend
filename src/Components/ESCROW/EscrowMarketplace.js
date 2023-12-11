@@ -12,14 +12,14 @@ import { customEvent } from '../utils/analyticsHelper';
 const EscrowMarketplace = () => {
 
     const [data, setData] = useState()
-    
+
     useEffect(() => {
         fetchData()
     }, [])
-    
+
 
     let fetchData = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/sell`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/sell`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const EscrowMarketplace = () => {
         <>
             <div className="Mcontainer">
                 <div className="NMcontainer"><Navbar /></div>
-                
+
                 <div className="Mmarket">
                     <div className="Ccontainer">
                     {data && data.map((list, index) => {

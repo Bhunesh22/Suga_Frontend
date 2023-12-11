@@ -28,10 +28,10 @@ const Footer = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
     setLoading(true)
-    
+
 		try {
-			const url = "https://sugabackend.azurewebsites.net/api/message/msg";
-			const { data: res } = await axios.post(url, msg);	
+			const url = "https://suga-backend-0bkm.onrender.com/api/message/msg";
+			const { data: res } = await axios.post(url, msg);
         setLoading(false)
         message.success("Message sent successfully!");
         setMsg({ name: "", email: "", message: ""})
@@ -47,10 +47,10 @@ const Footer = () => {
 		}
 	};
 
-  
+
     // const handleSubmit = async (e) => {
     //   e.preventDefault();
-  
+
     //   const res = await fetch(`https://suga-server.herokuapp.com/api/message/msg`, {
     //     method: 'POST',
     //     headers: {
@@ -67,11 +67,11 @@ const Footer = () => {
     //   message.success("Message sent successfully!");
     //   console.log(Json);
     // }
-  
+
     const onChange = (e) => {
       setMsg({ ...msg, [e.target.name]: e.target.value })
     }
-  
+
 
     return (
         <div className='Fcontainer'>
@@ -96,29 +96,29 @@ const Footer = () => {
                 <div className="Fleft">
                     <form onSubmit={handleSubmit}>
                         <div>
-                        <input 
-                        className='Ffirst' 
-                        type="text" id="fname"  
+                        <input
+                        className='Ffirst'
+                        type="text" id="fname"
                         placeholder='Enter your name'
                         name = "name"
                         value = {msg.name}
                         required
                         onChange={onChange}
                         />
-                        <input 
-                        className='Fsecond' 
-                        type="email" id="lname"  
-                        placeholder='Email' 
+                        <input
+                        className='Fsecond'
+                        type="email" id="lname"
+                        placeholder='Email'
                         name = "email"
                         value = {msg.email}
                         required
                         onChange={onChange}
                         /> </div><br />
-                        <textarea 
-                        className='Fthird' 
-                        type="text" 
-                        id="lname" 
-                        placeholder='type your message here........' 
+                        <textarea
+                        className='Fthird'
+                        type="text"
+                        id="lname"
+                        placeholder='type your message here........'
                         name = "message"
                         value = {msg.message}
                         required

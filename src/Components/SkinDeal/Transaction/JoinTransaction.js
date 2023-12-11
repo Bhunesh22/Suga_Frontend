@@ -18,7 +18,7 @@ const Transaction = () => {
     }else{
       object = {seller_upi: ""}
     }
-  
+
 
   const [checked, setchecked] = useState(false);
   const [btnColor, SetBtnColor] = useState({ color: "rgb(77, 105, 253, 0.5)" });
@@ -33,7 +33,7 @@ const Transaction = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const url = `https://sugabackend.azurewebsites.net/api/skin_deal/updatestatus/${joinCode}`;
+      const url = `https://suga-backend-0bkm.onrender.com/api/skin_deal/updatestatus/${joinCode}`;
 
       await axios
         .patch(url, data, {
@@ -56,11 +56,11 @@ const Transaction = () => {
   const handleCheck = () => {
     setchecked(!checked);
   };
-  
-  
+
+
   useEffect(() => {
     if (
-      checked 
+      checked
     ) {
       SetBtnColor({ color: "#4d69fd" });
     } else {
@@ -68,13 +68,13 @@ const Transaction = () => {
     }
   }, [checked]);
 
-  
+
   return (
     <div className="TTcontainer">
     <div className="TTtop">Transaction # 1058965</div>
 
     <div className="TTmid" style={{marginTop: "70px"}}>
-      
+
       <div className="TTinput">
       <p className="TT3rd">Your Role</p>
       <div className="TTdata">{deal.role == "buyer" ? "Seller" : "Buyer"}</div>
@@ -89,7 +89,7 @@ const Transaction = () => {
       <p className="TT3rd">Buyer Contact</p>
       <div className="TTdata">6350139098</div>
       </div> */}
-      
+
       <div className="TTinput">
       <p className="TT3rd">Payment for  </p>
       <div className="TTdata">{deal.payment_for}</div>
@@ -115,9 +115,9 @@ const Transaction = () => {
               Your bank account no. or UPI{" "}
               <span style={{ color: "red" }}>*</span>
             </p>
-            <input 
-            type="text" 
-            placeholder="enter your UPI...." 
+            <input
+            type="text"
+            placeholder="enter your UPI...."
             name="seller_upi"
             onChange={onchange}
             />
@@ -130,9 +130,9 @@ const Transaction = () => {
             <p className="TT3rd">
               Your steam trade url <span style={{ color: "red" }}>*</span>
             </p>
-            <input 
-            type="text" 
-            placeholder="enter your trade url...." 
+            <input
+            type="text"
+            placeholder="enter your trade url...."
             name="buyer_trade_url"
             onChange={onchange}
             />

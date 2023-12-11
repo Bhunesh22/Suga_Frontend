@@ -30,7 +30,7 @@ function MyListings() {
 
         setLoading(true)
         try {
-            const url = "https://sugabackend.azurewebsites.net/api/register_as_seller";
+            const url = "https://suga-backend-0bkm.onrender.com/api/register_as_seller";
 
             await axios.post(url, data1, { headers: { 'auth-token': localStorage.getItem('token') } });
             window.location = "/mylistings";
@@ -62,7 +62,7 @@ function MyListings() {
 
 
     let fetchUser = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/register_as_seller`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/register_as_seller`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ function MyListings() {
     };
 
     let fetchData = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/sell/individual_listing`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/sell/individual_listing`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ function MyListings() {
 
     const deleteItem = async (id) => {
         // API call
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/sell/deletenote/${id}`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/sell/deletenote/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -234,8 +234,8 @@ function MyListings() {
                                                             <td>
                                                                 <div className='assetStatus1'>
                                                                     <div>{list.status}<button className='tradeButton'><img className='tradeButton1' src={TradeDoneIcon1} /></button><button className='tradeButton'><img className='tradeButton1' src={TradeCancelIcon1} /></button></div>
-                                                                    <div><button 
-                                                                    className='deleteIcon2' 
+                                                                    <div><button
+                                                                    className='deleteIcon2'
                                                                     onClick={()=>{deleteItem(list._id)}}
                                                                     ><img src={deleteIcon2} /></button></div>
                                                                 </div>

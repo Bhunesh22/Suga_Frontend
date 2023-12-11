@@ -33,10 +33,10 @@ function EscrowSkinDetail() {
     useEffect(() => {
         fetchData()
     }, [])
-    
+
 
     let fetchData = async () => {
-        const responce = await fetch(`https://sugabackend.azurewebsites.net/api/sell`, {
+        const responce = await fetch(`https://suga-backend-0bkm.onrender.com/api/sell`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,10 +50,10 @@ function EscrowSkinDetail() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-       
+
         setLoading(true)
         try {
-            const url = "https://sugabackend.azurewebsites.net/api/buy";
+            const url = "https://suga-backend-0bkm.onrender.com/api/buy";
             await axios.post(url, data1 , {headers: {'auth-token': localStorage.getItem('token')}} );
             // window.location = "/";
             setLoading(false)
@@ -68,7 +68,7 @@ function EscrowSkinDetail() {
                 setError(error.response.data.message);
                 setLoading(false)
                 message.error("Please Login to Buy");
-               
+
             }
         }
     };
@@ -80,7 +80,7 @@ function EscrowSkinDetail() {
 
 
 
-   
+
     return (
         <>
             <div className='skinDetail1'>
@@ -99,8 +99,8 @@ function EscrowSkinDetail() {
                         </div> */}
                         <div className='skinBoxFlex1'>
                             <div>
-                                
-                                {data[index] == undefined ? <img className='skin3Logo' style={{marginTop:"0px", width:"600px", height: "auto"}} src="" alt="Loading..."/> :  
+
+                                {data[index] == undefined ? <img className='skin3Logo' style={{marginTop:"0px", width:"600px", height: "auto"}} src="" alt="Loading..."/> :
                                 <img className='skin3Logo' style={{marginTop:"0px", width:"600px", height: "auto"}}  src={data[index].image} />}
                             </div>
 
@@ -113,7 +113,7 @@ function EscrowSkinDetail() {
                         </div> */}
                     </div>
                     <div className='skinBlueLine2'></div>
-                   
+
                 </div>
 
 
@@ -143,10 +143,10 @@ function EscrowSkinDetail() {
                       <form onSubmit={handleSubmit} >
                     <div className='orderQuantity'>
                         <div className='orderUnitprice'>
-                    
+
                             <label>Unit Price:</label>
                             <label className='orderPrice1'>{data[index] == undefined? "loading...": data[index].price}</label>
-                      
+
                         </div>
                         <div className='orderDeleveryDetails'>
                             <div className='orderDeleveryDetailsFlex3'>
@@ -164,20 +164,20 @@ function EscrowSkinDetail() {
                                     <label className='orderPrice2'>{data[index] == undefined? "loading...": data[index].price}</label>
                                 </div>
 
-                              
-                                <input 
+
+                                <input
                                 type="text"
-                                className='buyTradeURL'  
-                                placeholder='Enter Your Trade URL.......' 
+                                className='buyTradeURL'
+                                placeholder='Enter Your Trade URL.......'
                                 name = "trade_url"
                                 onChange={handleChange}
                                 required
                                 />
 
-                                <input 
+                                <input
                                 type="text"
-                                className='buyTradeURL'  
-                                placeholder='Contact' 
+                                className='buyTradeURL'
+                                placeholder='Contact'
                                 name = "contact_buyer"
                                 onChange={handleChange}
                                 required
@@ -195,7 +195,7 @@ function EscrowSkinDetail() {
                     </div>
 
                     </form>
-                    
+
                 </div>
 
 
